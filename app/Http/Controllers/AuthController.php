@@ -39,6 +39,29 @@ class AuthController extends Controller
             'username' => 'required|min:3|max:100|unique:users,username,1,id|regex:/^[a-z0-9_]+$/',
             'email' => 'required|email|unique:users,email',
             'password' => 'required|confirmed|regex:/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{6,}$/',
+        ], [
+            // name
+            'name.required' => 'Nama lengkap wajib diisi.',
+            'name.min' => 'Nama lengkap minimal terdiri dari 3 karakter.',
+            'name.max' => 'Nama lengkap tidak boleh lebih dari 255 karakter.',
+            'name.regex' => 'Nama lengkap hanya boleh berisi huruf, spasi, tanda hubung (-), dan apostrof (’).',
+
+            // username
+            'username.required' => 'Username wajib diisi.',
+            'username.min' => 'Username minimal terdiri dari 3 karakter.',
+            'username.max' => 'Username tidak boleh lebih dari 100 karakter.',
+            'username.unique' => 'Username ini sudah digunakan, silakan pilih yang lain.',
+            'username.regex' => 'Username hanya boleh berisi huruf kecil, angka, dan underscore (_), tanpa spasi atau simbol lainnya.',
+
+            // email
+            'email.required' => 'Alamat email wajib diisi.',
+            'email.email' => 'Format email tidak valid.',
+            'email.unique' => 'Alamat email ini sudah terdaftar.',
+
+            // password
+            'password.required' => 'Kata sandi wajib diisi.',
+            'password.confirmed' => 'Konfirmasi kata sandi tidak cocok.',
+            'password.regex' => 'Kata sandi harus memiliki minimal 6 karakter dan mengandung huruf besar, huruf kecil, angka, serta simbol.',
         ]);
 
         $user = User::create([
