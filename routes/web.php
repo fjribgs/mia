@@ -22,5 +22,6 @@ Route::controller(AuthController::class)->group(function() {
     Route::get('/login', 'login')->middleware('guest')->name('auth.login');
     Route::post('/postlogin', 'postlogin')->middleware('guest')->name('auth.postlogin');
     Route::get('/register', 'register')->middleware('guest')->name('auth.register');
+    Route::post('/postregis', 'postregis')->middleware('guest')->name('auth.postregis');
     Route::get('/logout', 'logout')->middleware('auth')->name('auth.logout');
 });

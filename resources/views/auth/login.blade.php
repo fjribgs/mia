@@ -5,4 +5,5 @@
 
     <button type="submit">login</button>
 </form>
+<p>Tidak punya akun? <a href="{{ route('auth.register') }}">Daftar</a></p>
 <a href="{{ route('dashboard') }}">back</a>
