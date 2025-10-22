@@ -23,7 +23,14 @@ class AuthController extends Controller
 
         if(Auth::attempt($credentials)) {
             $request->session()->regenerate();
-            return redirect()->route('dashboard');
+
+            if(Auth::user()->role == 'admin') {
+                return redirect()->route('dashboard.admin');
+            } elseif(Auth::user()->role == 'umkm') {
+                return redirect()->route('dashboard.umkm');
+            } else {
+                return redirect()->route('dashboard.user');
+            }
         }
 
         return back()->withErrors('Username atau password salah! Silakan coba lagi!');
@@ -75,7 +82,7 @@ class AuthController extends Controller
         $request->session()->regenerate();
 
         return redirect()
-            ->route('dashboard')
+            ->route('dashboard.user')
             ->withSuccess('Selamat, '. $user->name. 'akun Anda berhasil dibuat!');
     }
 
