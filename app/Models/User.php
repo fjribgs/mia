@@ -18,10 +18,11 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
         'username',
+        'name',
         'email',
         'password',
+        'role',
     ];
 
     /**
@@ -43,4 +44,12 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function umkm() {
+        return $this->hasOne(Umkm::class);
+    }
+
+    public function review() {
+        return $this->hasOne(Review::class);
+    }
 }

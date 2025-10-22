@@ -24,7 +24,7 @@ class AuthController extends Controller
             return redirect()->route('dashboard');
         }
 
-        return back()->withErrors('lahhh siapa lu bang!!!!');
+        return back()->withErrors('Username or password is incorrect! Please try again!');
     }
 
     public function logout(Request $request) {

@@ -40,6 +40,8 @@
         </div>
     </div>
 
+    <a href="https://maps.app.goo.gl/SqGff3Yg4EUSeL6a7?g_st=aw">link gmaps</a>
+
 </body>
 
 </html>
