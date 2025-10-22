@@ -15,8 +15,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-})->name('dashboard');
+    return view('dashboard.user');
+})->name('dashboard.user');
+
+Route::get('/umkm', function () {
+    return view('dashboard.umkm');
+})->name('dashboard.umkm');
+
+Route::get('/admin', function () {
+    return view('dashboard.admin');
+})->name('dashboard.admin');
 
 Route::controller(AuthController::class)->group(function() {
     Route::get('/login', 'login')->middleware('guest')->name('auth.login');
