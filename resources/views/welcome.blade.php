@@ -13,7 +13,7 @@
 <body class="">
     <nav id="navbar"
     class="flex absolute mx-35 my-10">
-        <div class="text-4xl font-bold text-white">LokaHub</div>
+        <div class="text-4xl font-bold fixed text-white">LokaHub</div>
         <div></div>
     </nav>
     <section id="hero-section" 
@@ -25,7 +25,6 @@
             <h1 class="text-white text-7xl w-90">Temukan <b>UMKM terbaik</b> di sekitarmu!</h1>
             <button class="font-semibold text-[19px] bg-white rounded-4xl py-[15px] px-[33px] my-[52px]">Jelajahi Sekarang</button>
         </div>
-        <div></div>
     </section>
 </body>
 </html>
