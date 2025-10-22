@@ -1,47 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>bagaskara</title>
-
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>LokaHub</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
+    @vite('resources/css/app.css')
 </head>
-
-<body>
-    @if (Auth::check())
-        <h2>Welcome {{ Auth::user()->name }}!!!</h2>
-
-        <a href="{{ route('auth.logout') }}">logout</a>
-    @else
-        <h2>Please login first!</h2>
-
-        <a href="{{ route('auth.login') }}">login</a>
-    @endif
-    <div class="collapse collapse-plus bg-base-100 border border-base-300">
-        <input type="radio" name="my-accordion-3" checked="checked" />
-        <div class="collapse-title font-semibold">How do I create an account?</div>
-        <div class="collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the
-            registration process.</div>
-    </div>
-    <div class="collapse collapse-plus bg-base-100 border border-base-300">
-        <input type="radio" name="my-accordion-3" />
-        <div class="collapse-title font-semibold">I forgot my password. What should I do?</div>
-        <div class="collapse-content text-sm">Click on "Forgot Password" on the login page and follow the instructions
-            sent to your email.</div>
-    </div>
-    <div class="collapse collapse-plus bg-base-100 border border-base-300">
-        <input type="radio" name="my-accordion-3" />
-        <div class="collapse-title font-semibold">How do I update my profile information?</div>
-        <div class="collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to make changes.
+<body class="">
+    <nav id="navbar"
+    class="flex absolute mx-35 my-10">
+        <div class="text-4xl font-bold fixed text-white">LokaHub</div>
+        <div></div>
+    </nav>
+    <section id="hero-section" 
+    class="relative flex items-center">
+        <img src="{{ asset('images/hero-section.png')}}" 
+        alt="Background"
+        class="-z-10">
+        <div class="absolute mx-35">
+            <h1 class="text-white text-7xl w-90">Temukan <b>UMKM terbaik</b> di sekitarmu!</h1>
+            <button class="font-semibold text-[19px] bg-white rounded-4xl py-[15px] px-[33px] my-[52px]">Jelajahi Sekarang</button>
         </div>
     </div>
 
     <a href="https://maps.app.goo.gl/SqGff3Yg4EUSeL6a7?g_st=aw">link gmaps</a>
 
 </body>
-
 </html>
