@@ -2,9 +2,9 @@
 
 <form action="{{ route('auth.postregis') }}" method="post">
     @csrf
-    <input type="text" name="name" placeholder="Full Name">
-    <input type="text" name="username" placeholder="username">
-    <input type="email" name="email" placeholder="email@test.com">
+    <input type="text" name="name" placeholder="Full Name" value="{{ old('name') }}">
+    <input type="text" name="username" placeholder="username" value="{{ old('username') }}">
+    <input type="email" name="email" placeholder="email@test.com" value="{{ old('email') }}">
     <input type="password" name="password" placeholder="****">
     <input type="password" name="password_confirmation" placeholder="confirm password">
 

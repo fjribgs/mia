@@ -39,4 +39,7 @@ Route::controller(CategoryController::class)->group(function() {
     Route::get('/category', 'index')->middleware('can:isAdmin')->name('category.index');
     Route::get('/category/create', 'create')->middleware('can:isAdmin')->name('category.create');
     Route::post('/category/store', 'store')->middleware('can:isAdmin')->name('category.store');
+    Route::get('/category/edit/{category_id}', 'edit')->middleware('can:isAdmin')->name('category.edit');
+    Route::post('/category/update/{category_id}', 'update')->middleware('can:isAdmin')->name('category.update');
+    Route::get('/category/destroy/{category_id}', 'destroy')->middleware('can:isAdmin')->name('category.destroy');
 });

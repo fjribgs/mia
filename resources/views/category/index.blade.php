@@ -16,7 +16,10 @@
         <tr>
             <td>{{ $loop->iteration }}</td>
             <td>{{ $category->category_name }}</td>
-            <td>apa yhh</td>
+            <td>
+                <a href="{{ route('category.edit', ['category_id' => $category->id]) }}">Edit</a>
+                <a href="{{ route('category.destroy', ['category_id' => $category->id]) }}">Delete</a>
+            </td>
         </tr>
     @endforeach
     @empty($category)

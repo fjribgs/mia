@@ -26,4 +26,27 @@ class CategoryController extends Controller
 
         return redirect()->route('category.index')->withSuccess('Data kategori berhasil dibuat!');
     }
+
+    public function edit($category_id) {
+        $category = Category::findOrFail($category_id);
+        return view('category.edit', compact('category'));
+    }
+
+    public function update(Request $request, $category_id) {
+        $request->validate([
+            'category_name' => 'required|min:3|max:100|regex:/^[A-Za-zÀ-ÿ ]+$/',
+        ]);
+
+        $category = Category::findOrFail($category_id);
+        $category->update($request->all());
+
+        return redirect()->route('category.index')->withSuccess('Data kategori berhasil diubah!');
+    }
+
+    public function destroy($category_id) {
+        $category = Category::findOrFail($category_id);
+        $category->delete();
+
+        return redirect()->route('category.index')->withSuccess('Data kategori berhasil dihapus!');
+    }
 }
