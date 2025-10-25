@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,8 +16,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-})->name('dashboard');
+    return view('dashboard.user');
+})->name('dashboard.user');
+
+Route::get('/umkm', function () {
+    return view('dashboard.umkm');
+})->name('dashboard.umkm');
+
+Route::get('/admin', function () {
+    return view('dashboard.admin');
+})->name('dashboard.admin');
 
 Route::controller(AuthController::class)->group(function() {
     Route::get('/login', 'login')->middleware('guest')->name('auth.login');
@@ -24,4 +33,13 @@ Route::controller(AuthController::class)->group(function() {
     Route::get('/register', 'register')->middleware('guest')->name('auth.register');
     Route::post('/postregis', 'postregis')->middleware('guest')->name('auth.postregis');
     Route::get('/logout', 'logout')->middleware('auth')->name('auth.logout');
+});
+
+Route::controller(CategoryController::class)->group(function() {
+    Route::get('/category', 'index')->middleware('can:isAdmin')->name('category.index');
+    Route::get('/category/create', 'create')->middleware('can:isAdmin')->name('category.create');
+    Route::post('/category/store', 'store')->middleware('can:isAdmin')->name('category.store');
+    Route::get('/category/edit/{category_id}', 'edit')->middleware('can:isAdmin')->name('category.edit');
+    Route::post('/category/update/{category_id}', 'update')->middleware('can:isAdmin')->name('category.update');
+    Route::get('/category/destroy/{category_id}', 'destroy')->middleware('can:isAdmin')->name('category.destroy');
 });
