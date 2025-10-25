@@ -36,7 +36,7 @@ LIST FEATURE USER:
             alt="Background"
             class="-z-10 absolute w-full object-cover h-full">
 
-    <x-navbar></x-navbar>
+    <livewire:navbar />
 
     <section id="hero-section" 
         class="flex items-center 
