@@ -27,6 +27,6 @@ body {
   font-family: 'Poppins';
 }
 
-button {
+button, a {
   font-family: 'Montserrat', 'Poppins';
 }
