@@ -1,10 +1,27 @@
 <nav id="navbar"
-    class="flex fixed py-10 px-35 justify-between items-center w-screen">
+    class="flex fixed py-10 px-[36px] md:px-35 justify-between items-center w-screen">
     <div>
-        <h1 class="text-4xl font-bold text-white">LokaHub</h1>
+        <img src="{{ asset('images/logo.svg') }}" alt=""
+            class="xl:w-43 h-auto w-26 md:w-40">
     </div> 
-    <div class="">
-        <button class="border-green-200 border-1 rounded-3xl px-[28px] py-[13px] text-green-200 font-bold">Login</button>
-        <button class="border-green-500 border-1 rounded-3xl px-[28px] py-[13px] text-white font-bold bg-green-500">Register</button>
+    <div class="xl:flex gap-[35px] font-[Montserrat] hidden">
+        <a href="#"
+            class="text-white">Beranda</a>
+        <a href="#" 
+            class="text-white">Fitur</a>
+        <a href="#"
+            class="text-white">Kolaborasi</a>
+        <a href="#"
+            class="text-white">Event</a>
+        <a href="#"
+            class="text-white">Tentang Kami</a>
+    </div>
+    <div class="hidden xl:block">
+        <button class="border-white border-1 rounded-3xl px-[25px] py-[10px] text-white font-semibold">Login</button>
+        <button class="border-white border-1 rounded-3xl px-[25px] py-[10px] text-black font-medium bg-white">Register</button>
+    </div>
+    <div class="xl:hidden">
+        <img src="{{ asset('images/sidebar.svg')}}" alt="Sidebar"
+            class="md:scale-150">
     </div>
 </nav>

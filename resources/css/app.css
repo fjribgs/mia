@@ -17,6 +17,10 @@
   --primary-700: #005a4e;
   --primary-800: #00463d;
   --primary-900: #00352e;
+  --error: #d31b2a;
+  --success: #5da318;
+  --info: #0079d6;
+  --warning: #f48d0e;
 }
 
 body {

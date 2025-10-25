@@ -11,24 +11,50 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
+
     <img src="{{ asset('images/hero-section.svg')}}" 
             alt="Background"
-            class="-z-10 absolute w-full">
+            class="-z-10 absolute w-full object-cover h-full">
 
     <x-navbar></x-navbar>
 
     <section id="hero-section" 
-    class="flex items-center h-270 justify-between w-full px-35 rounded-b-2xl">
-        <div>
-            <h1 class="text-white text-[74px] w-140">Temukan <b>UMKM terbaik</b> di sekitarmu!</h1>
-            <button class="font-semibold text-[19px] bg-white rounded-4xl py-[15px] px-[33px] my-[52px]">Jelajahi Sekarang</button>
+        class="flex items-center 
+        h-screen justify-between 
+        w-full px-[36px] 
+        md:px-35 md:top-10">
+
+        <div class="text-center md:text-left mx-auto md:mx-0
+                    pt-[20px] md:pt-[110px]">
+
+            <h1 class="text-white text-[29px] md:text-[54px] md:w-[667px]">Temukan, Promosikan <br />& Kolaborasikan <br><b>UMKM terbaik</b> <br>di sekitarmu!</h1>
+
+            <p class="text-white pt-[32px] text-[10.3px] font-medium md:text-[20px]">Menjelajahi UMKM sekitar, membangun kolaborasi, <br>dan menumbuhkan ekosistem bisnis lokal</p>
+
+            <div class="flex gap-[5px] justify-center md:justify-start my-8 md:my-[52px]">
+
+                <button class="font-semibold text-[12px] md:text-[19px] 
+                    bg-white rounded-4xl
+                    py-[10px] md:py-[15px] 
+                    px-[14px] md:px-[33px] 
+                    ">Jelajahi Sekarang</button>
+
+                <button class="font-semibold text-[12px] 
+                    md:text-[19px] text-white
+                    py-[10px] md:py-[15px] 
+                    px-[11px] md:px-[33px] 
+                    underline">Daftarkan Bisnismu</button>
+
+            </div>
+
         </div>
+
     </section>
 
     <x-footer></x-footer>
 
     <a href="https://maps.app.goo.gl/SqGff3Yg4EUSeL6a7?g_st=aw"
     class="hidden">link gmaps</a>
-    
+
 </body>
 </html>
