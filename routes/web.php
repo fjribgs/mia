@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\PromoController;
+use App\Http\Controllers\UmkmController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,10 +20,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('dashboard.user');
 })->name('dashboard.user');
-
-Route::get('/umkm', function () {
-    return view('dashboard.umkm');
-})->name('dashboard.umkm');
 
 Route::get('/admin', function () {
     return view('dashboard.admin');
@@ -42,4 +40,16 @@ Route::controller(CategoryController::class)->group(function() {
     Route::get('/category/edit/{category_id}', 'edit')->middleware('can:isAdmin')->name('category.edit');
     Route::post('/category/update/{category_id}', 'update')->middleware('can:isAdmin')->name('category.update');
     Route::get('/category/destroy/{category_id}', 'destroy')->middleware('can:isAdmin')->name('category.destroy');
+});
+
+Route::controller(UmkmController::class)->group(function() {
+    // dashboard
+    Route::get('/umkm/{umkm_id}', 'dashboard')->middleware('auth')->name('dashboard.umkm');
+
+    Route::get('/umkm/regis', 'regisUmkm')->middleware('guest')->name('umkm.regis');
+});
+
+Route::controller(PromoController::class)->group(function() {
+    Route::get('/promo', 'index')->middleware('auth')->name('promo.index');
+    Route::get('/promo/create', 'create')->middleware('auth')->name('promo.create');
 });

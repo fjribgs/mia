@@ -14,12 +14,13 @@ return new class extends Migration
         Schema::create('promos', function (Blueprint $table) {
             $table->id();
             $table->foreignId('umkm_id')->constrained('umkms')->onDelete('cascade');
-            $table->enum('type', ['discount', 'promo']);
+            $table->enum('type', ['Diskon', 'Promo']);
             $table->string('name');
-            $table->text('description');
+            $table->text('description')->nullable();
             $table->date('start_date');
             $table->date('end_date');
             $table->decimal('discount_percent')->nullable();
+            $table->enum('status', ['Akan Dimulai', 'Berjalan', 'Sudah Berakhir']);
             $table->timestamps();
         });
     }

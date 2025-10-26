@@ -16,6 +16,8 @@ class DatabaseSeeder extends Seeder
         Artisan::call('laravolt:indonesia:seed');
         $this->call([
             UserSeeder::class,
+            UmkmSeeder::class,
+            PromoSeeder::class,
         ]);
     }
 }
