@@ -60,7 +60,7 @@
                     <div class="">
                         <button type="submit"
                         class="bg-[var(--primary-700)] w-full justify-center text-white md:text-[22px] px-[28px] py-[12px] rounded-[50px] mt-13">Masuk</button>
-                        <p class="text-[12px] md:text-[18px] justify-center mt-3 flex">Belum punya akun? <a href="{{ route('auth.register') }}">Daftar Sekarang</a></p>
+                        <p class="text-[12px] md:text-[18px] justify-center mt-3 flex">Belum punya akun? <a href="{{ route('auth.register') }}" class="ml-1">Daftar Sekarang</a></p>
                     </div>
                     
                 </form>
@@ -72,27 +72,24 @@
 
     {{-- Desktop View --}}
     <section class="hidden justify-between xl:flex">
-        <div class="px-35 py-12 h-screen w-50%">
+        <div class="px-35 py-12 h-screen w-50% flex flex-col justify-start">
             <div>
                 <a href="{{ route('dashboard.user') }}">
-                    <img src="{{ asset('images/logo.svg') }}" alt="Logo"
-                        class="w-[167px]">
+                    <img src="{{ asset('images/logo.svg') }}" alt="Logo" class="w-[167px]">
                 </a>
             </div>
-            <div class="items-center mt-40">
-                <h1 class="2xl:text-[68px] text-[60px] font-bold text-white">Selamat <br> Datang <br> Kembali di <br> LokaHub!</h1>
+
+            <div class="flex-grow flex items-center">
+                <h1 class="2xl:text-[68px] text-[60px] font-bold text-white">Selamat <br> Datang<br> Kembali di <br>LokaHub!</h1>
             </div>
         </div>
 
-        <div class="w-[50%]">
-            <div class="bg-white h-full rounded-l-[20px]">
-                <header class="px-[26px] pt-9 md:px-[38px]">
+        <div class="w-[50%] bg-white h-screen items-center flex flex-col justify-center rounded-l-[20px]">
+            <header class="px-[26px] pt-9 md:px-[38px]">
 
-                    <h1 class="font-bold text-white md:hidden text-[32px] pt-8">Selamat <br> Datang <br> Kembali di <br> LokaHub</h1>
-                
-                    <h1 class="font-bold text-white md:block xl:text-[40px] text-[30px] hidden pt-8">Selamat Datang Kembali!</h1>
+                <h1 class="font-bold text-white md:hidden text-[32px] pt-8">Selamat <br> Datang <br> Kembali di <br> LokaHub</h1>
 
-                </header>
+            </header>
 
             <div class="items-center justify-center bg-white w-full 2xl:px-56 xl:px-40 px-26 pt-[33px]">
                 <header>
@@ -128,7 +125,7 @@
                             <div class="mt-20">
                                 <button type="submit"
                                     class="bg-[var(--primary-500)] hover:bg-[var(--primary-400)] w-full justify-center text-white md:text-[22px] px-[28px] py-[12px] rounded-[50px] mt-13 transition-all hover:cursor-pointer">Masuk</button>
-                                <p class="text-[15px] text-[var(--secondary-text)] justify-center mt-4 flex">Belum punya akun? <a href="{{ route('auth.register') }}"> Daftar Sekarang</a></p>
+                                <p class="text-[15px] text-[var(--secondary-text)] justify-center mt-4 flex">Belum punya akun? <a href="{{ route('auth.register') }}" class="ml-1"> Daftar Sekarang</a></p>
                             </div>
                         </form>
                     </div>
