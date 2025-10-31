@@ -21,6 +21,12 @@
   --success: #5da318;
   --info: #0079d6;
   --warning: #f48d0e;
+  --main-text: #212121;
+  --secondary-text: #616161;
+  --caption: #9e9e9e;
+  --soft-border: #e0e0e0;
+  --soft-bg: #d4d4d4;
+  --bg: #fafafa;
 }
 
 body {

@@ -23,13 +23,12 @@
         </div>
 
         @if (Auth::check())
-            <div class="flex" wire:click="toggle">
+            <div class="hidden xl:flex cursor-pointer" wire:click="toggle">
                 <div class="flex text-white gap-3">
                     <h2>{{ Auth::user()->name }}</h2>
                     <img src="{{ asset('images/arrow-dropdown.svg') }}" alt="">
                 </div>
             </div>
-            
             {{-- <a href="{{ route('auth.logout') }}">logout</a> --}}
         @else
             <div class="hidden xl:flex gap-2">
@@ -47,7 +46,7 @@
         </div>
     </nav>
     
-    <div class=" {{ $isOpen ? 'absolute' : 'hidden' }} right-30 mt-20 w-40 bg-white text-black rounded-lg shadow-lg z-50" >
+    <div class=" {{ $isOpen ? 'max-h-60 opacity-100' : 'max-h-0 opacity-0 pointer-events-none' }} absolute right-30 mt-20 w-40 bg-white text-black rounded-lg shadow-lg z-50 transition-all" >
         <a href="/profile" class="block px-4 py-2 hover:bg-gray-200 hover:rounded-lg transition-all duration-300">Profil</a>
         <a href="{{ route('auth.logout') }}" class="block px-4 py-2 hover:bg-gray-200 hover:rounded-lg transition-all duration-300">Logout</a>
     </div>

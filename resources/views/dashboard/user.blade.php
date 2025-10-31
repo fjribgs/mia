@@ -47,22 +47,22 @@ LIST FEATURE USER:
         <div class="text-center md:text-left mx-auto md:mx-0
                     pt-[20px] md:pt-[110px]">
 
-            <h1 class="text-white text-[29px] md:text-[54px] md:w-[667px]">Temukan, Promosikan <br />& Kolaborasikan <br><b>UMKM terbaik</b> <br>di sekitarmu!</h1>
+            <h1 class="text-white text-[29px] md:text-[40px] lg:text-[54px] md:w-[667px]">Temukan, Promosikan <br />& Kolaborasikan <br><b>UMKM terbaik</b> <br>di sekitarmu!</h1>
 
-            <p class="text-white pt-[32px] text-[10.3px] font-medium md:text-[20px]">Menjelajahi UMKM sekitar, membangun kolaborasi, <br>dan menumbuhkan ekosistem bisnis lokal</p>
+            <p class="text-white pt-[32px] text-[10.3px] font-medium xl:text-[20px] md:text-[16px]">Menjelajahi UMKM sekitar, membangun kolaborasi, <br>dan menumbuhkan ekosistem bisnis lokal</p>
 
             <div class="flex gap-[5px] justify-center md:justify-start my-8 md:my-[52px]">
 
-                <button class="font-semibold text-[12px] md:text-[19px] 
+                <button class="font-semibold text-[12px] xl:text-[19px] md:text-[15px]
                     bg-white rounded-4xl
-                    py-[10px] md:py-[15px] 
-                    px-[14px] md:px-[33px] 
+                    py-[10px] xl:py-[15px] md:py-[14px]
+                    px-[14px] xl:px-[33px] md:px-[22px]
                     ">Jelajahi Sekarang</button>
 
-                <button class="font-semibold text-[12px] 
-                    md:text-[19px] text-white
-                    py-[10px] md:py-[15px] 
-                    px-[11px] md:px-[33px] 
+                <button class="font-semibold text-[12px] xl:text-[19px] md:text-[15px]
+                    text-white
+                    py-[10px] xl:py-[15px] md:py-[14px]
+                    px-[11px] xl:px-[33px] md:px-[22px]
                     underline">Daftarkan Bisnismu</button>
 
             </div>

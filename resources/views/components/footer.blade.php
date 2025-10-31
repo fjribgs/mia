@@ -5,7 +5,7 @@
         <div class="py-[60px]">
 
             <img src="{{ asset('images/logo.svg') }}" alt=""
-            class="w-50">
+            class="md:w-50 w-40">
 
             <p class="text-gray-300 my-10 font-light text-[12px] md:text-[18px] md:max-w-[560px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet porttitor interdum. Donec eu ante et libero feugiat ultrices.</p>
 
@@ -18,7 +18,7 @@
 
         <div class="h-[1px] bg-gray-400"></div>
 
-        <div class="flex justify-between text-[10px] md:text-[13px]">
+        <div class="md:flex block justify-between text-[10px] md:text-[13px]">
 
             <p class="text-gray-300 font-light mt-10 md:mt-4">
                 Copyright 2025 LokaHub. All Rights Reserved
@@ -32,7 +32,7 @@
 
             </div>
 
-            <div class="flex gap-2 mt-4">
+            <div class="md:flex hidden gap-2 mt-4">
 
                 <p class="text-gray-300 font-light">Privacy Policy</p>
 
