@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('name');
             $table->text('description');
             $table->decimal('price', 12, 2);
-            $table->enum('status', ['tersedia', 'habis', 'dihentikan']);
+            $table->enum('status', ['Tersedia', 'Habis', 'Dihentikan']);
             $table->boolean('is_best_seller')->default(false);
             $table->text('image');
             $table->timestamps();

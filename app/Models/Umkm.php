@@ -32,7 +32,7 @@ class Umkm extends Model
         'is_open_for_collaboration'
     ];
 
-    // relations
+    // ! relations
     public function user() {
         return $this->belongsTo(User::class, 'user_id');
     }
@@ -53,7 +53,7 @@ class Umkm extends Model
         return $this->belongsTo(Village::class, 'village_id');
     }
 
-    // relations from other tables
+    // ! relations from other tables
     public function umkmRoute() {
         return $this->hasMany(UmkmRoute::class);
     }

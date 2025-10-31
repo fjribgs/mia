@@ -17,6 +17,7 @@ class Promo extends Model
         'start_date',
         'end_date',
         'discount_percent',
+        'status',
     ];
 
     // relations

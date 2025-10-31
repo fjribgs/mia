@@ -19,14 +19,14 @@ return new class extends Migration
             $table->foreignId('district_id')->constrained('indonesia_districts');
             $table->foreignId('village_id')->constrained('indonesia_villages');
             $table->text('description');
-            $table->enum('type', ['tetap', 'keliling']);
+            $table->enum('type', ['Tetap', 'Keliling']);
             $table->text('gmaps_link');
             $table->text('address');
             $table->char('phone_number', 15);
             $table->string('open_days'); //note: dropdown hardcode value
             $table->string('open_time');
             $table->string('close_time');
-            $table->float('average_rating')->default(0);
+            $table->decimal('average_rating')->default(0);
             $table->boolean('is_open_for_collaboration')->default(false);
             $table->timestamps();
         });
