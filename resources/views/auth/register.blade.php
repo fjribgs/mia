@@ -90,7 +90,7 @@
                     <div class="">
                         <button type="submit"
                         class="bg-[var(--primary-500)] w-full justify-center text-white md:text-[22px] px-[28px] py-[12px] rounded-[50px] mt-13">Daftar</button>
-                        <p class="text-[12px]  md:text-[18px] justify-center mt-3 flex">Sudah punya akun? <a href="{{ route('auth.login') }}" class="pl-1">Masuk Disini</a></p>
+                        <p class="text-[12px]  md:text-[18px] justify-center mt-3 flex">Sudah punya akun? <a href="{{ route('auth.register') }}" class="pl-1">Masuk Disini</a></p>
                     </div>
                     
                 </form>
@@ -127,7 +127,7 @@
                 </header>
                 
                 <div class="mt-[40px]">
-                    <form action="{{ route('auth.postlogin') }}" method="post"
+                    <form action="{{ route('auth.postregis') }}" method="post"
                             class="">
                             @csrf
                         <div>
@@ -184,7 +184,7 @@
                             <div class="">
                                 <button type="submit"
                                     class="bg-[var(--primary-500)] hover:bg-[var(--primary-400)] w-full justify-center text-white md:text-[22px] px-[28px] py-[12px] rounded-[50px] mt-13 transition-all hover:cursor-pointer">Daftar</button>
-                                <p class="text-[15px] text-[var(--secondary-text)] justify-center mt-4 flex">Sudah punya akun? <a href="{{ route('auth.register') }}" class="ml-1"> Masuk Disini</a></p>
+                                <p class="text-[15px] text-[var(--secondary-text)] justify-center mt-4 flex">Sudah punya akun? <a href="{{ route('auth.login') }}" class="ml-1"> Masuk Disini</a></p>
                             </div>
                         </form>
                     </div>

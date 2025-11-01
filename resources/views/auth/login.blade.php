@@ -72,17 +72,7 @@
 
     {{-- Desktop View --}}
     <section class="hidden justify-between xl:flex">
-        <div class="px-35 py-12 h-screen w-50% flex flex-col justify-start">
-            <div>
-                <a href="{{ route('dashboard.user') }}">
-                    <img src="{{ asset('images/logo.svg') }}" alt="Logo" class="w-[167px]">
-                </a>
-            </div>
-
-            <div class="flex-grow flex items-center">
-                <h1 class="2xl:text-[68px] text-[60px] font-bold text-white">Selamat <br> Datang<br> Kembali di <br>LokaHub!</h1>
-            </div>
-        </div>
+        
 
         <div class="w-[50%] bg-white h-screen items-center flex flex-col justify-center rounded-l-[20px]">
             <header class="px-[26px] pt-9 md:px-[38px]">
@@ -131,6 +121,18 @@
                     </div>
                 </div>
             </div>      
+        </div>
+
+        <div class="pr-60 py-13 h-screen w-50% flex flex-col">
+            <div>
+                <a href="{{ route('dashboard.user') }}">
+                    <img src="{{ asset('images/logo.svg') }}" alt="Logo" class="w-[167px]">
+                </a>
+            </div>
+
+            <div class="flex-grow flex items-center">
+                <h1 class="2xl:text-[68px] text-[60px] font-bold text-white">Selamat Datang<br> Kembali di <br>LokaHub!</h1>
+            </div>
         </div>
     </section>
 </div>
