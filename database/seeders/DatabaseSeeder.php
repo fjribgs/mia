@@ -13,11 +13,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        Artisan::call('laravolt:indonesia:seed');
+        // Artisan::call('laravolt:indonesia:seed');
         $this->call([
             UserSeeder::class,
-            UmkmSeeder::class,
-            PromoSeeder::class,
+            // UmkmSeeder::class,
+            // PromoSeeder::class,
         ]);
     }
 }
