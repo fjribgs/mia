@@ -32,10 +32,9 @@
                 <h1 class="font-semibold text-[36px] md:text-[48px]">Masuk</h1>
                 <p class="text-gray-500 -mt-2 text-[13px] md:text-[20px] font-[Montserrat]">Masuk untuk Melanjutkan</p>
             </header>
-            
+
             <div class="mt-[40px]">
-                <form action="{{ route('auth.postlogin') }}" method="post"
-                    class="">
+                <form action="{{ route('auth.postlogin') }}" method="post">
                     @csrf
                     <div>
                         <label for="username"
@@ -46,7 +45,7 @@
                             class="border-1 w-full rounded-sm border-[var(--soft-border)] px-[16px]
                             py-[10px] text-[13px] md:text-[18px]">
                     </div>
-                    
+
                     <div class="mt-[20px]">
                         <label for="password"
                             class="block font-medium text-[14px] text-[var(--caption)] md:text-[20px]">
@@ -56,13 +55,13 @@
                             class="border-1 w-full rounded-sm border-[var(--soft-border)] px-[16px]
                             py-[10px] text-[13px] md:text-[18px]">
                     </div>
-                    
+
                     <div class="">
                         <button type="submit"
                         class="bg-[var(--primary-700)] w-full justify-center text-white md:text-[22px] px-[28px] py-[12px] rounded-[50px] mt-13">Masuk</button>
                         <p class="text-[12px] md:text-[18px] justify-center mt-3 flex">Belum punya akun? <a href="{{ route('auth.register') }}" class="ml-1">Daftar Sekarang</a></p>
                     </div>
-                    
+
                 </form>
             </div>
         </div>
@@ -96,7 +95,7 @@
                     <h1 class="font-semibold text-[36px] md:text-[48px]">Masuk</h1>
                     <p class="text-[var(--secondary-text)] -mt-2 text-[13px] md:text-[20px] font-[Montserrat]">Masuk untuk Melanjutkan</p>
                 </header>
-                
+
                 <div class="mt-[40px]">
                     <form action="{{ route('auth.postlogin') }}" method="post"
                             class="">
@@ -111,7 +110,7 @@
                                     class="border-[2px] w-full rounded-md border-[var(--soft-bg)] px-[16px]
                                     py-[13px] text-[18px]">
                             </div>
-                            
+
                             <div class="mt-[20px]">
                                 <label for="password"
                                     class="block font-medium text-[20px] text-gray-800">
@@ -121,7 +120,7 @@
                                     class="border-[2px] w-full rounded-md border-[var(--soft-bg)] px-[16px]
                                     py-[13px] text-[18px]">
                             </div>
-                        
+
                             <div class="mt-20">
                                 <button type="submit"
                                     class="bg-[var(--primary-500)] hover:bg-[var(--primary-400)] w-full justify-center text-white md:text-[22px] px-[28px] py-[12px] rounded-[50px] mt-13 transition-all hover:cursor-pointer">Masuk</button>
@@ -130,9 +129,8 @@
                         </form>
                     </div>
                 </div>
-            </div>      
+            </div>
         </div>
     </section>
-</div>
 </body>
 </html>
