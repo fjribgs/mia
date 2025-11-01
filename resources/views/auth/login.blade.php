@@ -32,10 +32,9 @@
                 <h1 class="font-semibold text-[36px] md:text-[48px]">Masuk</h1>
                 <p class="text-gray-500 -mt-2 text-[13px] md:text-[20px] font-[Montserrat]">Masuk untuk Melanjutkan</p>
             </header>
-            
+
             <div class="mt-[40px]">
-                <form action="{{ route('auth.postlogin') }}" method="post"
-                    class="">
+                <form action="{{ route('auth.postlogin') }}" method="post">
                     @csrf
                     <div>
 
@@ -104,7 +103,7 @@
                     <h1 class="font-semibold text-[36px] md:text-[48px]">Masuk</h1>
                     <p class="text-[var(--secondary-text)] -mt-2 text-[13px] md:text-[20px] font-[Montserrat]">Masuk untuk Melanjutkan</p>
                 </header>
-                
+
                 <div class="mt-[40px]">
                     <form action="{{ route('auth.postlogin') }}" method="post"
                         class="">
@@ -172,6 +171,5 @@
             </div>
         </div>
     </section>
-</div>
 </body>
 </html>

@@ -32,7 +32,7 @@
                 <h1 class="font-semibold text-[36px] md:text-[48px]">Daftar</h1>
                 <p class="text-gray-500 -mt-2 text-[13px] md:text-[20px] font-[Montserrat]">Daftarkan Akun Anda</p>
             </header>
-            
+
             <div class="mt-[40px]">
                 <form action="{{ route('auth.postregis') }}" method="post"
                     class="">
@@ -48,11 +48,11 @@
                     </div>
 
                     <div class="mt-[15px]">
-                        <label for="nama" value="{{ old('name') }}"
+                        <label for="name" value="{{ old('name') }}"
                             class="block font-medium text-[14px] text-[var(--secondary-text)] md:text-[20px]">
                             Nama
                         </label>
-                        <input type="text" name="nama" placeholder="Masukkan Nama"
+                        <input type="text" name="name" placeholder="Masukkan Nama"
                             class="border-[2px] w-full rounded-[6px] border-[var(--soft-border)] px-[16px]
                             py-[10px] text-[13px] md:text-[18px]">
                     </div>
@@ -66,7 +66,7 @@
                             class="border-[2px] w-full rounded-[6px] border-[var(--soft-border)] px-[16px]
                             py-[10px] text-[13px] md:text-[18px]">
                     </div>
-                    
+
                     <div class="mt-[15px]">
                         <label for="password"
                             class="block font-medium text-[14px] text-[var(--secondary-text)] md:text-[20px]">
@@ -78,21 +78,21 @@
                     </div>
 
                     <div class="mt-[15px]">
-                        <label for="confirm-password"
+                        <label for="password_confirmation"
                             class="block font-medium text-[14px] text-[var(--secondary-text)] md:text-[20px]">
                             Konfirmasi Password
                         </label>
-                        <input type="password" name="confirm-password" placeholder="Masukkan Password"
+                        <input type="password" name="password_confirmation" placeholder="Konfirmasi Password"
                             class="border-[2px] w-full rounded-[6px] border-[var(--soft-border)] px-[16px]
                             py-[10px] text-[13px] md:text-[18px]">
                     </div>
-                    
+
                     <div class="">
                         <button type="submit"
                         class="bg-[var(--primary-500)] w-full justify-center text-white md:text-[22px] px-[28px] py-[12px] rounded-[50px] mt-13">Daftar</button>
                         <p class="text-[12px]  md:text-[18px] justify-center mt-3 flex">Sudah punya akun? <a href="{{ route('auth.register') }}" class="pl-1">Masuk Disini</a></p>
                     </div>
-                    
+
                 </form>
             </div>
         </div>
@@ -155,7 +155,7 @@
                                     class="border-[2px] w-full rounded-md border-[var(--soft-bg)] px-[16px]
                                     py-[13px] text-[18px]">
                             </div>
-                            
+
                             <div class="mt-[15px]">
                                 <label for="password"
                                     class="block font-medium text-[20px] text-[var(--secondary-text)]">
@@ -167,15 +167,15 @@
                             </div>
 
                             <div class="mt-[15px]">
-                                <label for="confirm-password"
+                                <label for="password_confirmation"
                                     class="block font-medium text-[20px] text-[var(--secondary-text)]">
                                     Konfirmasi Password
                                 </label>
-                                <input type="password" name="confirm-password" placeholder="Masukkan Password"
+                                <input type="password" name="password_confirmation" placeholder="Konfirmasi Password"
                                     class="border-[2px] w-full rounded-md border-[var(--soft-bg)] px-[16px]
                                     py-[13px] text-[18px]">
                             </div>
-                        
+
                             <div class="">
                                 <button type="submit"
                                     class="bg-[var(--primary-500)] hover:bg-[var(--primary-400)] w-full justify-center text-white md:text-[22px] px-[28px] py-[12px] rounded-[50px] mt-13 transition-all hover:cursor-pointer">Daftar</button>
@@ -184,10 +184,9 @@
                         </form>
                     </div>
                 </div>
-            </div>      
+            </div>
         </div>
     </section>
-</div>
 </body>
 </html>
 
