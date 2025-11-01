@@ -10,7 +10,7 @@
     </style>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body>
+<body class="overflow-x-hidden m-0 p-0">
 
     {{-- Mobile & Tablet Device --}}
     <img src="{{ asset('images/auth-bg.svg') }}" alt="Background"
@@ -100,8 +100,8 @@
 
 
     {{-- Desktop View --}}
-    <section class="hidden justify-between xl:flex">
-        <div class="px-35 py-12 h-screen w-50% flex flex-col">
+    <section class="hidden xl:flex min-h-screen justify-between relative m-0 p-0 overflow-x-hidden">
+        <div class="px-35 py-12 w-50% flex flex-col justify-start">
             <div>
                 <a href="{{ route('dashboard.user') }}">
                     <img src="{{ asset('images/logo.svg') }}" alt="Logo" class="w-[167px]">
@@ -113,9 +113,9 @@
             </div>
         </div>
 
-        <div class="w-[50%] flex-col flex justify-center bg-white h-screen rounded-l-[20px]">
+        <div class="w-[50%] flex-col flex justify-center bg-[var(--bg)] rounded-l-[20px]">
 
-            <div class="items-center justify-center w-full ml-3 xl:px-40 px-26">
+            <div class="items-center h-screen overflow-auto flex-grow justify-center w-full 2xl:px-56 xl:px-40 px-26 py-20">
                 <header>
                     <h1 class="font-semibold text-[36px] md:text-[48px]">Daftar</h1>
                     <p class="text-[var(--secondary-text)] -mt-2 text-[13px] md:text-[20px] font-[Montserrat]">Daftarkan Akun Anda</p>

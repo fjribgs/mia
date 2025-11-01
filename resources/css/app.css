@@ -29,8 +29,14 @@
   --bg: #fafafa;
 }
 
-body {
+.wheel-fix {
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+html, body {
   font-family: 'Poppins';
+  overflow: hidden;
 }
 
 button, a {
