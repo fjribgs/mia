@@ -126,7 +126,7 @@
                     <p class="text-[var(--secondary-text)] -mt-2 text-[13px] md:text-[20px] font-[Montserrat]">Daftarkan Akun Anda</p>
                 </header>
 
-                <div class="mt-[40px]">
+                <div class="my-[40px]">
                     <form action="{{ route('auth.postlogin') }}" method="post"
                             class="">
                             @csrf
@@ -184,7 +184,7 @@
                             <div class="">
                                 <button type="submit"
                                     class="bg-[var(--primary-500)] hover:bg-[var(--primary-400)] w-full justify-center text-white md:text-[22px] px-[28px] py-[12px] rounded-[50px] mt-13 transition-all hover:cursor-pointer">Daftar</button>
-                                <p class="text-[15px] text-[var(--secondary-text)] justify-center mt-4 flex">Sudah punya akun? <a href="{{ route('auth.register') }}" class="ml-1"> Masuk Disini</a></p>
+                                <p class="text-[15px] text-[var(--secondary-text)] justify-center mt-4 flex">Sudah punya akun? <a href="{{ route('auth.login') }}" class="ml-1"> Masuk Disini</a></p>
                             </div>
                         </form>
                     </div>

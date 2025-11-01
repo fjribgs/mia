@@ -84,7 +84,7 @@
         </div>
 
         <div class="w-[50%] bg-white h-screen items-center flex flex-col justify-center rounded-l-[20px]">
-            <header class="px-[26px] pt-9 md:px-[38px]">
+            <header class="px-[26px] py-9 md:px-[38px]">
 
                 <h1 class="font-bold text-white md:hidden text-[32px] pt-8">Selamat <br> Datang <br> Kembali di <br> LokaHub</h1>
 
