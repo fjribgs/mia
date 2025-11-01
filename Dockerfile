@@ -30,6 +30,8 @@ WORKDIR /var/www/html
 
 COPY . /var/www/html/
 
+COPY --from=frontend /app/public/build /var/www/html/public/build
+
 RUN mkdir -p /var/www/html/public/storage && \
     cp -r /var/www/html/storage/app/public/. /var/www/html/public/storage/
 
