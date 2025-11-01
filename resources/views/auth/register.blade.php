@@ -101,7 +101,7 @@
 
     {{-- Desktop View --}}
     <section class="hidden justify-between xl:flex">
-        <div class="px-35 py-12 h-screen w-50% flex flex-col justify-start">
+        <div class="px-35 py-12 h-screen w-50% flex flex-col">
             <div>
                 <a href="{{ route('dashboard.user') }}">
                     <img src="{{ asset('images/logo.svg') }}" alt="Logo" class="w-[167px]">
@@ -114,13 +114,8 @@
         </div>
 
         <div class="w-[50%] flex-col flex justify-center bg-white h-screen rounded-l-[20px]">
-            <header class="px-[26px] pt-9 md:px-[38px]">
 
-                <h1 class="font-bold text-white md:hidden text-[32px] pt-8">Selamat <br> Datang <br> Kembali di <br> LokaHub</h1>
-
-            </header>
-
-            <div class="items-center justify-center bg-white w-full 2xl:px-56 xl:px-40 px-26 mb-10">
+            <div class="items-center justify-center w-full ml-3 xl:px-40 px-26">
                 <header>
                     <h1 class="font-semibold text-[36px] md:text-[48px]">Daftar</h1>
                     <p class="text-[var(--secondary-text)] -mt-2 text-[13px] md:text-[20px] font-[Montserrat]">Daftarkan Akun Anda</p>

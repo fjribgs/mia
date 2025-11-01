@@ -1,6 +1,6 @@
 <div>
     <nav id="navbar"
-        class="flex fixed py-9 px-[36px] md:px-35 justify-between items-center w-screen">
+        class="flex fixed top-6 md:top-5 left-7 right-7 py-4 px-5 md:left-25 md:right-25 md:py-[17px] md:px-[47px] justify-between items-center border border-[#E6F2F1]/30 bg-[#E6F2F1]/10 rounded-[16px]">
 
         <div>
             <a href="/">
@@ -9,7 +9,7 @@
             </a>
         </div> 
 
-        <div class="xl:flex gap-[35px] font-[Montserrat] hidden absolute left-1/2 -translate-x-1/2">
+        <div class="xl:flex gap-[35px] font-[Montserrat] hidden absolute left-1/2 -translate-x-1/2 ">
 
             <a href="#"
                 class="text-white hover:font-bold transition-all ease-in">Beranda</a>
