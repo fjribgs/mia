@@ -1,5 +1,9 @@
 <h2>Promo management</h2>
 
+@if (session('success'))
+    {{ session('success') }}
+@endif
+
 <table>
     <tr>
         <th>No</th>
@@ -16,7 +20,7 @@
         <tr>
             <td>{{ $loop->iteration }}</td>
             <td>{{ $promo->type }}</td>
-            <td>{{ $promo->name }}</td>
+            <td style="text-align: center">{{ $promo->name }}</td>
             @if ($promo->description != null)
                 <td>{{ $promo->description }}</td>
             @else
@@ -31,8 +35,8 @@
                 <td style="text-align: center">-</td>
             @endif
             <td>
-                <a href="">Edit</a>
-                <a href="">Delete</a>
+                <a href="{{ route('promo.edit', ['promo_id' => $promo->id]) }}">Edit</a>
+                <a href="{{ route('promo.destroy', ['promo_id' => $promo->id]) }}">Delete</a>
             </td>
         </tr>
     @endforeach

@@ -17,7 +17,7 @@ return new class extends Migration
             $table->foreignId('product_id')->nullable()->constrained('products')->nullOnDelete();
             $table->text('image');
             $table->string('title', 50);
-            $table->text('content');
+            $table->text('content'); // caption
             $table->date('post_date');
             $table->boolean('is_deleted')->default(false);
             $table->timestamps();

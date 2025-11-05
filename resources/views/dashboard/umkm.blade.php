@@ -10,7 +10,7 @@ LIST FEATURE UMKM:
 
  --}}
 
- <a href="{{ route('promo.index']) }}">promo</a>
+ <a href="{{ route('promo.index') }}">promo</a>
 
  <br><br>
  <a href="{{ route('auth.logout') }}">logout</a>

@@ -49,7 +49,11 @@ Route::controller(UmkmController::class)->group(function() {
     Route::get('/umkm/regis', 'regisUmkm')->middleware('guest')->name('umkm.regis');
 });
 
-Route::controller(PromoController::class)->group(function() {
-    Route::get('/promo', 'index')->middleware('auth')->name('promo.index');
-    Route::get('/promo/create', 'create')->middleware('auth')->name('promo.create');
+Route::controller(PromoController::class)->middleware('auth')->group(function() {
+    Route::get('/promo', 'index')->name('promo.index');
+    Route::get('/promo/create', 'create')->name('promo.create');
+    Route::post('/promo/store', 'store')->name('promo.store');
+    Route::get('/promo/edit/{promo_id}', 'edit')->name('promo.edit');
+    Route::post('/promo/update/{promo_id}', 'update')->name('promo.update');
+    Route::get('/promo/destroy/{promo_id}', 'destroy')->name('promo.destroy');
 });
