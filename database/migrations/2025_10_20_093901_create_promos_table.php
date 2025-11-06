@@ -20,7 +20,7 @@ return new class extends Migration
             $table->date('start_date');
             $table->date('end_date');
             $table->decimal('discount_percent')->nullable();
-            $table->enum('status', ['Akan Dimulai', 'Berjalan', 'Sudah Berakhir']);
+            $table->enum('status', ['Akan Dimulai', 'Berjalan', 'Sudah Berakhir'])->default('Akan Dimulai');
             $table->timestamps();
         });
     }
