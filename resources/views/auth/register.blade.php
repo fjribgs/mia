@@ -100,7 +100,8 @@
 
 
     {{-- Desktop View --}}
-    <section class="hidden xl:flex min-h-screen justify-between relative m-0 p-0 overflow-x-hidden">
+    <section id="desktop"
+        class="hidden xl:flex min-h-screen justify-between relative m-0 p-0 overflow-x-hidden">
         <div class="px-35 py-12 w-50% flex flex-col justify-start">
             <div>
                 <a href="{{ route('dashboard.user') }}">
@@ -113,15 +114,20 @@
             </div>
         </div>
 
-        <div class="w-[50%] flex-col flex justify-center bg-[var(--bg)] rounded-l-[20px]">
+        <div class="w-[50%] flex-col flex justify-center items-center bg-[var(--bg)] rounded-l-[20px]">
 
-            <div class="items-center h-screen overflow-auto flex-grow justify-center w-full 2xl:px-56 xl:px-40 px-26 py-20">
+            <div class="items-center h-screen overflow-auto flex-grow justify-center w-full 2xl:px-56 xl:px-30 px-26 py-20">
                 <header>
+
                     <h1 class="font-semibold text-[36px] md:text-[48px]">Daftar</h1>
-                    <p class="text-[var(--secondary-text)] -mt-2 text-[13px] md:text-[20px] font-[Montserrat]">Daftarkan Akun Anda</p>
+                    
+                    <p class="text-[var(--secondary-text)] -mt-2 text-[13px] md:text-[20px] font-[Montserrat]
+                    ">Daftarkan Akun Anda</p>
+
                 </header>
                 
                 <div class="mt-[40px]">
+                    
                     <form action="{{ route('auth.postregis') }}" method="post"
                             class="">
                             @csrf

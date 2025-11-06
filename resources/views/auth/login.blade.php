@@ -10,8 +10,23 @@
     </style>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body>
+<body id="login-page">
 
+    
+</body>
+</html>
+
+@extends('template.main')
+
+@section('title', 'Login |')
+
+@push('css')
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
+@endpush
+
+@section('content')
     {{-- Mobile & Tablet Device --}}
     <img src="{{ asset('images/auth-bg.svg') }}" alt="Background"
         class="-z-10 absolute w-full object-cover h-full">
@@ -23,8 +38,8 @@
                 <img src="{{ asset('images/logo.svg') }}" alt=""
                     class="w-[100px]">
             </a>
-            <h1 class="font-bold text-white md:hidden text-[32px] pt-8">Selamat <br> Datang <br> Kembali di <br> LokaHub!</h1>
-            <h1 class="font-bold text-white md:block text-[40px] hidden pt-8">Selamat Datang di LokaHub</h1>
+            <h1 class="font-bold text-white md:hidden text-[32px] pt-8">Selamat <br> Datang <br> Kembali di <br> Inspira!</h1>
+            <h1 class="font-bold text-white md:block text-[40px] hidden pt-8">Selamat Datang di Inspira</h1>
         </header>
 
         <div class="items-center justify-center bg-[var(--bg)] w-full px-[26px] rounded-t-2xl mt-10 pt-[33px] h-[700px] md:px-[38px]">
@@ -75,7 +90,9 @@
                     </div>
 
                     <p class="w-full mt-2.5 text-[10px] text-right text-[var(--primary-500)]">
+
                         <a href="#">Lupa Password?</a>
+                        
                     </p>
                     
                     <div class="">
@@ -83,7 +100,7 @@
                         <button type="submit"
                         class="bg-[var(--primary-500)] w-full justify-center text-white md:text-[22px] px-[28px] py-[12px] rounded-[50px] mt-13">Masuk</button>
 
-                        <p class="text-[12px] md:text-[18px] justify-center mt-3 flex">Belum punya akun? <a href="{{ route('auth.register') }}" class="ml-1">Daftar Sekarang</a></p>
+                        <p class="text-[12px] text-[var(--primary-500)] md:text-[18px] justify-center mt-3 flex">Belum punya akun? <a href="{{ route('auth.register') }}" class="ml-1">Daftar Sekarang</a></p>
 
                     </div>
                 </form>
@@ -167,9 +184,8 @@
             </div>
 
             <div class="flex-grow flex items-center text-right">
-                <h1 class="2xl:text-[68px] text-[60px] font-bold text-white">Selamat Datang<br> Kembali di <br>LokaHub!</h1>
+                <h1 class="2xl:text-[68px] text-[60px] font-bold text-white">Selamat Datang<br> Kembali di <br>Inspira!</h1>
             </div>
         </div>
     </section>
-</body>
-</html>
+@endsection
