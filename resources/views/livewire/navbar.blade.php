@@ -41,6 +41,7 @@
 
                 <a href="{{ route('auth.login') }}"
                     class="border-white border-1 rounded-3xl px-[21px] py-[10px] text-white font-semibold hover:scale-105 transition-all duration-300">Login</a>
+                    
                 <a href="{{ route('auth.register') }}"
                     class="border-white border-1 rounded-3xl px-[21px] py-[10px] text-black font-medium bg-white hover:scale-105 transition-all duration-300">Register</a>
             
