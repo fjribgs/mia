@@ -104,6 +104,17 @@ LIST FEATURE USER:
                     <button class="bg-[var(--primary-500)] rounded-4xl text-white w-full text-[12px] mt-3 py-2 items-center justify-center">Lihat Detail</button>
 
                 </div>
+                <button class="font-semibold text-[12px] xl:text-[19px] md:text-[15px]
+                    text-white
+                    py-[10px] xl:py-[15px] md:py-[14px]
+                    px-[11px] xl:px-[33px] md:px-[22px]
+                    underline">
+                    @if (Auth::check())
+                        <a href="{{ route('umkm.logout_already_login') }}">Daftarkan Bisnismu</a>
+                    @else
+                        <a href="{{ route('umkm.regis') }}">Daftarkan Bisnismu</a>
+                    @endif
+                </button>
 
             </div>
             
