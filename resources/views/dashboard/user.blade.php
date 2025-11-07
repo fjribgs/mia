@@ -295,46 +295,154 @@ LIST FEATURE USER:
 
         </section>
 
-        <section id="postingan-umkm"
-            class="h-screen bg-[var(--bg)] flex flex-col justify-center items-center">
+        <section id="post-section"
+            class="h-[120vh] bg-[var(--bg)] flex flex-col xl:flex-row justify-center xl:justify-between items-center w-full xl:px-35">
 
-            <div id="postingan-card"
-                class="absolute bg-white border-1 border-[var(--soft-bg)] rounded-md w-70 py-5">
+            <div class="group relative">
 
-                <div class="flex items-center mb-4 px-6">
+                <div id="postingan-card"
+                    class="absolute top-0 left-0 group-hover:-top-10 group-hover:left-30 bg-white border-1 border-[var(--soft-bg)] rounded-md w-70 xl:w-90 py-5 shadow-md hidden 2xl:block duration-300 transition-all">
 
-                    <img src="{{ asset('images/default_profile_picture.svg') }}" alt="Default Picture"
-                        class="w-7 mr-3">
+                    <div class="flex items-center mb-4 px-6">
 
-                    <div class="text-[10px] flex flex-col justify-start text-[var(--primary-500)]">
+                        <img src="{{ asset('images/default_profile_picture.svg') }}" alt="Default Picture"
+                            class="w-7 xl:w-10 mr-3">
 
-                        <p class="text-start font-medium">Warung Lorem Ipsum</p>
-                        <p class="text-start font-normal">2 jam yang lalu</p>
+                        <div class="text-[10px] xl:text-[11px] flex flex-col justify-start text-[var(--primary-500)]">
+
+                            <p class="text-start font-medium">Warung Lorem Ipsum</p>
+                            <p class="text-start font-normal">2 jam yang lalu</p>
+
+                        </div>
+
+                        <img src="{{ asset('images/more-button-post.svg')}}" alt="More Button"
+                            class="ml-16 xl:ml-25 w-4">
+                    
+                    </div>
+
+                    <p id="deskripsi"
+                        class="text-[10px] xl:text-[12px] font-[Montserrat] text-[var(--secondary-text)] px-6">
+                        Deskripsi atau caption lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                    </p>
+
+                    <img src="{{ asset('images/hero-section.svg') }}" alt="Picture Post"
+                        class="my-4 w-full">
+
+                    <div class="flex items-center gap-1.5">
+
+                        <img src="{{ asset('images/like.svg') }}" alt="Like"
+                            class="w-10 xl:w-11 pl-6">
+                        
+                        <p class="text-[10px] xl:text-[13px] text-[var(--secondary-text)]">30</p>
 
                     </div>
 
-                    <img src="{{ asset('images/more-button-post.svg')}}" alt="More Button"
-                        class="ml-16 w-4">
-                
+                    <p class="px-6 text-[9px] xl:text-[12px] text-[var(--secondary-text)] mt-2.5 font-[Montserrat]">
+                        Disukai oleh Lorem Ipsum dan 29 Lainnya
+                    </p>
+
                 </div>
 
-                <p id="deskripsi"
-                    class="text-[10px] font-[Montserrat] text-[var(--secondary-text)] px-6">Deskripsi atau caption lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
+                <div id="postingan-card"
+                    class="absolute top-0 left-0 group-hover:top-10 group-hover:left-18 bg-white rounded-md w-70 xl:w-90 py-5 shadow-md hidden 2xl:block transition-all duration-300">
 
-                <img src="{{ asset('images/hero-section.svg') }}" alt="Picture Post"
-                    class="my-4 w-full">
+                    <div class="flex items-center mb-4 px-6">
 
-                <div class="flex items-center gap-1.5">
+                        <img src="{{ asset('images/default_profile_picture.svg') }}" alt="Default Picture"
+                            class="w-7 xl:w-10 mr-3">
 
-                    <img src="{{ asset('images/like.svg') }}" alt="Like"
-                        class="w-10 pl-6">
+                        <div class="text-[10px] xl:text-[11px] flex flex-col justify-start text-[var(--primary-500)]">
+
+                            <p class="text-start font-medium">Warung Lorem Ipsum</p>
+                            <p class="text-start font-normal">2 jam yang lalu</p>
+
+                        </div>
+
+                        <img src="{{ asset('images/more-button-post.svg')}}" alt="More Button"
+                            class="ml-16 xl:ml-25 w-4">
                     
-                    <p class="text-[10px] text-[var(--secondary-text)]">30</p>
+                    </div>
+
+                    <p id="deskripsi"
+                        class="text-[10px] xl:text-[12px] font-[Montserrat] text-[var(--secondary-text)] px-6">
+                        Deskripsi atau caption lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                    </p>
+
+                    <img src="{{ asset('images/hero-section.svg') }}" alt="Picture Post"
+                        class="my-4 w-full">
+
+                    <div class="flex items-center gap-1.5">
+
+                        <img src="{{ asset('images/like.svg') }}" alt="Like"
+                            class="w-10 xl:w-11 pl-6">
+                        
+                        <p class="text-[10px] xl:text-[13px] text-[var(--secondary-text)]">30</p>
+
+                    </div>
+
+                    <p class="px-6 text-[9px] xl:text-[12px] text-[var(--secondary-text)] mt-2.5 font-[Montserrat]">
+                        Disukai oleh Lorem Ipsum dan 29 Lainnya
+                    </p>
 
                 </div>
 
-                <p class="px-6 text-[9px] text-[var(--secondary-text)] mt-2.5 font-[Montserrat]">Disukai oleh Lorem Ipsum dan 29 Lainnya</p>
+                <div id="postingan-card"
+                    class=" bg-white border-1 border-[var(--soft-bg)] rounded-md w-70 xl:w-90 py-5 shadow-md">
 
+                    <div class="flex items-center mb-4 px-6">
+
+                        <img src="{{ asset('images/default_profile_picture.svg') }}" alt="Default Picture"
+                            class="w-7 xl:w-10 mr-3">
+
+                        <div class="text-[10px] xl:text-[11px] flex flex-col justify-start text-[var(--primary-500)]">
+
+                            <p class="text-start font-medium">Warung Lorem Ipsum</p>
+                            <p class="text-start font-normal">2 jam yang lalu</p>
+
+                        </div>
+
+                        <img src="{{ asset('images/more-button-post.svg')}}" alt="More Button"
+                            class="ml-16 xl:ml-25 w-4">
+                    
+                    </div>
+
+                    <p id="deskripsi"
+                        class="text-[10px] xl:text-[12px] font-[Montserrat] text-[var(--secondary-text)] px-6">
+                        Deskripsi atau caption lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                    </p>
+
+                    <img src="{{ asset('images/hero-section.svg') }}" alt="Picture Post"
+                        class="my-4 w-full">
+
+                    <div class="flex items-center gap-1.5">
+
+                        <img src="{{ asset('images/like.svg') }}" alt="Like"
+                            class="w-10 xl:w-11 pl-6">
+                        
+                        <p class="text-[10px] xl:text-[13px] text-[var(--secondary-text)]">30</p>
+
+                    </div>
+
+                    <p class="px-6 text-[9px] xl:text-[12px] text-[var(--secondary-text)] mt-2.5 font-[Montserrat]">
+                        Disukai oleh Lorem Ipsum dan 29 Lainnya
+                    </p>
+
+                </div>
+            </div>
+            
+
+            <div id="post-umkm-desc"
+                class="mt-9 flex flex-col items-center xl:items-end justify-center xl:justify-end px-8 xl:gap-3.5">
+
+                <h3 class="font-semibold text-[var(--primary-500)] text-[25px] sm:text-[38px] xl:text-[42px] 2xl:text-[50px]">Cerita & Aktivitas UMKM</h3>
+
+                <p class="text-[9px] sm:text-[13px] xl:text-[15px] 2xl:text-[17px] text-center xl:text-end font-[Montserrat]">Ikuti perkembangan terbaru dari UMKM inklusif di daerah Bandung. <br>Dukung dan berinteraksi langsung dengan komunitas</p>
+
+                <button class="font-semibold text-[var(--bg)] text-[12px] sm:text-[14px] md:text-[15px]
+                        bg-[var(--primary-600)] rounded-4xl
+                        py-[10px]  md:py-[14px] sm:py-[12px]
+                        px-[14px]  md:px-[22px] sm:px-[19px]
+                        mt-7">Lihat Lainnya</button>
             </div>
 
         </section>
