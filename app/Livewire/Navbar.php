@@ -7,9 +7,14 @@ use Livewire\Component;
 class Navbar extends Component
 {
     public $isOpen = false;
+    public $isSidebarOpen = false;
 
     public function toggle() {
         $this -> isOpen = !$this -> isOpen;
+    }
+
+    public function toggleSidebar() {
+        $this -> isSidebarOpen = !$this -> isSidebarOpen;
     }
 
     public function render()

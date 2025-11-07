@@ -10,7 +10,7 @@
     </style>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body>
+<body class="overflow-x-hidden m-0 p-0">
 
     {{-- Mobile & Tablet Device --}}
     <img src="{{ asset('images/auth-bg.svg') }}" alt="Background"
@@ -90,7 +90,7 @@
                     <div class="">
                         <button type="submit"
                         class="bg-[var(--primary-500)] w-full justify-center text-white md:text-[22px] px-[28px] py-[12px] rounded-[50px] mt-13">Daftar</button>
-                        <p class="text-[12px]  md:text-[18px] justify-center mt-3 flex">Sudah punya akun? <a href="{{ route('auth.login') }}" class="pl-1">Masuk Disini</a></p>
+                        <p class="text-[12px]  md:text-[18px] justify-center mt-3 flex">Sudah punya akun? <a href="{{ route('auth.register') }}" class="pl-1">Masuk Disini</a></p>
                     </div>
 
                 </form>
@@ -100,8 +100,9 @@
 
 
     {{-- Desktop View --}}
-    <section class="hidden justify-between xl:flex">
-        <div class="px-35 py-12 h-screen w-50% flex flex-col justify-start">
+    <section id="desktop"
+        class="hidden xl:flex min-h-screen justify-between relative m-0 p-0 overflow-x-hidden">
+        <div class="px-35 py-12 w-50% flex flex-col justify-start">
             <div>
                 <a href="{{ route('dashboard.user') }}">
                     <img src="{{ asset('images/logo.svg') }}" alt="Logo" class="w-[167px]">
@@ -113,21 +114,21 @@
             </div>
         </div>
 
-        <div class="w-[50%] flex-col flex justify-center bg-white h-screen rounded-l-[20px]">
-            <header class="px-[26px] pt-9 md:px-[38px]">
+        <div class="w-[50%] flex-col flex justify-center items-center bg-[var(--bg)] rounded-l-[20px]">
 
-                <h1 class="font-bold text-white md:hidden text-[32px] pt-8">Selamat <br> Datang <br> Kembali di <br> LokaHub</h1>
-
-            </header>
-
-            <div class="items-center justify-center bg-white w-full 2xl:px-56 xl:px-40 px-26 mb-10">
+            <div class="items-center h-screen overflow-auto flex-grow justify-center w-full 2xl:px-56 xl:px-30 px-26 py-20">
                 <header>
-                    <h1 class="font-semibold text-[36px] md:text-[48px]">Daftar</h1>
-                    <p class="text-[var(--secondary-text)] -mt-2 text-[13px] md:text-[20px] font-[Montserrat]">Daftarkan Akun Anda</p>
-                </header>
 
-                <div class="my-[40px]">
-                    <form action="{{ route('auth.postlogin') }}" method="post"
+                    <h1 class="font-semibold text-[36px] md:text-[48px]">Daftar</h1>
+                    
+                    <p class="text-[var(--secondary-text)] -mt-2 text-[13px] md:text-[20px] font-[Montserrat]
+                    ">Daftarkan Akun Anda</p>
+
+                </header>
+                
+                <div class="mt-[40px]">
+                    
+                    <form action="{{ route('auth.postregis') }}" method="post"
                             class="">
                             @csrf
                         <div>
