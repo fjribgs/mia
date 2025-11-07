@@ -63,7 +63,13 @@ LIST FEATURE USER:
                     text-white
                     py-[10px] xl:py-[15px] md:py-[14px]
                     px-[11px] xl:px-[33px] md:px-[22px]
-                    underline">Daftarkan Bisnismu</button>
+                    underline">
+                    @if (Auth::check())
+                        <a href="{{ route('umkm.logout_already_login') }}">Daftarkan Bisnismu</a>
+                    @else
+                        <a href="{{ route('umkm.regis') }}">Daftarkan Bisnismu</a>
+                    @endif
+                </button>
 
             </div>
 
