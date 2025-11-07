@@ -45,7 +45,7 @@ LIST FEATURE USER:
 
     <main class="relative">
 
-        <section id="hero-section" 
+        <section id="hero-section"
             class="flex items-center min-h-screen justify-between w-full px-[36px] md:px-35 top-2 relative">
 
             <div class="text-center md:text-left mx-auto md:mx-0 pt-[20px] md:pt-[110px] max-w-170">
@@ -81,7 +81,7 @@ LIST FEATURE USER:
             <p class="text-[var(--secondary-text)] text-[12px] font-light pt-2.5">Temukan berbagai UMKM yang dikelola oleh penyandang disabilitas di sekitar Bandung!</p>
 
             <div id="umkm-card"
-                class="flex flex-col justify-between bg-[#FFFFFF] h-[300px] w-[200px] shadow-md px-5 py-7 mt-10 rounded-[18px]">  
+                class="flex flex-col justify-between bg-[#FFFFFF] h-[300px] w-[200px] shadow-md px-5 py-7 mt-10 rounded-[18px]">
 
                 <img src="#" alt="">
 
@@ -117,7 +117,7 @@ LIST FEATURE USER:
                 </button>
 
             </div>
-            
+
             <button class="flex gap-1 mt-13 border-1 border-[var(--primary-500)] rounded-4xl py-2 px-4">
                 <div class="text-[13px] text-[var(--primary-500)]">Lihat UMKM Lainnya</div>
                 <img src="{{ asset('images/arrow-right.svg') }}" alt="arrow-right"
@@ -126,14 +126,14 @@ LIST FEATURE USER:
 
         </section>
     </main>
-    
+
     <footer>
 
         <x-footer></x-footer>
 
     </footer>
 
-    <a href="https://maps.app.goo.gl/SqGff3Yg4EUSeL6a7?g_st=aw" 
+    <a href="https://maps.app.goo.gl/SqGff3Yg4EUSeL6a7?g_st=aw"
         class="hidden">link gmaps</a>
 
 </body>
@@ -163,7 +163,7 @@ LIST FEATURE USER:
 
     <main class="relative">
 
-        <section id="hero-section" 
+        <section id="hero-section"
             class="flex items-center min-h-screen justify-between w-full px-[36px] md:px-35 top-2 relative">
 
             <div class="text-center md:text-left mx-auto md:mx-0 pt-[20px] md:pt-[110px] xl:max-w-170 max-w-124">
@@ -184,7 +184,13 @@ LIST FEATURE USER:
                         text-white
                         py-[10px] xl:py-[15px] md:py-[14px]
                         px-[11px] xl:px-[33px] md:px-[22px]
-                        underline">Daftarkan Bisnismu</button>
+                        underline">
+                        @if (Auth::check())
+                            <a href="{{ route('umkm.logout_already_login') }}">Daftarkan Bisnismu</a>
+                        @else
+                            <a href="{{ route('umkm.regis') }}">Daftarkan Bisnismu</a>
+                        @endif
+                    </button>
 
                 </div>
 
@@ -199,7 +205,7 @@ LIST FEATURE USER:
             <p class="text-[var(--secondary-text)] text-[12px] font-light pt-2.5">Temukan berbagai UMKM yang dikelola oleh penyandang disabilitas di sekitar Bandung!</p>
 
             <div id="umkm-card"
-                class="flex flex-col justify-between bg-[#FFFFFF] h-[400px] w-[250px] shadow-md px-5 py-7 mt-10 rounded-[18px] top-[100px]">  
+                class="flex flex-col justify-between bg-[#FFFFFF] h-[400px] w-[250px] shadow-md px-5 py-7 mt-10 rounded-[18px] top-[100px]">
 
                 <img src="#" alt="">
 
@@ -212,14 +218,14 @@ LIST FEATURE USER:
 
                     <div id="kolaborasi"
                         class="flex gap-2 bg-[var(--primary-50)] py-2 px-3 items-center rounded-md min-w-full">
-                        
+
                         <img src="{{ asset('images/kolaborasi.svg') }}" alt=""
                             class="w-8">
-                            
+
                         <p class="text-[8px] text-start text-[var(--primary-500)] font-[Montserrat]">Berkolaborasi dengan <br> <b>Lorem Ipsum</b></p>
-                    
+
                     </div>
-                    
+
                     <div id="lokasi"
                         class="flex gap-1">
 
@@ -235,8 +241,8 @@ LIST FEATURE USER:
 
             </div>
 
-            
-            
+
+
             <button class="flex gap-1 mt-13 border-1 border-[var(--primary-500)] rounded-4xl py-2 px-4">
                 <div class="text-[13px] text-[var(--primary-500)]">Lihat UMKM Lainnya</div>
                 <img src="{{ asset('images/arrow-right.svg') }}" alt="arrow-right"
@@ -245,13 +251,13 @@ LIST FEATURE USER:
 
         </section>
     </main>
-    
+
     <footer>
 
         <x-footer></x-footer>
 
     </footer>
 
-    <a href="https://maps.app.goo.gl/SqGff3Yg4EUSeL6a7?g_st=aw" 
+    <a href="https://maps.app.goo.gl/SqGff3Yg4EUSeL6a7?g_st=aw"
         class="hidden">link gmaps</a>
 @endsection
