@@ -1,6 +1,6 @@
 <div>
     <nav id="navbar"
-        class="flex fixed top-6 md:top-5 left-7 right-7 py-4 px-5 md:left-25 md:right-25 md:py-[17px] md:px-[40px] justify-between items-center border border-[#E6F2F1]/30 bg-[#E6F2F1]/10 rounded-[16px] z-70 transition-all duration-500">
+        class="flex fixed top-6 md:top-5 left-7 right-7 py-4 px-5 md:left-25 md:right-25 md:py-[15px] md:px-[40px] justify-between items-center border border-[#E6F2F1]/30 bg-[#E6F2F1]/10 rounded-[16px] z-70 transition-all duration-500">
 
         <div>
             <a href="/">
