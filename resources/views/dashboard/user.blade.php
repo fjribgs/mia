@@ -182,7 +182,7 @@ LIST FEATURE USER:
         </section>
 
         <section id="umkm-section" 
-            class="flex flex-col justify-center items-center px-[36px] sm:px-30 md:px-35 py-10 h-[120vh] text-center bg-[var(--bg)] relative">
+            class="flex flex-col justify-center items-center px-[36px] sm:px-30 md:px-35 py-10 h-[120vh] text-center bg-[var(--bg)] relative bg-gradient-to-b from-[#E6F2F1] to-[#FAFAFA]">
 
             <div class="absolute bg-[var(--bg)] h-130 w-13 sm:w-20 md:w-27 blur-lg -left-[30px]"></div>
             <div class="absolute bg-[var(--bg)] h-130 w-13 sm:w-20 md:w-27 blur-lg -right-[30px]"></div>
@@ -296,7 +296,7 @@ LIST FEATURE USER:
         </section>
 
         <section id="post-section"
-            class="h-[100vh] bg-[var(--bg)] flex flex-col xl:flex-row justify-center xl:justify-between items-center w-full xl:px-45">
+            class="h-[100vh] bg-[var(--bg)] flex flex-col xl:flex-row justify-center xl:justify-between items-center w-full xl:px-45 bg-gradient-to-b from-[#FAFAFA] to-[#E6F2F1]">
 
             <div class="group relative">
 
@@ -454,7 +454,7 @@ LIST FEATURE USER:
         </section>
 
         <section id="maps-section"
-            class="flex flex-col h-[120vh] bg-[var(--bg)] lg:px-35 px-9 items-center justify-center">
+            class="flex flex-col h-[120vh] bg-[var(--bg)] lg:px-35 px-9 items-center justify-center bg-gradient-to-b from-[#E6F2F1] to-[#FAFAFA]">
 
             <div class="flex flex-col w-full gap-1">
 
@@ -528,7 +528,7 @@ LIST FEATURE USER:
         </section>
 
         <section id="about-us-section"
-            class="h-[120vh] flex flex-col relative items-center justify-center px-6 lg:px-35 text-[var(--primary-500)] w-full">
+            class="h-[120vh] flex flex-col relative items-center justify-center px-6 lg:px-35 text-[var(--primary-500)] w-full bg-gradient-to-b from-[#FAFAFA] to-[#E6F2F1]">
 
             <div class="flex gap-20 items-center justify-center">
 
@@ -556,9 +556,9 @@ LIST FEATURE USER:
                                 <path d="M18.3965 0.100586C20.2126 0.0871452 21.9601 0.778521 23.2549 2.02344C24.5498 3.26861 25.2858 4.96566 25.2998 6.74121C25.3137 8.51688 24.6044 10.2248 23.3291 11.4893V11.4902L13.708 20.8857C13.436 21.1513 13.0673 21.2997 12.6836 21.2998C12.2998 21.2998 11.9304 21.1514 11.6582 20.8857L2.03516 11.4893L2.0332 11.4883V11.4873C0.780807 10.2259 0.0864749 8.53323 0.100586 6.77539C0.114798 5.01746 0.836693 3.33579 2.10938 2.09375L2.2793 1.92773V1.93848C2.87885 1.39176 3.57323 0.952459 4.33203 0.645508C5.16321 0.309305 6.05456 0.136719 6.9541 0.136719C7.85346 0.136772 8.74418 0.30939 9.5752 0.645508C10.4063 0.981716 11.1615 1.47526 11.7979 2.09668H11.7988C12.029 2.32229 12.3236 2.60024 12.6826 2.93066C13.0402 2.6002 13.3353 2.32226 13.5674 2.0957C14.8427 0.831347 16.5801 0.11413 18.3965 0.100586ZM18.4004 1.89062C17.0653 1.90081 15.7895 2.42911 14.8535 3.35742H14.8525C14.7224 3.48447 14.5753 3.6265 14.4102 3.78223L13.8623 4.29199L12.751 5.31348L12.6836 5.37598L12.6152 5.31348L11.5039 4.29199C11.103 3.9225 10.7728 3.61054 10.5127 3.35742H10.5117C9.56848 2.43665 8.28889 1.91905 6.9541 1.91895C5.61913 1.91895 4.33885 2.43651 3.39551 3.35742C1.45299 5.25542 1.4302 8.32301 3.32227 10.2295L12.6826 19.3691L22.0264 10.2451L22.1963 10.0674C23.0245 9.16016 23.4805 7.98283 23.4707 6.7627C23.4602 5.46134 22.9213 4.21652 21.9707 3.30273C21.5 2.85022 20.9417 2.49229 20.3291 2.25C19.7167 2.00784 19.0612 1.8856 18.4004 1.89062Z" fill="#007F6E" stroke="#007F6E" stroke-width="0.2"/>
                                 </svg>
 
-                                <h3 class="font-medium text-[15px] lg:text-[17px]">Inklusif</h3>
+                                <h3 class="font-medium text-[15px] lg:text-[17px] xl:px-1">Inklusif</h3>
 
-                                <p class="font-[Montserrat] text-[11px] lg:text-[14px]">Mendukung ekosistem bisnis yang setara untuk semua</p>
+                                <p class="font-[Montserrat] text-[11px] lg:text-[14px] xl:px-1">Mendukung ekosistem bisnis yang setara untuk semua</p>
                             </div>
 
                             <div id="kolaboratif"
@@ -572,9 +572,9 @@ LIST FEATURE USER:
                                 </svg>
 
 
-                                <h3 class="font-medium text-[15px] lg:text-[17px]">Kolaboratif</h3>
+                                <h3 class="font-medium text-[15px] lg:text-[17px] xl:px-1">Kolaboratif</h3>
 
-                                <p class="font-[Montserrat] text-[11px] lg:text-[14px]">Membangun jaringan dan kolaborasi yang kuat</p>
+                                <p class="font-[Montserrat] text-[11px] lg:text-[14px] xl:px-1">Membangun jaringan dan kolaborasi yang kuat</p>
                             </div>
 
                         </div>
@@ -591,9 +591,9 @@ LIST FEATURE USER:
                                 </svg>
 
 
-                                <h3 class="font-medium text-[15px] lg:text-[17px]">Berdampak</h3>
+                                <h3 class="font-medium text-[15px] lg:text-[17px] xl:px-1">Berdampak</h3>
 
-                                <p class="font-[Montserrat] text-[11px] lg:text-[14px]">Menciptakan perubahan yang nyata bagi UMKM</p>
+                                <p class="font-[Montserrat] text-[11px] lg:text-[14px] xl:px-1">Menciptakan perubahan yang nyata bagi UMKM</p>
                             </div>
 
                             <div id="berkelanjutan"
@@ -604,9 +604,9 @@ LIST FEATURE USER:
                                 </svg>
 
 
-                                <h3 class="font-medium text-[15px] lg:text-[17px]">Berkelanjutan</h3>
+                                <h3 class="font-medium text-[15px] lg:text-[17px] xl:px-1">Berkelanjutan</h3>
 
-                                <p class="font-[Montserrat] text-[11px] lg:text-[14px]">Pertumbuhan bisnis yang berkelanjutan</p>
+                                <p class="font-[Montserrat] text-[11px] lg:text-[14px] xl:px-1">Pertumbuhan bisnis yang berkelanjutan</p>
                             </div>
 
                         </div>

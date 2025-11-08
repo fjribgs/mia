@@ -38,7 +38,7 @@
                 <img src="{{ asset('images/logo.svg') }}" alt=""
                     class="w-[100px]">
             </a>
-            <h1 class="font-bold text-white md:hidden text-[32px] pt-8">Selamat <br> Datang <br> Kembali di <br> Inspira!</h1>
+            <h1 class="font-bold text-white md:hidden text-[32px] pt-8">Selamat Datang <br> Kembali di <br> Inspira!</h1>
             <h1 class="font-bold text-white md:block text-[40px] hidden pt-8">Selamat Datang di Inspira</h1>
         </header>
 
@@ -184,7 +184,7 @@
             </div>
 
             <div class="flex-grow flex items-center text-right">
-                <h1 class="2xl:text-[68px] text-[60px] font-bold text-white">Selamat Datang<br> Kembali di <br>Inspira!</h1>
+                <h1 class="2xl:text-[68px] text-[60px] font-bold text-white w-100">Selamat Datang Kembali di Inspira!</h1>
             </div>
         </div>
     </section>
