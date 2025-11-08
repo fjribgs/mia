@@ -164,7 +164,7 @@ LIST FEATURE USER:
                 <div class="flex gap-[5px] justify-center md:justify-start my-8 md:my-[52px]">
 
                     <button class="font-semibold text-[12px] sm:text-[14px] xl:text-[19px] md:text-[15px]
-                        bg-white rounded-4xl
+                        bg-white rounded-4xl text-[var(--primary-500)]
                         py-[10px] xl:py-[15px] md:py-[14px] sm:py-[12px]
                         px-[14px] xl:px-[33px] md:px-[22px] sm:px-[19px]
                         ">Jelajahi Sekarang</button>
@@ -182,17 +182,17 @@ LIST FEATURE USER:
         </section>
 
         <section id="umkm-section" 
-            class="flex flex-col justify-center items-center px-[36px] sm:px-30 md:px-35 py-10 h-screen xl:h-[120vh] text-center bg-[var(--bg)] relative">
+            class="flex flex-col justify-center items-center px-[36px] sm:px-30 md:px-35 py-10 h-[120vh] text-center bg-[var(--bg)] relative">
 
             <div class="absolute bg-[var(--bg)] h-130 w-13 sm:w-20 md:w-27 blur-lg -left-[30px]"></div>
             <div class="absolute bg-[var(--bg)] h-130 w-13 sm:w-20 md:w-27 blur-lg -right-[30px]"></div>
 
-            <h2 class="text-[var(--primary-500)] text-[23px] sm:text-[29px] lg:text-[40px] xl:text-[50px] font-medium">Wujudkan UMKM <b>Berdaya</b></h2>
+            <h2 class="text-[var(--primary-500)] text-[23px] sm:text-[29px] lg:text-[40px] xl:text-[42px] font-semibold">Wujudkan UMKM Berdaya</h2>
 
-            <p class="text-[var(--secondary-text)] text-[12px] sm:text-[15px] lg:text-[16px] xl:text-[20px] font-light pt-2.5">Temukan berbagai UMKM yang dikelola oleh penyandang disabilitas di sekitar Bandung!</p>
+            <p class="text-[var(--secondary-text)] text-[12px] sm:text-[15px] lg:text-[16px] xl:text-[17px] font-light pt-2.5">Temukan berbagai UMKM yang dikelola oleh penyandang disabilitas di sekitar Bandung!</p>
 
             <div id="umkm-cards"
-                class="flex items-center gap-2 sm:mt-10">
+                class="flex items-center xl:gap-5 gap-3 sm:mt-10">
 
                 <div id="umkm-card-left"
                     class="flex flex-col justify-between bg-[#FFFFFF] h-[340px] xl:h-[450px] w-[250px] xl:w-[300px] shadow-md px-5 py-7 mt-10 rounded-[18px] top-[100px] xl:hover:size-110 transition-all duration-300">  
@@ -283,7 +283,7 @@ LIST FEATURE USER:
                 </div>
             </div>
 
-            <button class="flex gap-2 mt-13 border-1 border-[var(--primary-600)] rounded-4xl py-2 px-4 hover:bg-[var(--primary-600)] transition-all duration-300 text-[var(--primary-600)] hover:text-[var(--bg)] items-center">
+            <button class="flex gap-2 mt-13 border-1 border-[var(--primary-600)] rounded-4xl py-2 px-4 hover:bg-[var(--primary-600)] transition-all duration-300 text-[var(--primary-600)] hover:text-[var(--bg)] items-center cursor-pointer">
                 <div class="text-[13px] sm:text-[16px] xl:text-[18px]">Lihat UMKM Lainnya</div>
                 <div id="back" wire:click="toggleSidebar"
                     class="cursor-pointer">
@@ -296,12 +296,12 @@ LIST FEATURE USER:
         </section>
 
         <section id="post-section"
-            class="h-[120vh] bg-[var(--bg)] flex flex-col xl:flex-row justify-center xl:justify-between items-center w-full xl:px-35">
+            class="h-[100vh] bg-[var(--bg)] flex flex-col xl:flex-row justify-center xl:justify-between items-center w-full xl:px-45">
 
             <div class="group relative">
 
                 <div id="postingan-card"
-                    class="absolute top-0 left-0 group-hover:-top-10 group-hover:left-30 bg-white border-1 border-[var(--soft-bg)] rounded-md w-70 xl:w-90 py-5 shadow-md hidden 2xl:block duration-300 transition-all">
+                    class="relative xl:top-3 xl:left-3 bg-white rounded-md w-70 xl:w-90 py-5 shadow-md z-8">
 
                     <div class="flex items-center mb-4 px-6">
 
@@ -344,7 +344,7 @@ LIST FEATURE USER:
                 </div>
 
                 <div id="postingan-card"
-                    class="absolute top-0 left-0 group-hover:top-10 group-hover:left-18 bg-white rounded-md w-70 xl:w-90 py-5 shadow-md hidden 2xl:block transition-all duration-300">
+                    class="absolute top-6 left-6 group-hover:top-15 group-hover:left-15 bg-white rounded-md w-70 xl:w-90 py-5 shadow-md hidden xl:block duration-300 transition-all">
 
                     <div class="flex items-center mb-4 px-6">
 
@@ -387,7 +387,7 @@ LIST FEATURE USER:
                 </div>
 
                 <div id="postingan-card"
-                    class=" bg-white border-1 border-[var(--soft-bg)] rounded-md w-70 xl:w-90 py-5 shadow-md">
+                    class="absolute top-0 left-0 group-hover:-top-9 group-hover:-left-9 bg-white rounded-md w-70 xl:w-90 py-5 shadow-md hidden xl:block transition-all duration-300">
 
                     <div class="flex items-center mb-4 px-6">
 
@@ -429,20 +429,90 @@ LIST FEATURE USER:
 
                 </div>
             </div>
-            
-
+        
             <div id="post-umkm-desc"
-                class="mt-9 flex flex-col items-center xl:items-end justify-center xl:justify-end px-8 xl:gap-3.5">
+                class="mt-9 xl:mt-20 flex flex-col items-center xl:items-end justify-center xl:justify-end px-8 xl:gap-3.5">
 
                 <h3 class="font-semibold text-[var(--primary-500)] text-[25px] sm:text-[38px] xl:text-[42px] 2xl:text-[50px]">Cerita & Aktivitas UMKM</h3>
 
-                <p class="text-[9px] sm:text-[13px] xl:text-[15px] 2xl:text-[17px] text-center xl:text-end font-[Montserrat]">Ikuti perkembangan terbaru dari UMKM inklusif di daerah Bandung. <br>Dukung dan berinteraksi langsung dengan komunitas</p>
+                <p class="text-[10px] sm:text-[13px] xl:text-[15px] 2xl:text-[17px] text-center xl:text-end font-[Montserrat] w-160">Ikuti perkembangan terbaru dari UMKM inklusif di daerah Bandung. Dukung dan berinteraksi langsung dengan komunitas</p>
 
-                <button class="font-semibold text-[var(--bg)] text-[12px] sm:text-[14px] md:text-[15px]
+                <button class="font-semibold text-[var(--bg)] text-[12px] sm:text-[14px]
                         bg-[var(--primary-600)] rounded-4xl
-                        py-[10px]  md:py-[14px] sm:py-[12px]
-                        px-[14px]  md:px-[22px] sm:px-[19px]
+                        py-[10px]  md:py-[13px] sm:py-[12px]
+                        px-[14px]  md:px-[24px] sm:px-[19px]
                         mt-7">Lihat Lainnya</button>
+            </div>
+
+        </section>
+
+        <section id="maps-section"
+            class="flex flex-col h-[120vh] bg-[var(--bg)] lg:px-35 px-9 items-center justify-center">
+
+            <div class="flex flex-col w-full gap-1">
+
+                <h3 class="font-semibold text-[var(--primary-500)] text-[25px] sm:text-[38px] xl:text-[42px] 2xl:text-[50px]">Peta Lokasi</h3>
+
+                <p class="text-[11px] sm:text-[13px] lg:text-[15px] xl:text-[19px] text-[var(--secondary-text)] font-[Montserrat] lg:w-140 xl:w-180">Ikuti perkembangan terbaru dari UMKM inklusif di daerah Bandung. Dukung dan berinteraksi langsung dengan komunitas</p>
+
+            </div>
+
+            <div class="flex lg:flex-row flex-col w-full gap-5 items-center justify-center lg:mt-7">
+
+                <div id="information"
+                    class="flex flex-row flex-[1] lg:flex-col gap-2 w-full lg:h-full justify-between mt-3 lg:mt-0 text-center">
+
+                    <div class="flex flex-col items-center justify-center bg-white shadow-md rounded-[10px] flex-1 h-[90px]">
+                        
+                        <h4 class="text-[22px] lg:text-[32px] text-[var(--primary-500)] font-medium">20+</h4>
+                        <p class="text-[10px] lg:text-[13px] xl:text-[16px] text-[var(--primary-500)]">Lokasi UMKM Disabilitas</p>
+
+                    </div>
+
+                    <div class="flex flex-col items-center justify-center bg-white shadow-md rounded-[10px] flex-1 h-[90px]">
+                        
+                        <h4 class="text-[22px] lg:text-[32px] text-[var(--primary-500)] font-medium">15+</h4>
+                        <p class="text-[10px] lg:text-[13px] xl:text-[16px] text-[var(--primary-500)]">Pelaku Usaha Terdaftar</p>
+
+                    </div>
+
+                    <div class="flex flex-col items-center justify-center bg-white shadow-md rounded-[10px] flex-1 h-[90px]">
+                        
+                        <h4 class="text-[22px] lg:text-[32px] text-[var(--primary-500)] font-medium">8+</h4>
+                        <p class="text-[10px] lg:text-[13px] xl:text-[16px] text-[var(--primary-500)]">Kolaborasi Aktif</p>
+
+                    </div>
+
+                </div>
+
+                <div id="maps"
+                    class="mt-7 lg:mt-0 flex-[3] xl:flex-[4] border-2 border-[var(--soft-bg)] rounded-[6px] w-full lg:h-full relative shadow-md">
+
+                    <img src="{{  asset('images/maps.webp') }}" alt="Maps"
+                        class="w-full blur-[3px] h-70 lg:h-150 object-cover">
+
+                    <div class="absolute inset-0 flex items-center justify-center flex-col text-center text-[var(--primary-500)] px-7">
+
+                        <div class="bg-white blur-lg w-50 h-30 absolute z-1 rounded-4xl"></div>
+
+                        <h5 class="text-[21px] lg:text-[26px] font-semibold z-2">Peta Interaktif</h5>
+
+                        <p class="text-[12px] lg:text-[15px] font-[Montserrat] font-medium z-2">Peta akan menampilkan lokasi UMKM dengan pin interaktif.</p>
+
+                        <a href="#" class="bg-[var(--primary-500)] hover:bg-[var(--primary-400)] px-4 py-2 rounded-4xl mt-4 z-2 flex gap-2 items-center duration-200 transition-all cursor-pointer">
+
+                            <svg width="18" height="18" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M17.0721 3.19692C17.1375 3.02881 16.9718 2.86318 16.8037 2.92855L3.0431 8.27991C2.86985 8.34729 2.86597 8.59103 3.037 8.66387L8.32008 10.9141C8.66499 11.061 8.93967 11.3357 9.08657 11.6806L11.3368 16.9637C11.4096 17.1347 11.6534 17.1308 11.7207 16.9576L17.0721 3.19692ZM16.3529 1.76921C17.5297 1.31158 18.6891 2.47101 18.2314 3.64777L12.8801 17.4084C12.4085 18.6212 10.7022 18.6483 10.1923 17.4511L7.94214 12.168C7.92115 12.1187 7.88191 12.0795 7.83264 12.0585L2.54955 9.80831C1.35239 9.29841 1.37949 7.5922 2.59224 7.12057L16.3529 1.76921Z" fill="#E6F2F1"/>
+                            </svg>
+
+                            <p class="text-[13px] lg:text-[15px] text-[var(--bg)] ">Lihat Lokasi UMKM</p>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
             </div>
 
         </section>
