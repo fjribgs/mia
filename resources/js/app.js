@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (currentScroll > lastScroll + 1) {
       navbar.style.transform = 'translateY(-120px)';
-    } else if (currentScroll < lastScroll - 2) {
+    } else if (currentScroll < lastScroll - 4) {
       navbar.style.transform = 'translateY(0)';
     }
 

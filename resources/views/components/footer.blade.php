@@ -5,9 +5,9 @@
         <div class="py-[60px]">
 
             <img src="{{ asset('images/logo.svg') }}" alt="Logo Inspira"
-            class="md:w-50 w-40">
+            class="md:w-50 w-30">
 
-            <p class="text-gray-300 my-10 font-light text-[12px] md:text-[18px] md:max-w-[560px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet porttitor interdum. Donec eu ante et libero feugiat ultrices.</p>
+            <p class="text-gray-300 my-10 font-light font-[Montserrat] text-[12px] md:text-[18px] md:w-[560px]">Platform direktori digital yang menghubungkan masyarakat dengan UMKM inklusif yang dikelola oleh penyandang disabilitas.</p>
 
             <div class="flex gap-[15px]">
                 <img src="{{ asset('images/instagram.svg') }}" alt="Instagram">
@@ -24,19 +24,11 @@
                 Copyright 2025 Inspira. All Rights Reserved
             </p>
 
-            <div class="flex md:hidden gap-2 mt-2">
+            <div class="flex flex-col md:flex-row gap-1 md:gap-2 mt-4 items-start md:items-center">
 
-                <p class="text-gray-300 font-light hover:font-bold transition-all cursor-pointer">Privacy Policy</p>
+                <p class="text-gray-300 font-light cursor-pointer underline">Privacy Policy</p>
 
-                <p class="text-gray-300 font-light hover:font-bold transition-all cursor-pointer">Terms & Conditions</p>
-
-            </div>
-
-            <div class="md:flex hidden gap-2 mt-4">
-
-                <p class="text-gray-300 font-light hover:font-bold transition-all cursor-pointer">Privacy Policy</p>
-
-                <p class="text-gray-300 font-light hover:font-bold transition-all cursor-pointer">Terms & Conditions</p>
+                <p class="text-gray-300 font-light cursor-pointer underline">Terms & Conditions</p>
 
             </div>
 
