@@ -43,10 +43,11 @@ Route::controller(CategoryController::class)->group(function() {
 });
 
 Route::controller(UmkmController::class)->group(function() {
+    Route::get('/umkm/regis', 'regisUmkm')->middleware('guest')->name('umkm.regis');
+    Route::get('/umkm/logout-if-already-login', 'logoutIfAlreadyLogin')->name('umkm.logout_already_login');
+
     // dashboard
     Route::get('/umkm/{umkm_id}', 'dashboard')->middleware('auth')->name('dashboard.umkm');
-
-    Route::get('/umkm/regis', 'regisUmkm')->middleware('guest')->name('umkm.regis');
 });
 
 Route::controller(PromoController::class)->middleware('auth')->group(function() {

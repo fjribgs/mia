@@ -45,7 +45,7 @@ LIST FEATURE USER:
 
     <main class="relative">
 
-        <section id="hero-section" 
+        <section id="hero-section"
             class="flex items-center min-h-screen justify-between w-full px-[36px] md:px-35 top-2 relative">
 
             <div class="text-center md:text-left mx-auto md:mx-0 pt-[20px] md:pt-[110px] max-w-170">
@@ -81,7 +81,7 @@ LIST FEATURE USER:
             <p class="text-[var(--secondary-text)] text-[12px] font-light pt-2.5">Temukan berbagai UMKM yang dikelola oleh penyandang disabilitas di sekitar Bandung!</p>
 
             <div id="umkm-card"
-                class="flex flex-col justify-between bg-[#FFFFFF] h-[300px] w-[200px] shadow-md px-5 py-7 mt-10 rounded-[18px]">  
+                class="flex flex-col justify-between bg-[#FFFFFF] h-[300px] w-[200px] shadow-md px-5 py-7 mt-10 rounded-[18px]">
 
                 <img src="#" alt="">
 
@@ -104,9 +104,20 @@ LIST FEATURE USER:
                     <button class="bg-[var(--primary-500)] rounded-4xl text-white w-full text-[12px] mt-3 py-2 items-center justify-center">Lihat Detail</button>
 
                 </div>
+                <button class="font-semibold text-[12px] xl:text-[19px] md:text-[15px]
+                    text-white
+                    py-[10px] xl:py-[15px] md:py-[14px]
+                    px-[11px] xl:px-[33px] md:px-[22px]
+                    underline">
+                    @if (Auth::check())
+                        <a href="{{ route('umkm.logout_already_login') }}">Daftarkan Bisnismu</a>
+                    @else
+                        <a href="{{ route('umkm.regis') }}">Daftarkan Bisnismu</a>
+                    @endif
+                </button>
 
             </div>
-            
+
             <button class="flex gap-1 mt-13 border-1 border-[var(--primary-500)] rounded-4xl py-2 px-4">
                 <div class="text-[13px] text-[var(--primary-500)]">Lihat UMKM Lainnya</div>
                 <img src="{{ asset('images/arrow-right.svg') }}" alt="arrow-right"
@@ -115,14 +126,14 @@ LIST FEATURE USER:
 
         </section>
     </main>
-    
+
     <footer>
 
         <x-footer></x-footer>
 
     </footer>
 
-    <a href="https://maps.app.goo.gl/SqGff3Yg4EUSeL6a7?g_st=aw" 
+    <a href="https://maps.app.goo.gl/SqGff3Yg4EUSeL6a7?g_st=aw"
         class="hidden">link gmaps</a>
 
 </body>
@@ -171,8 +182,8 @@ LIST FEATURE USER:
 
                     <button class="font-semibold text-[12px] sm:text-[14px] xl:text-[19px] md:text-[15px]
                         text-white
-                        py-[10px] xl:py-[15px] md:py-[14px] sm:py-[12px]
-                        px-[11px] xl:px-[33px] md:px-[22px] sm:px-[19px]
+                        py-[10px] xl:py-[15px] md:py-[14px]
+                        px-[11px] xl:px-[33px] md:px-[22px]
                         underline">Daftarkan Bisnismu</button>
 
                 </div>
@@ -191,37 +202,8 @@ LIST FEATURE USER:
 
             <p class="text-[var(--secondary-text)] text-[12px] sm:text-[15px] lg:text-[16px] xl:text-[17px] font-light pt-2.5">Temukan berbagai UMKM yang dikelola oleh penyandang disabilitas di sekitar Bandung!</p>
 
-            <div id="umkm-cards"
-                class="flex items-center xl:gap-5 gap-3 sm:mt-5">
-
-                <div id="umkm-card-left"
-                    class="flex flex-col justify-between bg-[#FFFFFF] h-[340px] xl:h-[450px] w-[250px] xl:w-[300px] shadow-md px-5 py-7 mt-10 rounded-[18px] top-[100px] xl:hover:w-[350px] transition-all duration-300">  
-
-                    <img src="#" alt="">
-
-                    <div class="flex flex-col justify-center items-start gap-3">
-
-                        <h3 class="text-[13px] lg:text-[16px] font-semibold text-[var(--primary-500)] font-[Montserrat]">Lorem Ipsum</h3>
-
-                        <div id="kategori"
-                            class="border-1 border-[var(--info)] text-[var(--info)] rounded-2xl px-2 py-0.5 text-[10px] xl:text-[12px]">Kerajinan</div>
-                        
-                        <div id="lokasi"
-                            class="flex gap-1">
-
-                            <img src="{{ asset('images/lokasi-gps.svg') }}" alt="" class="w-3">
-
-                            <p class="text-[11px] xl:text-[13px] text-[var(--caption)]">Bandung</p>
-
-                        </div>
-
-                        <button class="bg-[var(--primary-500)] rounded-4xl text-white w-full text-[12px] lg:text-[16px] mt-3 py-2 items-center justify-center">Lihat Detail</button>
-                        
-                    </div>
-                </div>
-
-                <div id="umkm-card-middle"
-                    class="flex flex-col justify-between bg-[#FFFFFF] h-[400px] xl:h-[500px] w-[250px] xl:w-[320px] shadow-md px-5 py-7 mt-10 rounded-[18px] top-[100px] z-7 xl:hover:w-[370px] transition-all duration-300">  
+            <div id="umkm-card"
+                class="flex flex-col justify-between bg-[#FFFFFF] h-[400px] w-[250px] shadow-md px-5 py-7 mt-10 rounded-[18px] top-[100px]">  
 
                     <img src="#" alt="">
 
@@ -232,18 +214,18 @@ LIST FEATURE USER:
                         <div id="kategori"
                             class="border-1 border-[var(--info)] text-[var(--info)] rounded-2xl px-2 py-0.5 text-[10px] xl:text-[12px]">Kerajinan</div>
 
-                        <div id="kolaborasi"
-                            class="flex gap-2 bg-[var(--primary-50)] py-2 px-3 items-center rounded-md min-w-full">
+                    <div id="kolaborasi"
+                        class="flex gap-2 bg-[var(--primary-50)] py-2 px-3 items-center rounded-md min-w-full">
+                        
+                        <img src="{{ asset('images/kolaborasi.svg') }}" alt=""
+                            class="w-8">
                             
-                            <img src="{{ asset('images/kolaborasi.svg') }}" alt=""
-                                class="w-8 xl:w-11">
-                                
-                            <p class="text-[8px] lg:text-[10px] xl:text-[13px] text-start text-[var(--primary-500)] font-[Montserrat]">Berkolaborasi dengan <br> <b>Lorem Ipsum</b></p>
-                        
-                        </div>
-                        
-                        <div id="lokasi"
-                            class="flex gap-1">
+                        <p class="text-[8px] text-start text-[var(--primary-500)] font-[Montserrat]">Berkolaborasi dengan <br> <b>Lorem Ipsum</b></p>
+                    
+                    </div>
+                    
+                    <div id="lokasi"
+                        class="flex gap-1">
 
                             <img src="{{ asset('images/lokasi-gps.svg') }}" alt="" class="w-3">
 
@@ -630,17 +612,22 @@ LIST FEATURE USER:
 
             
             
+            <button class="flex gap-1 mt-13 border-1 border-[var(--primary-500)] rounded-4xl py-2 px-4">
+                <div class="text-[13px] text-[var(--primary-500)]">Lihat UMKM Lainnya</div>
+                <img src="{{ asset('images/arrow-right.svg') }}" alt="arrow-right"
+                    class="w-5">
+            </button>
 
         </section>
 
     </main>
-    
+
     <footer>
 
         <x-footer></x-footer>
 
     </footer>
 
-    <a href="https://maps.app.goo.gl/SqGff3Yg4EUSeL6a7?g_st=aw" 
+    <a href="https://maps.app.goo.gl/SqGff3Yg4EUSeL6a7?g_st=aw"
         class="hidden">link gmaps</a>
 @endsection
