@@ -1,4 +1,5 @@
 <div>
+    {{-- Desktop Navbar --}}
     <nav id="navbar"
         class="flex fixed top-6 md:top-5 left-7 right-7 py-4 px-5 md:left-25 md:right-25 md:py-[15px] md:px-[40px] justify-between items-center border border-[#E6F2F1]/30 bg-[#E6F2F1]/10 rounded-[16px] z-70 transition-all duration-500">
 
@@ -27,11 +28,13 @@
         </div>
 
         @if (Auth::check())
-            <div class="hidden xl:flex cursor-pointer" wire:click="toggle">
+            <div class="hidden xl:flex cursor-pointer" wire:click="toggleDesktop">
 
                 <div class="flex text-white gap-3">
+
                     <h2>{{ Auth::user()->name }}</h2>
                     <img src="{{ asset('images/arrow-dropdown.svg') }}" alt="">
+
                 </div>
 
             </div>
@@ -58,13 +61,17 @@
 
     </nav>
 
-    <div class=" {{ $isOpen ? 'max-h-60 opacity-100' : 'max-h-0 opacity-0 pointer-events-none' }} xl:fixed hidden right-30 mt-20 w-40 bg-white text-black rounded-lg shadow-lg z-50 transition-all" >
+    <div class=" {{ $isOpenDesktop ? 'h-20 opacity-100' : 'h-0 opacity-0 pointer-events-none' }} fixed w-40 bg-[var(--bg)] text-[var(--primary-500)] rounded-lg shadow-lg z-50 transition-all right-20 top-23" >
 
-        <a href="/profile" class="block px-4 py-2 hover:bg-gray-200 hover:rounded-lg transition-all duration-300">Profil</a>
+        <a href="#" class="block px-4 py-2 hover:bg-gray-200 hover:rounded-lg transition-all duration-300">Profil</a>
 
         <a href="{{ route('auth.logout') }}" class="block px-4 py-2 hover:bg-gray-200 hover:rounded-lg transition-all duration-300">Logout</a>
 
     </div>
+
+
+    {{-- Mobile Sidebar --}}   
+
 
     <div id="background-sidebar"
         class="{{ $isSidebarOpen ? 'bg-black/30 pointer-events-none' : 'bg-black/0 pointer-events-none' }} w-screen h-screen fixed z-90 transition-all"></div>
@@ -102,7 +109,7 @@
         <div id="account">
 
             @if (Auth::check())
-                <div class="flex xl:hidden cursor-pointer" wire:click="toggle">
+                <div class="flex xl:hidden cursor-pointer" wire:click="toggleMobile">
 
                     <div class="flex text-white gap-3">
                         <h2>{{ Auth::user()->name }}</h2>
@@ -122,11 +129,11 @@
                 </div>
             @endif
 
-            <div class=" {{ $isOpen ? 'max-h-60 opacity-100' : 'max-h-0 opacity-0 pointer-events-none' }} fixed xl:hidden w-full mt-4 bg-white text-black rounded-lg shadow-lg z-50 transition-all" >
+            <div class=" {{ $isOpenMobile ? 'max-h-60 opacity-100' : 'max-h-0 opacity-0 pointer-events-none' }} fixed max-w-full mt-4 bg-white text-black rounded-lg shadow-lg z-50 transition-all" >
 
-                <a href="/profile" class="block px-4 py-2 hover:bg-gray-200 hover:rounded-lg transition-all duration-300 text-[12px]">Profil</a>
+                <a href="/profile" class="block pl-4 pr-6 py-2 hover:bg-gray-200 hover:rounded-lg transition-all duration-300 text-[14px]">Profil</a>
 
-                <a href="{{ route('auth.logout') }}" class="block px-4 py-2 hover:bg-gray-200 hover:rounded-lg transition-all duration-300 text-[12px]">Logout</a>
+                <a href="{{ route('auth.logout') }}" class="block pl-4 pr-6 py-2 hover:bg-gray-200 hover:rounded-lg transition-all duration-300 text-[14px]">Logout</a>
 
             </div>
         </div>

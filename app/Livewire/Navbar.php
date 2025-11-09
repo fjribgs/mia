@@ -6,11 +6,16 @@ use Livewire\Component;
 
 class Navbar extends Component
 {
-    public $isOpen = false;
+    public $isOpenMobile = false;
+    public $isOpenDesktop = false;
     public $isSidebarOpen = false;
 
-    public function toggle() {
-        $this -> isOpen = !$this -> isOpen;
+    public function toggleMobile() {
+        $this -> isOpenMobile = !$this -> isOpenMobile;
+    }
+
+    public function toggleDesktop() {
+        $this -> isOpenDesktop = !$this -> isOpenDesktop;
     }
 
     public function toggleSidebar() {
