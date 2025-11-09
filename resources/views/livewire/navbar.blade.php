@@ -13,7 +13,7 @@
         <div class="xl:flex gap-[35px] font-[Montserrat] hidden justify-end items-center w-full pr-10">
 
             <a href="{{ route('dashboard.user') }}"
-                class="text-white @if (Request::segment(1) == '') font-bold @endif hover:font-bold transition-all ease-in">Beranda</a>
+                class="text-white @if (Request::segment(1) == '') font-semibold @endif hover:font-bold transition-all ease-in">Beranda</a>
             <a href="#"
                 class="text-white hover:font-bold transition-all ease-in">UMKM</a>
             <a href="#"
@@ -89,16 +89,22 @@
 
         <div id="navigation"
             class="flex flex-col gap-3 transition-all duration-150 w-full">
-            <a href="#"
-                class="text-white active:bg-[var(--primary-700)] active:active:px-4 py-1 rounded-sm transition-all duration-150">Beranda</a>
+
+            <a href="{{ route('dashboard.user') }}"
+                class=" text-white active:bg-[var(--primary-700)] active:px-4 py-1 rounded-sm transition-all duration-150">Beranda</a>
+
             <a href="#"
                 class="text-white active:bg-[var(--primary-700)] active:px-4 py-1 rounded-sm transition-all duration-150">UMKM</a>
+
             <a href="#"
                 class="text-white active:bg-[var(--primary-700)] active:px-4 py-1 rounded-sm transition-all duration-150">Postingan</a>
+
             <a href="#"
                 class="text-white active:bg-[var(--primary-700)] active:px-4 py-1 rounded-sm transition-all duration-150">Tentang Kami</a>
+
             <a href="#"
                 class="text-white active:bg-[var(--primary-700)] active:px-4 py-1 rounded-sm transition-all duration-150">Kontak</a>
+
         </div>
 
         <div id="separator"

@@ -199,7 +199,7 @@ LIST FEATURE USER:
         </section>
 
         <section id="umkm-section" 
-            class="flex flex-col justify-center items-center px-[36px] sm:px-30 md:px-35 py-10 h-[120vh] text-center bg-[var(--bg)] relative bg-gradient-to-b from-[#E6F2F1] to-[#FAFAFA]">
+            class="flex flex-col justify-center items-center px-[36px] sm:px-30 md:px-35 py-10 lg:h-[120vh] h-screen  text-center bg-[var(--bg)] relative bg-gradient-to-b from-[#E6F2F1] to-[#FAFAFA]">
 
             <div class="absolute bg-[var(--bg)] h-130 w-13 sm:w-20 md:w-27 blur-lg -left-[30px]"></div>
             <div class="absolute bg-[var(--bg)] h-130 w-13 sm:w-20 md:w-27 blur-lg -right-[30px]"></div>
@@ -471,7 +471,7 @@ LIST FEATURE USER:
         </section>
 
         <section id="maps-section"
-            class="flex flex-col h-[120vh] bg-[var(--bg)] lg:px-35 px-9 items-center justify-center bg-gradient-to-b from-[#E6F2F1] to-[#FAFAFA]">
+            class="flex flex-col lg:h-[120vh] h-screen  bg-[var(--bg)] lg:px-35 px-9 items-center justify-center bg-gradient-to-b from-[#E6F2F1] to-[#FAFAFA]">
 
             <div class="flex flex-col w-full gap-1">
 
@@ -545,7 +545,7 @@ LIST FEATURE USER:
         </section>
 
         <section id="about-us-section"
-            class="h-[120vh] flex flex-col relative items-center justify-center px-6 lg:px-35 text-[var(--primary-500)] w-full bg-gradient-to-b from-[#FAFAFA] to-[#E6F2F1]">
+            class="lg:h-[120vh] h-screen  flex flex-col relative items-center justify-center px-6 lg:px-35 text-[var(--primary-500)] w-full bg-gradient-to-b from-[#FAFAFA] to-[#E6F2F1]">
 
             <div class="flex gap-20 items-center justify-center">
 
