@@ -32,7 +32,7 @@
 
                 <div class="flex text-white gap-3">
 
-                    <h2>{{ Auth::user()->name }}</h2>
+                    <div>{{ Auth::user()->name }}</div>
                     <img src="{{ asset('images/arrow-dropdown.svg') }}" alt="">
 
                 </div>
