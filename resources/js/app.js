@@ -27,7 +27,13 @@ window.lenis = lenis;
 document.addEventListener('DOMContentLoaded', () => {
   const navbar = document.getElementById('navbar');
   const separator = document.getElementById('separator');
+  const post2 = document.getElementById('postingan-card-2');
+  const post3 = document.getElementById('postingan-card-3');
+
   let lastScroll = 0;
+
+  const postSection = document.getElementById('post-section');
+  const sectionTop = postSection.offsetTop;
 
   window.addEventListener('scroll', () => {
     const currentScroll = window.scrollY;
@@ -51,6 +57,22 @@ document.addEventListener('DOMContentLoaded', () => {
       separator.classList.remove('bg-gray-300')
       separator.classList.add('bg-gray-500')
     }
+
+    if (currentScroll > sectionTop - 100 && currentScroll < sectionTop + 100) {
+    // scroll berada di dalam section → aktifkan efek
+    post3.classList.remove('top-0', 'left-0');
+    post3.classList.add('top-15', 'left-15');
+
+    post2.classList.remove('top-6', 'left-6');
+    post2.classList.add('-left-9', '-top-9');
+    } else {
+    // scroll di atas atau di bawah section → balik posisi semula
+    post3.classList.add('top-0', 'left-0');
+    post3.classList.remove('top-15', 'left-15');
+
+    post2.classList.add('top-6', 'left-6');
+    post2.classList.remove('-left-9', '-top-9');
+}
 
     lastScroll = currentScroll;
   })

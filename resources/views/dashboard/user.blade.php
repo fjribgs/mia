@@ -317,7 +317,7 @@ LIST FEATURE USER:
 
             <div class="group relative">
 
-                <div id="postingan-card"
+                <div id="postingan-card-1"
                     class="relative xl:top-3 xl:left-3 bg-white rounded-md w-70 xl:w-120 py-5 shadow-md z-8">
 
                     <div class="flex items-center mb-4 px-6">
@@ -360,8 +360,8 @@ LIST FEATURE USER:
 
                 </div>
 
-                <div id="postingan-card"
-                    class="absolute top-6 left-6 group-hover:top-15 group-hover:left-15 bg-white rounded-md w-70 xl:w-120 py-5 shadow-md hidden xl:block duration-300 transition-all">
+                <div id="postingan-card-2"
+                    class="absolute top-6 left-6  bg-white rounded-md w-70 xl:w-120 py-5 shadow-md hidden xl:block duration-500 transition-all">
 
                     <div class="flex items-center mb-4 px-6">
 
@@ -403,8 +403,8 @@ LIST FEATURE USER:
 
                 </div>
 
-                <div id="postingan-card"
-                    class="absolute top-0 left-0 group-hover:-top-9 group-hover:-left-9 bg-white rounded-md w-70 xl:w-120 py-5 shadow-md hidden xl:block transition-all duration-300">
+                <div id="postingan-card-3"
+                    class="absolute top-0 left-0 bg-white rounded-md w-70 xl:w-120 py-5 shadow-md hidden xl:block transition-all duration-500">
 
                     <div class="flex items-center mb-4 px-6">
 
@@ -658,3 +658,4 @@ LIST FEATURE USER:
     <a href="https://maps.app.goo.gl/SqGff3Yg4EUSeL6a7?g_st=aw"
         class="hidden">link gmaps</a>
 @endsection
+
