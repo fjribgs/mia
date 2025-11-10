@@ -209,12 +209,14 @@ LIST FEATURE USER:
             <p class="text-[var(--secondary-text)] text-[12px] sm:text-[15px] lg:text-[16px] xl:text-[17px] font-light pt-2.5">Temukan berbagai UMKM yang dikelola oleh penyandang disabilitas di sekitar Bandung!</p>
 
             <div id="umkm-cards"
-                class="flex items-center xl:gap-5 gap-3 sm:mt-5">
+                class="flex items-center xl:gap-5 gap-3 sm:mt-5 [&>div>div]:text-start [&>div>div]:px-5 [&>div>div]:py-5">
 
                 <div id="umkm-card-left"
-                    class="flex flex-col justify-between bg-[#FFFFFF] h-[340px] xl:h-[450px] w-[250px] xl:w-[300px] shadow-md px-5 py-7 mt-10 rounded-[18px] top-[100px] xl:hover:w-[350px] transition-all duration-300">  
+                    class="flex flex-col justify-between bg-[#FFFFFF] h-[340px] xl:h-[450px] w-[250px] xl:w-[300px] shadow-md mt-10 rounded-[18px] top-[100px] xl:hover:w-[350px] transition-all duration-300">  
 
-                    <img src="#" alt="">
+                    <img src="{{ asset('images/umkm-pulas-katumbiri.webp') }}" 
+                        alt="Foto UMKM" 
+                        class="w-full h-full object-cover rounded-t-[18px]">
 
                     <div class="flex flex-col justify-center items-start gap-3">
 
@@ -238,9 +240,11 @@ LIST FEATURE USER:
                 </div>
 
                 <div id="umkm-card-middle"
-                    class="flex flex-col justify-between bg-[#FFFFFF] h-[400px] xl:h-[500px] w-[250px] xl:w-[320px] shadow-md px-5 py-7 mt-10 rounded-[18px] top-[100px] z-7 xl:hover:w-[370px] transition-all duration-300">  
+                    class="flex flex-col justify-between bg-[#FFFFFF] h-[400px] xl:h-[500px] w-[250px] xl:w-[320px] shadow-md mt-10 rounded-[18px] top-[100px] z-7 xl:hover:w-[370px] transition-all duration-300">  
 
-                    <img src="#" alt="">
+                    <img src="{{ asset('images/umkm-cafe-more.webp') }}" 
+                        alt="Foto UMKM" 
+                        class="w-full h-full object-cover rounded-t-[18px]">
 
                     <div class="flex flex-col justify-center items-start gap-3">
 
@@ -274,16 +278,18 @@ LIST FEATURE USER:
                 </div>
 
                 <div id="umkm-card-right"
-                    class="flex flex-col justify-between bg-[#FFFFFF] h-[340px] xl:h-[450px] w-[250px] xl:w-[300px] shadow-md px-5 py-7 mt-10 rounded-[18px] top-[100px] xl:hover:w-[350px] transition-all duration-300">  
+                    class="flex flex-col justify-between bg-[#FFFFFF] h-[340px] xl:h-[450px] w-[250px] xl:w-[300px] shadow-md mt-10 rounded-[18px] top-[100px] xl:hover:w-[350px] transition-all duration-300">  
 
-                    <img src="#" alt="">
+                        <img src="{{ asset('images/umkm-keripik-kusnadi.webp') }}" 
+                            alt="Foto UMKM" 
+                            class="w-full h-full object-cover rounded-t-[18px]">
 
                     <div class="flex flex-col justify-center items-start gap-3">
 
-                        <h3 class="text-[13px] lg:text-[16px] font-semibold text-[var(--primary-500)] font-[Montserrat]">Lorem Ipsum</h3>
+                        <h3 class="text-[13px] lg:text-[16px] font-semibold text-[var(--primary-500)] font-[Montserrat]">Keripik Pisang Kusnadi</h3>
 
                         <div id="kategori"
-                            class="border-1 border-[var(--info)] text-[var(--info)] rounded-2xl px-2 py-0.5 text-[10px] xl:text-[12px]">Kerajinan</div>
+                            class="border-1 border-[var(--info)] text-[var(--info)] rounded-2xl px-2 py-0.5 text-[10px] xl:text-[12px]">Food & Beverages</div>
                         
                         <div id="lokasi"
                             class="flex gap-1">
