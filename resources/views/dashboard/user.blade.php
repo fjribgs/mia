@@ -218,7 +218,7 @@ LIST FEATURE USER:
 
                     <div class="flex flex-col justify-center items-start gap-3">
 
-                        <h3 class="text-[13px] lg:text-[16px] font-semibold text-[var(--primary-500)] font-[Montserrat]">Lorem Ipsum</h3>
+                        <h3 class="text-[13px] lg:text-[16px] font-semibold text-[var(--primary-500)] font-[Montserrat]">PUKA (Pulas Katumbiri)</h3>
 
                         <div id="kategori"
                             class="border-1 border-[var(--info)] text-[var(--info)] rounded-2xl px-2 py-0.5 text-[10px] xl:text-[12px]">Kerajinan</div>
@@ -244,10 +244,10 @@ LIST FEATURE USER:
 
                     <div class="flex flex-col justify-center items-start gap-3">
 
-                        <h3 class="text-[13px] lg:text-[16px] font-semibold text-[var(--primary-500)] font-[Montserrat]">Lorem Ipsum</h3>
+                        <h3 class="text-[13px] lg:text-[16px] font-semibold text-[var(--primary-500)] font-[Montserrat]">Cafe More (Wyata Guna)</h3>
 
                         <div id="kategori"
-                            class="border-1 border-[var(--info)] text-[var(--info)] rounded-2xl px-2 py-0.5 text-[10px] xl:text-[12px]">Kerajinan</div>
+                            class="border-1 border-[var(--info)] text-[var(--info)] rounded-2xl px-2 py-0.5 text-[10px] xl:text-[12px]">Food & Beverages</div>
 
                         <div id="kolaborasi"
                             class="flex gap-2 bg-[var(--primary-50)] py-2 px-3 items-center rounded-md min-w-full">
@@ -255,7 +255,7 @@ LIST FEATURE USER:
                             <img src="{{ asset('images/kolaborasi.svg') }}" alt=""
                                 class="w-8 xl:w-11">
                                 
-                            <p class="text-[8px] lg:text-[10px] xl:text-[13px] text-start text-[var(--primary-500)] font-[Montserrat]">Berkolaborasi dengan <br> <b>Lorem Ipsum</b></p>
+                            <p class="text-[8px] lg:text-[10px] xl:text-[13px] text-start text-[var(--primary-500)] font-[Montserrat]">Berkolaborasi dengan <br> <b>PUKA (Pulas Katumbiri)</b></p>
                         
                         </div>
                         
@@ -549,7 +549,7 @@ LIST FEATURE USER:
 
             <div class="flex gap-20 items-center justify-center">
 
-                <div class="flex flex-col gap-3 mt-2 w-full text-[var(--primary-500)]">
+                <div class="flex flex-col gap-3 mt-2 w-full text-[var(--primary-500)] [&>div>div>div]:bg-white">
 
                     <h2 class="font-semibold text-[20px] md:text-[27px] xl:text-[45px] md:max-w-130 xl:max-w-180">Memberdayakan UMKM untuk Indonesia yang lebih Inklusif</h2>
 
@@ -587,7 +587,6 @@ LIST FEATURE USER:
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M16.9289 2.35901C17.0675 1.84637 17.5954 1.5431 18.108 1.68165C20.229 2.2549 21.7033 4.34937 21.7033 6.73077C21.7033 9.24703 19.9786 11.5158 17.5597 11.8063C17.0325 11.8697 16.5537 11.4936 16.4904 10.9663C16.427 10.4391 16.8031 9.96031 17.3304 9.89697C18.6203 9.74203 19.7802 8.44676 19.7802 6.73077C19.7802 5.10267 18.782 3.85588 17.6063 3.53812C17.0936 3.39957 16.7904 2.87166 16.9289 2.35901Z" fill="#007F6E"/>
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M19.798 15.6126C19.8997 15.0914 20.4046 14.7513 20.9258 14.8529C23.2922 15.3144 25 17.3875 25 19.7985V20.4668C25 21.0586 24.8224 21.9015 24.0505 22.3949C23.5308 22.7271 22.7247 23.0811 21.4819 23.3326C20.9614 23.4379 20.4541 23.1013 20.3488 22.5808C20.2435 22.0603 20.58 21.553 21.1005 21.4477C22.1608 21.2331 22.7339 20.9541 23.0147 20.7746L23.017 20.7724C23.0191 20.7698 23.0266 20.7596 23.0359 20.7369C23.0564 20.6872 23.0769 20.598 23.0769 20.4668V19.7985C23.0769 18.3077 22.0209 17.0258 20.5577 16.7405C20.0365 16.6388 19.6964 16.1339 19.798 15.6126Z" fill="#007F6E"/>
                                 </svg>
-
 
                                 <h3 class="font-medium text-[15px] lg:text-[17px] xl:px-1">Kolaboratif</h3>
 

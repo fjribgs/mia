@@ -22,7 +22,7 @@
 
                 <h5 class="text-[14px] xl:text-[16px] font-semibold">Tautan Cepat</h5>
 
-                <div class="flex flex-col gap-1 xl:gap-3 font-[Montserrat] text-[12px] xl:text-[14px] text-[var(--primary-100)]">
+                <div class="flex flex-col gap-1 xl:gap-3 font-[Montserrat] text-[12px] xl:text-[14px] text-[var(--primary-100)] font-medium [&>a]:transition-all [&>a]:duration-300 [&>a]:hover:font-bold">
 
                     <a href="#">UMKM</a>
                     <a href="#">Postingan</a>
@@ -36,7 +36,7 @@
 
                 <h5 class="text-[12px] md:text-[14px] xl:text-[16px] font-semibold">Sumber Daya</h5>
 
-                <div class="flex flex-col gap-1 xl:gap-3 font-[Montserrat] text-[10px] md:text-[12px] xl:text-[14px] text-[var(--primary-100)]">
+                <div class="flex flex-col gap-1 xl:gap-3 font-[Montserrat] text-[10px] md:text-[12px] xl:text-[14px] text-[var(--primary-100)] font-medium [&>a]:transition-all [&>a]:duration-300 [&>a]:hover:font-bold">
 
                     <a href="#">Panduan UMKM</a>
                     <a href="#">Tips Kolaborasi</a>
@@ -52,7 +52,7 @@
 
                 <h5 class="text-[12px] md:text-[14px] xl:text-[16px] font-semibold">Kontak</h5>
 
-                <div class="flex flex-col gap-1 xl:gap-3 font-[Montserrat] text-[10px] md:text-[12px] xl:text-[15px] text-[var(--primary-100)]">
+                <div class="flex flex-col gap-1 xl:gap-3 font-[Montserrat] text-[10px] md:text-[12px] xl:text-[15px] text-[var(--primary-100)] ">
 
                     <div class="flex gap-1 xl:gap-2 items-center">
 

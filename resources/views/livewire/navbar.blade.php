@@ -32,8 +32,9 @@
 
                 <div class="flex text-white gap-3">
 
-                    <div>{{ Auth::user()->name }}</div>
-                    <img src="{{ asset('images/arrow-dropdown.svg') }}" alt="">
+                    <img src="{{ asset('images/' . Auth::user()->profile_picture) }}"
+                        alt="Profile Picture"
+                        class="w-12 rounded-full object-cover">
 
                 </div>
 
@@ -61,7 +62,7 @@
 
     </nav>
 
-    <div class=" {{ $isOpenDesktop ? 'h-20 opacity-100' : 'h-0 opacity-0 pointer-events-none' }} fixed w-40 bg-[var(--bg)] text-[var(--primary-500)] rounded-lg shadow-lg z-50 transition-all right-20 top-23" >
+    <div class=" {{ $isOpenDesktop ? 'h-20 opacity-100' : 'h-0 opacity-0 pointer-events-none' }} absolute w-40 bg-[var(--bg)] text-[var(--primary-500)] rounded-lg shadow-lg z-50 transition-all right-20 top-23" >
 
         <a href="#" class="block px-4 py-2 hover:bg-gray-200 hover:rounded-lg transition-all duration-300">Profil</a>
 
