@@ -28,4 +28,9 @@ class UmkmController extends Controller
 
         return redirect()->route('umkm.regis');
     }
+
+    public function index() {
+        $umkms = Umkm::all();
+        return view('umkm.index', compact('umkms'));
+    }
 }

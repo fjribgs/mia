@@ -20,6 +20,7 @@ class Umkm extends Model
         'city_id',
         'district_id',
         'village_id',
+        'profile_picture',
         'description',
         'type',
         'gmaps_link',
@@ -28,6 +29,7 @@ class Umkm extends Model
         'open_days',
         'open_time',
         'close_time',
+        'image',
         'average_rating',
         'is_open_for_collaboration'
     ];

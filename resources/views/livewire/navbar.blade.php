@@ -13,7 +13,7 @@
 
             <a href="{{ route('dashboard.user') }}"
                 class="text-white @if (Request::segment(1) == '') font-bold @endif hover:font-bold transition-all ease-in">Beranda</a>
-            <a href="#"
+            <a href="{{ route('umkm.index') }}"
                 class="text-white hover:font-bold transition-all ease-in">UMKM</a>
             <a href="#"
                 class="text-white hover:font-bold transition-all ease-in">Postingan</a>
