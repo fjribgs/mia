@@ -27,6 +27,7 @@ return new class extends Migration
             $table->string('open_days'); //note: dropdown hardcode value
             $table->string('open_time');
             $table->string('close_time');
+            $table->text('image')->nullable();
             $table->decimal('average_rating')->default(0);
             $table->boolean('is_open_for_collaboration')->default(false);
             $table->timestamps();
