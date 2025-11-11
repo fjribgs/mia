@@ -175,11 +175,11 @@ LIST FEATURE USER:
 
                 <div class="flex gap-2 justify-center md:justify-start mt-8 md:my-9">
 
-                    <button class="font-semibold text-[12px] sm:text-[14px] xl:text-[19px] md:text-[15px]
+                    <a class="font-semibold text-[12px] sm:text-[14px] xl:text-[19px] md:text-[15px]
                         bg-white rounded-4xl text-[var(--primary-500)]
                         py-[10px] xl:py-[15px] md:py-[14px] sm:py-[12px]
                         px-[14px] xl:px-[33px] md:px-[22px] sm:px-[19px]
-                        ">Jelajahi Sekarang</button>
+                        ">Jelajahi Sekarang</a>
 
                     <button class="font-semibold text-[12px] sm:text-[14px] xl:text-[19px] md:text-[15px]
                         text-white py-[10px] xl:py-[15px] md:py-[14px] sm:py-[12px]
@@ -478,7 +478,7 @@ LIST FEATURE USER:
         </section>
 
         <section id="maps-section"
-            class="flex flex-col lg:h-[120vh] h-screen  bg-[var(--bg)] lg:px-35 px-9 items-center justify-center bg-gradient-to-b from-[#E6F2F1] to-[#FAFAFA]">
+            class="flex flex-col lg:h-[120vh] h-screen bg-[var(--bg)] lg:px-35 px-9 items-center justify-center bg-gradient-to-b from-[#E6F2F1] to-[#FAFAFA]">
 
             <div class="flex flex-col w-full gap-1">
 
@@ -552,13 +552,13 @@ LIST FEATURE USER:
         </section>
 
         <section id="about-us-section"
-            class="lg:h-[120vh] h-screen  flex flex-col relative items-center justify-center px-6 lg:px-35 text-[var(--primary-500)] w-full bg-gradient-to-b from-[#FAFAFA] to-[#E6F2F1]">
+            class="lg:h-[120vh] h-screen  flex flex-col relative items-center justify-center lg:px-35 px-9 text-[var(--primary-500)] w-full bg-gradient-to-b from-[#FAFAFA] to-[#E6F2F1]">
 
             <div class="flex gap-20 items-center justify-center">
 
-                <div class="flex flex-col gap-3 mt-2 w-full text-[var(--primary-500)] [&>div>div>div]:bg-white">
+                <div class="flex flex-col gap-4 mt-2 w-full text-[var(--primary-500)] [&>div>div>div]:bg-white">
 
-                    <h2 class="font-semibold text-[20px] md:text-[27px] xl:text-[45px] md:max-w-130 xl:max-w-180">Memberdayakan UMKM untuk Indonesia yang lebih Inklusif</h2>
+                    <h2 class="block font-semibold text-[20px] md:text-[27px] xl:text-[45px]">Memberdayakan UMKM untuk Indonesia yang lebih Inklusif</h2>
 
                     <div class="flex flex-col gap-5 font-[Montserrat] text-[11px] md:text-[14px] xl:text-[16px]">
 
