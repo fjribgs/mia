@@ -151,10 +151,6 @@ LIST FEATURE USER:
 @endpush
 
 @section('content')
-    <img src="{{ asset('images/hero-section.svg')}}"
-            alt=""
-            class="-z-10 absolute w-full object-cover h-full">
-
     <header>
 
         <livewire:navbar />
@@ -164,9 +160,14 @@ LIST FEATURE USER:
     <main class="relative">
 
         <section id="hero-section" 
-            class="flex items-center min-h-screen justify-between w-full px-[36px] md:px-35 relative">
+            class="flex items-center h-screen justify-between w-full px-[36px] md:px-35 relative">
 
-            <div class="text-center md:text-left mx-auto md:mx-0 pt-[20px] md:pt-[90px] xl:max-w-170 max-w-124">
+            <img src="{{ asset('images/hero-section.svg')}}"
+                alt=""
+                class="-z-10 inset-0 absolute w-full object-cover h-full">
+
+
+            <div class="text-center md:text-left mx-auto md:mx-0 md:pt-[90px] xl:max-w-170 max-w-124">
 
                 <h1 class="text-white text-[29px] sm:text-[37px] md:text-[40px] lg:text-[48px] md:w-[667px]">Memberdayakan UMKM <br />Disabilitas untuk <br><b>Tumbuh</b> dan <br> <b>Menginspirasi</b></h1>
 
@@ -199,7 +200,7 @@ LIST FEATURE USER:
         </section>
 
         <section id="umkm-section" 
-            class="flex flex-col justify-center items-center px-[36px] sm:px-30 md:px-35 py-10 lg:h-[120vh] h-screen  text-center bg-[var(--bg)] relative bg-gradient-to-b from-[#E6F2F1] to-[#FAFAFA]">
+            class="flex flex-col justify-center items-center px-[36px] sm:px-30 md:px-35 py-10 lg:h-[120vh] h-screen text-center bg-[var(--bg)] relative bg-gradient-to-b from-[#E6F2F1] to-[#FAFAFA]">
 
             <div class="absolute bg-[var(--bg)] h-130 w-13 sm:w-20 md:w-27 blur-lg -left-[30px]"></div>
             <div class="absolute bg-[var(--bg)] h-130 w-13 sm:w-20 md:w-27 blur-lg -right-[30px]"></div>
@@ -212,7 +213,7 @@ LIST FEATURE USER:
                 class="flex items-center xl:gap-5 gap-3 sm:mt-5 [&>div>div]:text-start [&>div>div]:px-5 [&>div>div]:py-5">
 
                 <div id="umkm-card-left"
-                    class="flex flex-col justify-between bg-[#FFFFFF] h-[340px] xl:h-[450px] w-[250px] xl:w-[300px] shadow-md mt-10 rounded-[18px] top-[100px] xl:hover:w-[350px] transition-all duration-300">  
+                    class="flex flex-col justify-between bg-[#FFFFFF] h-[450px] xl:h-[450px] w-[250px] xl:w-[300px] shadow-md mt-10 rounded-[18px] xl:hover:w-[350px] transition-all duration-300">  
 
                     <img src="{{ asset('images/umkm-pulas-katumbiri.webp') }}" 
                         alt="Foto UMKM" 
@@ -234,7 +235,7 @@ LIST FEATURE USER:
 
                         </div>
 
-                        <button class="bg-[var(--primary-500)] rounded-4xl text-white w-full text-[12px] lg:text-[16px] mt-3 py-2 items-center justify-center">Lihat Detail</button>
+                        <button class="bg-[var(--primary-500)] rounded-4xl text-white w-full text-[12px] lg:text-[16px] py-2 items-center justify-center">Lihat Detail</button>
                         
                     </div>
                 </div>
@@ -278,7 +279,7 @@ LIST FEATURE USER:
                 </div>
 
                 <div id="umkm-card-right"
-                    class="flex flex-col justify-between bg-[#FFFFFF] h-[340px] xl:h-[450px] w-[250px] xl:w-[300px] shadow-md mt-10 rounded-[18px] top-[100px] xl:hover:w-[350px] transition-all duration-300">  
+                    class="flex flex-col justify-between bg-[#FFFFFF] h-[450px] xl:h-[450px] w-[250px] xl:w-[300px] shadow-md mt-10 rounded-[18px] xl:hover:w-[350px] transition-all duration-300">  
 
                         <img src="{{ asset('images/umkm-keripik-kusnadi.webp') }}" 
                             alt="Foto UMKM" 
@@ -300,7 +301,7 @@ LIST FEATURE USER:
 
                         </div>
 
-                        <button class="bg-[var(--primary-500)] rounded-4xl text-white w-full text-[12px] lg:text-[16px] mt-3 py-2 items-center justify-center">Lihat Detail</button>
+                        <button class="bg-[var(--primary-500)] rounded-4xl text-white w-full text-[12px] lg:text-[16px] py-2 items-center justify-center">Lihat Detail</button>
                         
                     </div>
                 </div>
