@@ -1,11 +1,11 @@
 <div>
     {{-- Desktop Navbar --}}
     <nav id="navbar"
-        class="flex fixed top-6 md:top-5 left-7 right-7 py-4 px-5 md:left-25 md:right-25 md:py-[15px] md:px-[40px] justify-between items-center border border-[#E6F2F1]/30 bg-[#E6F2F1]/10 rounded-[16px] z-70 transition-all duration-500">
+        class="flex fixed top-6 md:top-5 left-7 right-7 py-4 px-5 md:left-25 md:right-25 md:py-[15px] md:px-[40px] justify-between items-center border {{ request()->routeIs('dashboard.user') ? 'border-[#E6F2F1]/30 bg-[#E6F2F1]/10' : 'bg-[var(--primary-500)] border-[var(--primary-500)] shadow-md' }} rounded-[16px] z-40 transition-all duration-500">
 
         <div>
             <a href="{{ route('dashboard.user') }}">
-                <img src="{{ asset('images/logo.svg') }}" alt=""
+                <img src="{{ asset('images/logo.svg') }}" alt="" 
                     class="xl:w-43 h-auto w-22 md:w-28">
             </a>
         </div>
@@ -13,9 +13,9 @@
         <div class="xl:flex gap-[35px] font-[Montserrat] hidden justify-end items-center w-full pr-10">
 
             <a href="{{ route('dashboard.user') }}"
-                class="text-white @if (Request::segment(1) == '') font-semibold @endif hover:font-bold transition-all ease-in">Beranda</a>
-            <a href="#"
-                class="text-white hover:font-bold transition-all ease-in">UMKM</a>
+                class="text-white {{ request()->routeIs('dashboard.user') ? 'font-bold' : '' }} hover:font-bold transition-all ease-in">Beranda</a>
+            <a href="{{ route('umkm.index') }}"
+                class="text-white {{ request()->routeIs('umkm.index') ? 'font-bold' : '' }} hover:font-bold transition-all ease-in">UMKM</a>
             <a href="#"
                 class="text-white hover:font-bold transition-all ease-in">Postingan</a>
             <a href="#"

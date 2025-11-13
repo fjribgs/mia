@@ -115,7 +115,7 @@
         
         <div class="w-[50%] bg-white h-screen items-center flex flex-col justify-center rounded-r-[20px]">
 
-            <div class="items-center justify-center bg-white w-full xl:px-40 mr-14 px-26 pt-[33px]">
+            <div class="items-center justify-center bg-white w-full xl:px-40 mr-14 px-26 pt-[33px] text-[var(--primary-500)]">
                 <header>
                     <h1 class="font-semibold text-[36px] md:text-[48px]">Masuk</h1>
                     <p class="text-[var(--secondary-text)] -mt-2 text-[13px] md:text-[20px] font-[Montserrat]">Masuk untuk Melanjutkan</p>
@@ -184,7 +184,7 @@
             </div>
 
             <div class="flex-grow flex items-center text-right">
-                <h1 class="2xl:text-[68px] text-[60px] font-bold text-white w-100">Selamat Datang Kembali di Inspira!</h1>
+                <h1 class="2xl:text-[60px] text-[50px] font-bold text-white w-100">Selamat Datang Kembali di Inspira!</h1>
             </div>
         </div>
     </section>

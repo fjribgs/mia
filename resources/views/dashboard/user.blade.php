@@ -173,13 +173,23 @@ LIST FEATURE USER:
 
                 <p class="text-white pt-[32px] text-[12px] sm:text-[14px] font-normal xl:text-[19px] md:text-[16px] max-w-160">Jelajahi kisah inspiratif, dukung produk lokal, dan bantu UMKM disabilitas untuk meraih kemandirian ekonomi.</p>
 
-                <div class="flex gap-2 justify-center md:justify-start mt-8 md:my-9">
+                <div class="flex gap-2 justify-center md:justify-start mt-8 md:my-9 [&>a]:hover:bg-[var(--primary-100)] [&>a]:transition-all [&>a]:duration-300">
 
-                    <a class="font-semibold text-[12px] sm:text-[14px] xl:text-[19px] md:text-[15px]
-                        bg-white rounded-4xl text-[var(--primary-500)]
-                        py-[10px] xl:py-[15px] md:py-[14px] sm:py-[12px]
-                        px-[14px] xl:px-[33px] md:px-[22px] sm:px-[19px]
-                        ">Jelajahi Sekarang</a>
+                    @if (Auth::check())
+                        <a href="{{ route('umkm.index') }}"
+                            class="font-semibold text-[12px] sm:text-[14px] xl:text-[19px] md:text-[15px]
+                            bg-white rounded-4xl text-[var(--primary-500)]
+                            py-[10px] xl:py-[15px] md:py-[14px] sm:py-[12px]
+                            px-[14px] xl:px-[33px] md:px-[22px] sm:px-[19px]
+                            ">Jelajahi Sekarang</a>
+                    @else
+                        <a href="{{ route('auth.login') }}"
+                            class="font-semibold text-[12px] sm:text-[14px] xl:text-[19px] md:text-[15px]
+                            bg-white rounded-4xl text-[var(--primary-500)]
+                            py-[10px] xl:py-[15px] md:py-[14px] sm:py-[12px]
+                            px-[14px] xl:px-[33px] md:px-[22px] sm:px-[19px]
+                            ">Jelajahi Sekarang</a>
+                    @endif
 
                     <button class="font-semibold text-[12px] sm:text-[14px] xl:text-[19px] md:text-[15px]
                         text-white py-[10px] xl:py-[15px] md:py-[14px] sm:py-[12px]
@@ -241,7 +251,7 @@ LIST FEATURE USER:
                 </div>
 
                 <div id="umkm-card-middle"
-                    class="flex flex-col justify-between bg-[#FFFFFF] h-[400px] xl:h-[500px] w-[250px] xl:w-[320px] shadow-md mt-10 rounded-[18px] top-[100px] z-7 xl:hover:w-[370px] transition-all duration-300">  
+                    class="flex flex-col justify-between bg-[#FFFFFF] xl:h-[500px] w-[320px] shadow-md mt-10 rounded-[18px] top-[100px] z-7 xl:hover:w-[370px] transition-all duration-300">  
 
                     <img src="{{ asset('images/umkm-cafe-more.webp') }}" 
                         alt="Foto UMKM" 
@@ -308,12 +318,18 @@ LIST FEATURE USER:
             </div>
 
             <button class="flex gap-2 mt-13 border-1 border-[var(--primary-600)] rounded-4xl py-2 px-4 hover:bg-[var(--primary-600)] transition-all duration-300 text-[var(--primary-600)] hover:text-[var(--bg)] items-center cursor-pointer">
+                
                 <div class="text-[13px] sm:text-[16px] xl:text-[18px]">Lihat UMKM Lainnya</div>
+                
                 <div id="back" wire:click="toggleSidebar"
                     class="cursor-pointer">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5061 3.43558C12.8178 3.16282 13.2917 3.1944 13.5644 3.50613L20.5644 11.5061C20.8119 11.7889 20.8119 12.2111 20.5644 12.4939L13.5644 20.4939C13.2917 20.8056 12.8178 20.8372 12.5061 20.5644C12.1944 20.2917 12.1628 19.8179 12.4356 19.5061L18.3472 12.75H4C3.58579 12.75 3.25 12.4142 3.25 12C3.25 11.5858 3.58579 11.25 4 11.25H18.3472L12.4356 4.49389C12.1628 4.18216 12.1944 3.70834 12.5061 3.43558Z" fill="currentColor" class=""/>
-                </svg>
+                
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5061 3.43558C12.8178 3.16282 13.2917 3.1944 13.5644 3.50613L20.5644 11.5061C20.8119 11.7889 20.8119 12.2111 20.5644 12.4939L13.5644 20.4939C13.2917 20.8056 12.8178 20.8372 12.5061 20.5644C12.1944 20.2917 12.1628 19.8179 12.4356 19.5061L18.3472 12.75H4C3.58579 12.75 3.25 12.4142 3.25 12C3.25 11.5858 3.58579 11.25 4 11.25H18.3472L12.4356 4.49389C12.1628 4.18216 12.1944 3.70834 12.5061 3.43558Z" fill="currentColor" class=""/>
+                
+                    </svg>
+                    
             </div>
             </button>
 
@@ -325,7 +341,7 @@ LIST FEATURE USER:
             <div class="group relative">
 
                 <div id="postingan-card-1"
-                    class="relative xl:top-3 xl:left-3 bg-white rounded-md w-70 xl:w-120 py-5 shadow-md z-8">
+                    class="relative xl:top-3 xl:left-3 bg-white rounded-md w-70 xl:w-120 py-5 shadow-lg z-8">
 
                     <div class="flex items-center mb-4 px-6">
 
@@ -334,22 +350,19 @@ LIST FEATURE USER:
 
                         <div class="text-[10px] xl:text-[11px] flex flex-col justify-start text-[var(--primary-500)]">
 
-                            <p class="text-start font-medium">Warung Lorem Ipsum</p>
-                            <p class="text-start font-normal">2 jam yang lalu</p>
+                            <p class="text-start font-medium">Batik Lestari</p>
+                            <p class="text-start font-normal">3 jam yang lalu</p>
 
                         </div>
-
-                        <img src="{{ asset('images/more-button-post.svg')}}" alt="More Button"
-                            class="ml-16 xl:ml-56 w-4">
                     
                     </div>
 
                     <p id="deskripsi"
                         class="text-[10px] xl:text-[12px] font-[Montserrat] text-[var(--secondary-text)] px-6">
-                        Deskripsi atau caption lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                        Bangga pakai batik lokal! Setiap motif kami dibuat dengan cinta oleh pengrajin dari Pekalongan. Cocok untuk acara formal maupun santai — tampil elegan dengan warisan budaya Indonesia. 🌸
                     </p>
 
-                    <img src="{{ asset('images/hero-section.svg') }}" alt="Picture Post"
+                    <img src="{{ asset('images/batik.webp') }}" alt="Picture Post"
                         class="my-4 w-full">
 
                     <div class="flex items-center gap-1.5">
@@ -368,7 +381,7 @@ LIST FEATURE USER:
                 </div>
 
                 <div id="postingan-card-2"
-                    class="absolute top-6 left-6  bg-white rounded-md w-70 xl:w-120 py-5 shadow-md hidden xl:block duration-500 transition-all">
+                    class="absolute top-6 left-6 bg-white rounded-md w-70 xl:w-120 py-5 shadow-lg hidden xl:block duration-200 transition-all">
 
                     <div class="flex items-center mb-4 px-6">
 
@@ -377,22 +390,19 @@ LIST FEATURE USER:
 
                         <div class="text-[10px] xl:text-[11px] flex flex-col justify-start text-[var(--primary-500)]">
 
-                            <p class="text-start font-medium">Warung Lorem Ipsum</p>
-                            <p class="text-start font-normal">2 jam yang lalu</p>
+                            <p class="text-start font-medium">KayuKita</p>
+                            <p class="text-start font-normal">3 hari yang lalu</p>
 
                         </div>
-
-                        <img src="{{ asset('images/more-button-post.svg')}}" alt="More Button"
-                            class="ml-16 xl:ml-25 w-4">
                     
                     </div>
 
                     <p id="deskripsi"
                         class="text-[10px] xl:text-[12px] font-[Montserrat] text-[var(--secondary-text)] px-6">
-                        Deskripsi atau caption lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                        Kerajinan kayu handmade dengan desain unik dan ramah lingkungan. Cocok untuk dekorasi rumah atau hadiah spesial. Dukung pengrajin lokal, pilih produk berkualitas dari KayuKita!
                     </p>
 
-                    <img src="{{ asset('images/hero-section.svg') }}" alt="Picture Post"
+                    <img src="{{ asset('images/kayu.webp') }}" alt="Picture Post"
                         class="my-4 w-full">
 
                     <div class="flex items-center gap-1.5">
@@ -411,7 +421,7 @@ LIST FEATURE USER:
                 </div>
 
                 <div id="postingan-card-3"
-                    class="absolute top-0 left-0 bg-white rounded-md w-70 xl:w-120 py-5 shadow-md hidden xl:block transition-all duration-500">
+                    class="absolute top-0 left-0 bg-white rounded-md w-70 xl:w-120 py-5 shadow-lg hidden xl:block transition-all duration-200">
 
                     <div class="flex items-center mb-4 px-6">
 
@@ -420,19 +430,16 @@ LIST FEATURE USER:
 
                         <div class="text-[10px] xl:text-[11px] flex flex-col justify-start text-[var(--primary-500)]">
 
-                            <p class="text-start font-medium">Warung Lorem Ipsum</p>
+                            <p class="text-start font-medium">Kopi Lereng</p>
                             <p class="text-start font-normal">2 jam yang lalu</p>
 
                         </div>
-
-                        <img src="{{ asset('images/more-button-post.svg')}}" alt="More Button"
-                            class="ml-16 xl:ml-25 w-4">
                     
                     </div>
 
                     <p id="deskripsi"
                         class="text-[10px] xl:text-[12px] font-[Montserrat] text-[var(--secondary-text)] px-6">
-                        Deskripsi atau caption lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                        Diseduh langsung dari biji pilihan petani lereng gunung. Setiap tegukan punya cerita, aroma, dan kehangatan khas kopi Nusantara. #NgopiLokal yuk!
                     </p>
 
                     <img src="{{ asset('images/hero-section.svg') }}" alt="Picture Post"
@@ -459,7 +466,7 @@ LIST FEATURE USER:
 
                 <h3 class="font-semibold text-[var(--primary-500)] text-[25px] sm:text-[38px] xl:text-[42px] 2xl:text-[50px]">Cerita & Aktivitas UMKM</h3>
 
-                <p class="text-[10px] sm:text-[13px] xl:text-[15px] 2xl:text-[17px] text-center xl:text-end font-[Montserrat] xl:w-160 ">Dukung dan berinteraksi langsung dengan komunitas untuk mengikuti perkembangan terbaru dari UMKM inklusif di daerah Bandung</p>
+                <p class="text-[10px] sm:text-[13px] xl:text-[15px] 2xl:text-[17px] text-center xl:text-end font-[Montserrat] w-130 xl:w-160 ">Dukung dan berinteraksi langsung dengan komunitas untuk mengikuti perkembangan terbaru dari UMKM inklusif di daerah Bandung</p>
 
                 <a class="flex gap-2 mt-7 border-1 border-[var(--primary-600)] rounded-4xl py-2 px-4 hover:bg-[var(--primary-600)] transition-all duration-300 text-[var(--primary-600)] hover:text-[var(--bg)] items-center cursor-pointer">
 
