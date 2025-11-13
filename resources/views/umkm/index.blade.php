@@ -17,8 +17,8 @@
     @foreach ($umkms as $umkm)
         <tr>
             <td>{{ $loop->iteration }}</td>
-            @if ($umkm->image != null)
-                {{-- ! temporary --}}
+            @if ($umkm->image != null) --}}
+                ! temporary
                 <td>
                     <img src="{{ asset('storage/defaults/default_store.webp') }}" alt="default store image" style="width: 200px;">
                 </td>
@@ -48,3 +48,31 @@
 
 <br><br>
 <a href="{{ route('dashboard.user') }}">back</a>
+
+{{-- @extends('template.main')
+
+@section('title', 'Direktori UMKM |')
+
+@push('css')
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
+@endpush
+
+@section('content')
+    <header class="relative">
+
+        <div class="fixed h-50 w-screen bg-[var(--primary-50)] flex flex-col">
+
+            <livewire:navbar />
+
+            <div class="flex lg:flex-row flex-col">
+
+                
+
+            </div>
+
+        </div>
+        
+    </header>
+@endsection --}}

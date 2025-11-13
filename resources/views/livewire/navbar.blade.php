@@ -1,10 +1,11 @@
 <div>
+    {{-- Desktop Navbar --}}
     <nav id="navbar"
-        class="flex fixed top-6 md:top-5 left-7 right-7 py-4 px-5 md:left-25 md:right-25 md:py-[17px] md:px-[40px] justify-between items-center border border-[#E6F2F1]/30 bg-[#E6F2F1]/10 rounded-[16px] z-70 transition-all duration-500">
+        class="flex fixed top-6 md:top-5 left-7 right-7 py-4 px-5 md:left-25 md:right-25 md:py-[15px] md:px-[40px] justify-between items-center border {{ request()->routeIs('dashboard.user') ? 'border-[#E6F2F1]/30 bg-[#E6F2F1]/10' : 'bg-[var(--primary-500)] border-[var(--primary-500)] shadow-md' }} rounded-[16px] z-40 transition-all duration-500">
 
         <div>
             <a href="{{ route('dashboard.user') }}">
-                <img src="{{ asset('images/logo.svg') }}" alt=""
+                <img src="{{ asset('images/logo.svg') }}" alt="" 
                     class="xl:w-43 h-auto w-22 md:w-28">
             </a>
         </div>
@@ -12,9 +13,9 @@
         <div class="xl:flex gap-[35px] font-[Montserrat] hidden justify-end items-center w-full pr-10">
 
             <a href="{{ route('dashboard.user') }}"
-                class="text-white @if (Request::segment(1) == '') font-bold @endif hover:font-bold transition-all ease-in">Beranda</a>
+                class="text-white {{ request()->routeIs('dashboard.user') ? 'font-bold' : '' }} hover:font-bold transition-all ease-in">Beranda</a>
             <a href="{{ route('umkm.index') }}"
-                class="text-white hover:font-bold transition-all ease-in">UMKM</a>
+                class="text-white {{ request()->routeIs('umkm.index') ? 'font-bold' : '' }} hover:font-bold transition-all ease-in">UMKM</a>
             <a href="#"
                 class="text-white hover:font-bold transition-all ease-in">Postingan</a>
             <a href="#"
@@ -27,11 +28,14 @@
         </div>
 
         @if (Auth::check())
-            <div class="hidden xl:flex cursor-pointer" wire:click="toggle">
+            <div class="hidden xl:flex cursor-pointer" wire:click="toggleDesktop">
 
                 <div class="flex text-white gap-3">
-                    <h2>{{ Auth::user()->name }}</h2>
-                    <img src="{{ asset('images/arrow-dropdown.svg') }}" alt="">
+
+                    <img src="{{ asset('images/' . Auth::user()->profile_picture) }}"
+                        alt="Profile Picture"
+                        class="w-12 rounded-full object-cover">
+
                 </div>
 
             </div>
@@ -41,6 +45,7 @@
 
                 <a href="{{ route('auth.login') }}"
                     class="border-white border-1 rounded-3xl px-[21px] py-[10px] text-white font-semibold hover:scale-105 transition-all duration-300">Login</a>
+                    
                 <a href="{{ route('auth.register') }}"
                     class="border-white border-1 rounded-3xl px-[21px] py-[10px] text-black font-medium bg-white hover:scale-105 transition-all duration-300">Register</a>
 
@@ -57,13 +62,17 @@
 
     </nav>
 
-    <div class=" {{ $isOpen ? 'max-h-60 opacity-100' : 'max-h-0 opacity-0 pointer-events-none' }} xl:fixed hidden right-30 mt-20 w-40 bg-white text-black rounded-lg shadow-lg z-50 transition-all" >
+    <div class=" {{ $isOpenDesktop ? 'h-20 opacity-100' : 'h-0 opacity-0 pointer-events-none' }} absolute w-40 bg-[var(--bg)] text-[var(--primary-500)] rounded-lg shadow-lg z-50 transition-all right-20 top-23" >
 
-        <a href="/profile" class="block px-4 py-2 hover:bg-gray-200 hover:rounded-lg transition-all duration-300">Profil</a>
+        <a href="#" class="block px-4 py-2 hover:bg-gray-200 hover:rounded-lg transition-all duration-300">Profil</a>
 
         <a href="{{ route('auth.logout') }}" class="block px-4 py-2 hover:bg-gray-200 hover:rounded-lg transition-all duration-300">Logout</a>
 
     </div>
+
+
+    {{-- Mobile Sidebar --}}   
+
 
     <div id="background-sidebar"
         class="{{ $isSidebarOpen ? 'bg-black/30 pointer-events-none' : 'bg-black/0 pointer-events-none' }} w-screen h-screen fixed z-90 transition-all"></div>
@@ -80,17 +89,23 @@
 
 
         <div id="navigation"
-            class="flex flex-col gap-3 w-55 transition-all duration-150">
-            <a href="#"
-                class="text-white active:bg-[var(--primary-700)] active:active:px-4 py-1 rounded-sm transition-all duration-150">Beranda</a>
+            class="flex flex-col gap-3 transition-all duration-150 w-full">
+
+            <a href="{{ route('dashboard.user') }}"
+                class=" text-white active:bg-[var(--primary-700)] active:px-4 py-1 rounded-sm transition-all duration-150">Beranda</a>
+
             <a href="#"
                 class="text-white active:bg-[var(--primary-700)] active:px-4 py-1 rounded-sm transition-all duration-150">UMKM</a>
+
             <a href="#"
                 class="text-white active:bg-[var(--primary-700)] active:px-4 py-1 rounded-sm transition-all duration-150">Postingan</a>
+
             <a href="#"
                 class="text-white active:bg-[var(--primary-700)] active:px-4 py-1 rounded-sm transition-all duration-150">Tentang Kami</a>
+
             <a href="#"
                 class="text-white active:bg-[var(--primary-700)] active:px-4 py-1 rounded-sm transition-all duration-150">Kontak</a>
+
         </div>
 
         <div id="separator"
@@ -101,7 +116,7 @@
         <div id="account">
 
             @if (Auth::check())
-                <div class="flex xl:hidden cursor-pointer" wire:click="toggle">
+                <div class="flex xl:hidden cursor-pointer" wire:click="toggleMobile">
 
                     <div class="flex text-white gap-3">
                         <h2>{{ Auth::user()->name }}</h2>
@@ -114,18 +129,18 @@
                 <div class="flex gap-2">
 
                     <a href="{{ route('auth.login') }}"
-                        class="border-white border-1 rounded-3xl px-[21px] py-[10px] text-white font-semibold hover:scale-105 transition-all duration-300">Login</a>
+                        class="border-white border-1 text-[12px] rounded-3xl px-[21px] py-[10px] text-white font-semibold hover:scale-105 transition-all duration-300">Login</a>
                     <a href="{{ route('auth.register') }}"
-                        class="border-white border-1 rounded-3xl px-[21px] py-[10px] text-black font-medium bg-white hover:scale-105 transition-all duration-300">Register</a>
-
+                        class="border-white border-1 text-[12px] rounded-3xl px-[21px] py-[10px] text-[var(--primary-500)] font-medium bg-white hover:scale-105 transition-all duration-300">Register</a>
+                
                 </div>
             @endif
 
-            <div class=" {{ $isOpen ? 'max-h-60 opacity-100' : 'max-h-0 opacity-0 pointer-events-none' }} fixed xl:hidden w-full mt-4 bg-white text-black rounded-lg shadow-lg z-50 transition-all" >
+            <div class=" {{ $isOpenMobile ? 'max-h-60 opacity-100' : 'max-h-0 opacity-0 pointer-events-none' }} fixed max-w-full mt-4 bg-white text-black rounded-lg shadow-lg z-50 transition-all" >
 
-                <a href="/profile" class="block px-4 py-2 hover:bg-gray-200 hover:rounded-lg transition-all duration-300 text-[12px]">Profil</a>
+                <a href="/profile" class="block pl-4 pr-6 py-2 hover:bg-gray-200 hover:rounded-lg transition-all duration-300 text-[14px]">Profil</a>
 
-                <a href="{{ route('auth.logout') }}" class="block px-4 py-2 hover:bg-gray-200 hover:rounded-lg transition-all duration-300 text-[12px]">Logout</a>
+                <a href="{{ route('auth.logout') }}" class="block pl-4 pr-6 py-2 hover:bg-gray-200 hover:rounded-lg transition-all duration-300 text-[14px]">Logout</a>
 
             </div>
         </div>

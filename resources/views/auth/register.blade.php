@@ -110,7 +110,7 @@
             </div>
 
             <div class="flex-grow flex items-center">
-                <h1 class="2xl:text-[68px] text-[60px] font-bold text-white">Selamat <br> Datang di<br> LokaHub!</h1>
+                <h1 class="2xl:text-[60px] text-[50px] font-bold text-white">Selamat <br> Datang di<br> LokaHub!</h1>
             </div>
         </div>
 

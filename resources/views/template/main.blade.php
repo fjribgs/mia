@@ -6,14 +6,20 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="shortcut icon" href="{{ asset('images/logo-notext.svg') }}" type="image/x-icon">
   <title>@yield('title') Inspira</title>
+  @livewireStyles
 
   @stack('css')
 
   @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
+
 <body>
+
   @yield('content')
 
+  @livewireScripts
+
   @stack('script')
+  
 </body>
 </html>
