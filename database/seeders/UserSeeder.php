@@ -43,10 +43,10 @@ class UserSeeder extends Seeder
                 'role' => 'umkm',
             ],
             [
-                'name' => 'Gallerajid',
-                'username' => 'gallerajid',
-                'email' => 'gallerajid@gmail.com',
-                'password' => bcrypt('gallerajid'),
+                'name' => 'Keripik Pak Dedi',
+                'username' => 'keripikdedi',
+                'email' => 'keripikdedi@gmail.com',
+                'password' => bcrypt('keripikdedi'),
                 'role' => 'umkm',
             ],
             [
@@ -71,10 +71,10 @@ class UserSeeder extends Seeder
                 'role' => 'umkm',
             ],
             [
-                'name' => 'Puzzle Hidayah',
-                'username' => 'puzzlehidayah',
-                'email' => 'puzzlehidayah@gmail.com',
-                'password' => bcrypt('puzzlehidayah'),
+                'name' => 'Cafe Cupable',
+                'username' => 'cafecupable',
+                'email' => 'cafecupable@gmail.com',
+                'password' => bcrypt('cafecupable'),
                 'role' => 'umkm',
             ],
             [
@@ -92,10 +92,10 @@ class UserSeeder extends Seeder
                 'role' => 'umkm',
             ],
             [
-                'name' => 'Keripik Pak Dedi',
-                'username' => 'keripikdedi',
-                'email' => 'keripikdedi@gmail.com',
-                'password' => bcrypt('keripikdedi'),
+                'name' => 'Gallerajid',
+                'username' => 'gallerajid',
+                'email' => 'gallerajid@gmail.com',
+                'password' => bcrypt('gallerajid'),
                 'role' => 'umkm',
             ],
         ];

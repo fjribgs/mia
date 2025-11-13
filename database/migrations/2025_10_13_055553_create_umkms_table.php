@@ -16,8 +16,8 @@ return new class extends Migration
             $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
             $table->foreignId('province_id')->constrained('indonesia_provinces');
             $table->foreignId('city_id')->constrained('indonesia_cities');
-            $table->foreignId('district_id')->constrained('indonesia_districts');
-            $table->foreignId('village_id')->constrained('indonesia_villages');
+            $table->foreignId('district_id')->nullable()->constrained('indonesia_districts');
+            $table->foreignId('village_id')->nullable()->constrained('indonesia_villages');
             $table->string('umkm_picture')->default('default_umkm.svg');
             $table->text('description');
             $table->enum('type', ['Tetap', 'Keliling']);
