@@ -57,10 +57,24 @@ class UserSeeder extends Seeder
                 'role' => 'umkm',
             ],
             [
+                'name' => 'BJ Homemade (Kacamata Kayu)',
+                'username' => 'bjhomemade',
+                'email' => 'bjhomemade@gmail.com',
+                'password' => bcrypt('bjhomemade'),
+                'role' => 'umkm',
+            ],
+            [
                 'name' => 'Nokha (Nopi Herlina)',
                 'username' => 'nokha',
                 'email' => 'nokha@gmail.com',
                 'password' => bcrypt('nokha'),
+                'role' => 'umkm',
+            ],
+            [
+                'name' => 'Puzzle Hidayah',
+                'username' => 'puzzlehidayah',
+                'email' => 'puzzlehidayah@gmail.com',
+                'password' => bcrypt('puzzlehidayah'),
                 'role' => 'umkm',
             ],
             [
@@ -75,27 +89,6 @@ class UserSeeder extends Seeder
                 'username' => 'onnihouse',
                 'email' => 'onnihouse@gmail.com',
                 'password' => bcrypt('onnihouse'),
-                'role' => 'umkm',
-            ],
-            [
-                'name' => 'BJ Homemade (Kacamata Kayu)',
-                'username' => 'bjhomemade',
-                'email' => 'bjhomemade@gmail.com',
-                'password' => bcrypt('bjhomemade'),
-                'role' => 'umkm',
-            ],
-            [
-                'name' => 'Puzzle Hidayah',
-                'username' => 'puzzlehidayah',
-                'email' => 'puzzlehidayah@gmail.com',
-                'password' => bcrypt('puzzlehidayah'),
-                'role' => 'umkm',
-            ],
-            [
-                'name' => 'Difabis Coffee & Tea (BAZNAS)',
-                'username' => 'difabiscoffee',
-                'email' => 'difabiscoffee@gmail.com',
-                'password' => bcrypt('difabiscoffee'),
                 'role' => 'umkm',
             ],
             [

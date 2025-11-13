@@ -169,31 +169,31 @@ LIST FEATURE USER:
 
             <div class="text-center md:text-left mx-auto md:mx-0 md:pt-[90px] xl:max-w-170 max-w-124">
 
-                <h1 class="text-white text-[29px] sm:text-[37px] md:text-[40px] lg:text-[48px] md:w-[667px]">Memberdayakan UMKM <br />Disabilitas untuk <br><b>Tumbuh</b> dan <br> <b>Menginspirasi</b></h1>
+                <h1 class="text-white text-[29px] sm:text-[37px] md:text-[40px] 2xl:text-[48px] md:w-[667px]">Memberdayakan UMKM <br />Disabilitas untuk <br><b>Tumbuh</b> dan <br> <b>Menginspirasi</b></h1>
 
-                <p class="text-white pt-[32px] text-[12px] sm:text-[14px] font-normal xl:text-[19px] md:text-[16px] max-w-160">Jelajahi kisah inspiratif, dukung produk lokal, dan bantu UMKM disabilitas untuk meraih kemandirian ekonomi.</p>
+                <p class="text-white pt-[32px] text-[12px] sm:text-[14px] font-normal xl:w-130 2xl:text-[19px] md:text-[16px] max-w-160">Jelajahi kisah inspiratif, dukung produk lokal, dan bantu UMKM disabilitas untuk meraih kemandirian ekonomi.</p>
 
                 <div class="flex gap-2 justify-center md:justify-start mt-8 md:my-9 [&>a]:hover:bg-[var(--primary-100)] [&>a]:transition-all [&>a]:duration-300">
 
                     @if (Auth::check())
                         <a href="{{ route('umkm.index') }}"
-                            class="font-semibold text-[12px] sm:text-[14px] xl:text-[19px] md:text-[15px]
+                            class="font-semibold text-[12px] sm:text-[14px] 2xl:text-[19px] md:text-[15px]
                             bg-white rounded-4xl text-[var(--primary-500)]
-                            py-[10px] xl:py-[15px] md:py-[14px] sm:py-[12px]
-                            px-[14px] xl:px-[33px] md:px-[22px] sm:px-[19px]
+                            py-[10px] 2xl:py-[15px] md:py-[14px] sm:py-[12px]
+                            px-[14px] 2xl:px-[33px] md:px-[22px] sm:px-[19px]
                             ">Jelajahi Sekarang</a>
                     @else
                         <a href="{{ route('auth.login') }}"
-                            class="font-semibold text-[12px] sm:text-[14px] xl:text-[19px] md:text-[15px]
+                            class="font-semibold text-[12px] sm:text-[14px] 2xl:text-[19px] md:text-[15px]
                             bg-white rounded-4xl text-[var(--primary-500)]
-                            py-[10px] xl:py-[15px] md:py-[14px] sm:py-[12px]
-                            px-[14px] xl:px-[33px] md:px-[22px] sm:px-[19px]
+                            py-[10px] 2xl:py-[15px] md:py-[14px] sm:py-[12px]
+                            px-[14px] 2xl:px-[33px] md:px-[22px] sm:px-[19px]
                             ">Jelajahi Sekarang</a>
                     @endif
 
-                    <button class="font-semibold text-[12px] sm:text-[14px] xl:text-[19px] md:text-[15px]
-                        text-white py-[10px] xl:py-[15px] md:py-[14px] sm:py-[12px]
-                        px-[11px] xl:px-[33px] md:px-[22px] sm:px-[19px] underline">
+                    <button class="font-semibold text-[12px] sm:text-[14px] 2xl:text-[19px] md:text-[15px]
+                        text-white py-[10px] 2xl:py-[15px] md:py-[14px] sm:py-[12px]
+                        px-[11px] 2xl:px-[33px] md:px-[22px] sm:px-[19px] underline">
 
                         @if (Auth::check())
                             <a href="{{ route('umkm.logout_already_login') }}">Daftarkan Bisnismu</a>
@@ -223,7 +223,7 @@ LIST FEATURE USER:
                 class="flex items-center xl:gap-5 gap-3 sm:mt-5 [&>div>div]:text-start [&>div>div]:px-5 [&>div>div]:py-5">
 
                 <div id="umkm-card-left"
-                    class="flex flex-col justify-between bg-[#FFFFFF] h-[450px] xl:h-[450px] w-[250px] xl:w-[300px] shadow-md mt-10 rounded-[18px] xl:hover:w-[350px] transition-all duration-300">  
+                    class="flex flex-col justify-between bg-[#FFFFFF] h-[350px] w-[300px] xl:h-[450px] xl:w-[300px] shadow-md mt-10 rounded-[18px] xl:hover:w-[350px] transition-all duration-300">  
 
                     <img src="{{ asset('images/umkm-pulas-katumbiri.webp') }}" 
                         alt="Foto UMKM" 
@@ -251,7 +251,7 @@ LIST FEATURE USER:
                 </div>
 
                 <div id="umkm-card-middle"
-                    class="flex flex-col justify-between bg-[#FFFFFF] xl:h-[500px] w-[320px] shadow-md mt-10 rounded-[18px] top-[100px] z-7 xl:hover:w-[370px] transition-all duration-300">  
+                    class="flex flex-col justify-between bg-[#FFFFFF] h-[400px] w-[300px] xl:h-[500px] xl:w-[320px] shadow-md mt-10 rounded-[18px] top-[100px] z-7 xl:hover:w-[370px] transition-all duration-300">  
 
                     <img src="{{ asset('images/umkm-cafe-more.webp') }}" 
                         alt="Foto UMKM" 
@@ -289,7 +289,7 @@ LIST FEATURE USER:
                 </div>
 
                 <div id="umkm-card-right"
-                    class="flex flex-col justify-between bg-[#FFFFFF] h-[450px] xl:h-[450px] w-[250px] xl:w-[300px] shadow-md mt-10 rounded-[18px] xl:hover:w-[350px] transition-all duration-300">  
+                    class="flex flex-col justify-between bg-[#FFFFFF] h-[400px] w-[300px] xl:h-[450px] xl:w-[300px] shadow-md mt-10 rounded-[18px] xl:hover:w-[350px] transition-all duration-300">  
 
                         <img src="{{ asset('images/umkm-keripik-kusnadi.webp') }}" 
                             alt="Foto UMKM" 
@@ -329,7 +329,7 @@ LIST FEATURE USER:
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5061 3.43558C12.8178 3.16282 13.2917 3.1944 13.5644 3.50613L20.5644 11.5061C20.8119 11.7889 20.8119 12.2111 20.5644 12.4939L13.5644 20.4939C13.2917 20.8056 12.8178 20.8372 12.5061 20.5644C12.1944 20.2917 12.1628 19.8179 12.4356 19.5061L18.3472 12.75H4C3.58579 12.75 3.25 12.4142 3.25 12C3.25 11.5858 3.58579 11.25 4 11.25H18.3472L12.4356 4.49389C12.1628 4.18216 12.1944 3.70834 12.5061 3.43558Z" fill="currentColor" class=""/>
                 
                     </svg>
-                    
+
             </div>
             </button>
 
@@ -341,7 +341,7 @@ LIST FEATURE USER:
             <div class="group relative">
 
                 <div id="postingan-card-1"
-                    class="relative xl:top-3 xl:left-3 bg-white rounded-md w-70 xl:w-120 py-5 shadow-lg z-8">
+                    class="relative xl:top-3 xl:flex-[1] xl:left-3 bg-white rounded-md w-70 xl:w-100 2xl:w-120 py-5 shadow-lg z-8">
 
                     <div class="flex items-center mb-4 px-6">
 
@@ -381,7 +381,7 @@ LIST FEATURE USER:
                 </div>
 
                 <div id="postingan-card-2"
-                    class="absolute top-6 left-6 bg-white rounded-md w-70 xl:w-120 py-5 shadow-lg hidden xl:block duration-200 transition-all">
+                    class="absolute top-6 left-6 bg-white rounded-md w-70 xl:w-100 2xl:w-120 py-5 shadow-lg hidden xl:block duration-200 transition-all">
 
                     <div class="flex items-center mb-4 px-6">
 
@@ -415,13 +415,13 @@ LIST FEATURE USER:
                     </div>
 
                     <p class="px-6 text-[9px] xl:text-[12px] text-[var(--secondary-text)] mt-2.5 font-[Montserrat]">
-                        Disukai oleh Lorem Ipsum dan 29 Lainnya
+                        Disukai oleh charlixcx dan 67 Lainnya
                     </p>
 
                 </div>
 
                 <div id="postingan-card-3"
-                    class="absolute top-0 left-0 bg-white rounded-md w-70 xl:w-120 py-5 shadow-lg hidden xl:block transition-all duration-200">
+                    class="absolute top-0 left-0 bg-white rounded-md w-70 xl:w-100 2xl:w-120 py-5 shadow-lg hidden xl:block transition-all duration-200">
 
                     <div class="flex items-center mb-4 px-6">
 
@@ -462,11 +462,11 @@ LIST FEATURE USER:
             </div>
         
             <div id="post-umkm-desc"
-                class="mt-9 xl:mt-20 flex flex-col items-center xl:items-end justify-center xl:justify-end px-8 xl:gap-3.5">
+                class="mt-9 xl:mt-20 xl:flex-[2] flex flex-col items-center xl:items-end justify-center xl:justify-end px-8 xl:gap-3.5">
 
-                <h3 class="font-semibold text-[var(--primary-500)] text-[25px] sm:text-[38px] xl:text-[42px] 2xl:text-[50px]">Cerita & Aktivitas UMKM</h3>
+                <h3 class="font-semibold text-[var(--primary-500)] text-[25px] sm:text-[38px] xl:text-[38px] 2xl:text-[50px]">Cerita & Aktivitas UMKM</h3>
 
-                <p class="text-[10px] sm:text-[13px] xl:text-[15px] 2xl:text-[17px] text-center xl:text-end font-[Montserrat] w-130 xl:w-160 ">Dukung dan berinteraksi langsung dengan komunitas untuk mengikuti perkembangan terbaru dari UMKM inklusif di daerah Bandung</p>
+                <p class="text-[10px] sm:text-[13px] xl:text-[15px] 2xl:text-[18px] text-center xl:text-end font-[Montserrat] w-130 xl:w-160 2xl:w-180">Dukung dan berinteraksi langsung dengan komunitas untuk mengikuti perkembangan terbaru dari UMKM inklusif di daerah Bandung</p>
 
                 <a class="flex gap-2 mt-7 border-1 border-[var(--primary-600)] rounded-4xl py-2 px-4 hover:bg-[var(--primary-600)] transition-all duration-300 text-[var(--primary-600)] hover:text-[var(--bg)] items-center cursor-pointer">
 
