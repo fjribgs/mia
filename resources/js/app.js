@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
       separator.classList.add('bg-gray-500')
     }
 
-    if (currentScroll > sectionTop - 200 && currentScroll < sectionTop + 170) {
+    if (currentScroll > sectionTop - 200 && currentScroll < sectionTop + 300) {
     // scroll berada di dalam section → aktifkan efek
     post3.classList.remove('top-0', 'left-0');
     post3.classList.add('top-15', 'left-15');
