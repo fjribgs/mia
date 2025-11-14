@@ -1,4 +1,4 @@
-<h2>List UMKM for user views</h2>
+{{-- <h2>List UMKM for user views</h2>
 
 <table>
     <tr>
@@ -17,7 +17,7 @@
     @foreach ($umkms as $umkm)
         <tr>
             <td>{{ $loop->iteration }}</td>
-            @if ($umkm->image != null) --}}
+            @if ($umkm->image != null)
                 ! temporary
                 <td>
                     <img src="{{ asset('storage/defaults/default_store.webp') }}" alt="default store image" style="width: 200px;">
@@ -47,9 +47,9 @@
 </table>
 
 <br><br>
-<a href="{{ route('dashboard.user') }}">back</a>
+<a href="{{ route('dashboard.user') }}">back</a> --}}
 
-{{-- @extends('template.main')
+@extends('template.main')
 
 @section('title', 'Direktori UMKM |')
 
@@ -60,19 +60,7 @@
 @endpush
 
 @section('content')
-    <header class="relative">
+    
+    <livewire:umkm-index />
 
-        <div class="fixed h-50 w-screen bg-[var(--primary-50)] flex flex-col">
-
-            <livewire:navbar />
-
-            <div class="flex lg:flex-row flex-col">
-
-                
-
-            </div>
-
-        </div>
-        
-    </header>
-@endsection --}}
+@endsection
