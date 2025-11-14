@@ -16,17 +16,17 @@ return new class extends Migration
             $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
             $table->foreignId('province_id')->constrained('indonesia_provinces');
             $table->foreignId('city_id')->constrained('indonesia_cities');
-            $table->foreignId('district_id')->constrained('indonesia_districts');
-            $table->foreignId('village_id')->constrained('indonesia_villages');
+            $table->foreignId('district_id')->nullable()->constrained('indonesia_districts');
+            $table->foreignId('village_id')->nullable()->constrained('indonesia_villages');
             $table->string('umkm_picture')->default('default_umkm.svg');
             $table->text('description');
             $table->enum('type', ['Tetap', 'Keliling']);
-            $table->text('gmaps_link');
-            $table->text('address');
-            $table->char('phone_number', 15);
-            $table->string('open_days'); //note: dropdown hardcode value
-            $table->string('open_time');
-            $table->string('close_time');
+            $table->text('gmaps_link')->nullable();
+            $table->text('address')->nullable();
+            $table->char('phone_number', 15)->nullable();
+            $table->string('open_days')->nullable(); //note: dropdown hardcode value
+            $table->string('open_time')->nullable();
+            $table->string('close_time')->nullable();
             $table->text('image')->nullable();
             $table->decimal('average_rating')->default(0);
             $table->boolean('is_open_for_collaboration')->default(false);
