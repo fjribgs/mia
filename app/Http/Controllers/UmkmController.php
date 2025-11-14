@@ -5,11 +5,15 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Umkm;
+use Laravolt\Indonesia\Models\City;
+use Laravolt\Indonesia\Models\Province;
 
 class UmkmController extends Controller
 {
     public function regisUmkm() {
-        return view('auth.umkm_regis');
+        $provinces = Province::where('name', 'JAWA BARAT')->get();
+        $cities = City::whereIn('name', ['KOTA BANDUNG', 'KABUPATEN BANDUNG', 'KABUPATEN BANDUNG BARAT'])->get();
+        return view('auth.umkm_regis', compact('provinces', 'cities'));
     }
 
     public function postregisUmkm(Request $request) {

@@ -1,148 +1,4 @@
-{{--
-
-LIST FEATURE USER:
-- view umkms
-- view products
-- view promos
-- giving review
-- view posts
-- manage his data (profile(?))
-
---}}
-
-{{-- @if (Auth::check())
-    <h2>Selamat Datang {{ Auth::user()->name }}</h2>
-    <a href="{{ route('auth.logout') }}">logout</a>
-@else
-    <h2>Selamat Datang! Silakan login terlebih dahulu!</h2>
-    <a href="{{ route('auth.login') }}">login</a>
-@endif --}}
-
-{{-- <!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Inspira</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-    </style>
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
-</head>
-
-<body class="overflow-auto">
-
-    <img src="{{ asset('images/hero-section.svg')}}"
-            alt=""
-            class="-z-10 absolute w-full object-cover h-full">
-
-    <header>
-
-        <livewire:navbar />
-
-    </header>
-
-    <main class="relative">
-
-        <section id="hero-section"
-            class="flex items-center min-h-screen justify-between w-full px-[36px] md:px-35 top-2 relative">
-
-            <div class="text-center md:text-left mx-auto md:mx-0 pt-[20px] md:pt-[110px] max-w-170">
-
-                <h1 class="text-white text-[29px] md:text-[40px] lg:text-[54px] md:w-[667px]">Memberdayakan UMKM <br />Disabilitas untuk <br><b>Tumbuh</b> dan <br>Menginspirasi</h1>
-
-                <p class="text-white pt-[32px] text-[12px] font-medium xl:text-[20px] md:text-[16px] max-w-160">Jelajahi kisah inspiratif, dukung produk lokal, dan bantu UMKM disabilitas untuk meraih kemandirian ekonomi.</p>
-
-                <div class="flex gap-[5px] justify-center md:justify-start my-8 md:my-[52px]">
-
-                    <button class="font-semibold text-[12px] xl:text-[19px] md:text-[15px]
-                        bg-white rounded-4xl
-                        py-[10px] xl:py-[15px] md:py-[14px]
-                        px-[14px] xl:px-[33px] md:px-[22px]
-                        ">Jelajahi Sekarang</button>
-
-                    <button class="font-semibold text-[12px] xl:text-[19px] md:text-[15px]
-                        text-white
-                        py-[10px] xl:py-[15px] md:py-[14px]
-                        px-[11px] xl:px-[33px] md:px-[22px]
-                        underline">Daftarkan Bisnismu</button>
-
-                </div>
-
-            </div>
-
-        </section>
-
-        <section class="flex flex-col justify-center items-center px-[36px] md:px-35 py-10 h-screen text-center bg-[var(--bg)]">
-
-            <h2 class="text-[var(--primary-500)] text-[23px] font-medium">Wujudkan UMKM <b>Berdaya</b></h2>
-
-            <p class="text-[var(--secondary-text)] text-[12px] font-light pt-2.5">Temukan berbagai UMKM yang dikelola oleh penyandang disabilitas di sekitar Bandung!</p>
-
-            <div id="umkm-card"
-                class="flex flex-col justify-between bg-[#FFFFFF] h-[300px] w-[200px] shadow-md px-5 py-7 mt-10 rounded-[18px]">
-
-                <img src="#" alt="">
-
-                <div class="flex flex-col justify-center items-start gap-3">
-
-                    <h3 class="text-[13px] font-semibold text-[var(--primary-500)]">Lorem Ipsum</h3>
-
-                    <div id="kategori"
-                        class="border-1 border-[var(--info)] text-[var(--info)] rounded-2xl px-2 py-0.5 text-[10px]">Kerajinan</div>
-
-                    <div id="lokasi"
-                        class="flex gap-1">
-
-                        <img src="{{ asset('images/lokasi-gps.svg') }}" alt="" class="w-3">
-
-                        <p class="text-[11px] text-[var(--caption)]">Bandung</p>
-
-                    </div>
-
-                    <button class="bg-[var(--primary-500)] rounded-4xl text-white w-full text-[12px] mt-3 py-2 items-center justify-center">Lihat Detail</button>
-
-                </div>
-                <button class="font-semibold text-[12px] xl:text-[19px] md:text-[15px]
-                    text-white
-                    py-[10px] xl:py-[15px] md:py-[14px]
-                    px-[11px] xl:px-[33px] md:px-[22px]
-                    underline">
-                    @if (Auth::check())
-                        <a href="{{ route('umkm.logout_already_login') }}">Daftarkan Bisnismu</a>
-                    @else
-                        <a href="{{ route('umkm.regis') }}">Daftarkan Bisnismu</a>
-                    @endif
-                </button>
-
-            </div>
-
-            <button class="flex gap-1 mt-13 border-1 border-[var(--primary-500)] rounded-4xl py-2 px-4">
-                <div class="text-[13px] text-[var(--primary-500)]">Lihat UMKM Lainnya</div>
-                <img src="{{ asset('images/arrow-right.svg') }}" alt="arrow-right"
-                    class="w-5">
-            </button>
-
-        </section>
-    </main>
-
-    <footer>
-
-        <x-footer></x-footer>
-
-    </footer>
-
-    <a href="https://maps.app.goo.gl/SqGff3Yg4EUSeL6a7?g_st=aw"
-        class="hidden">link gmaps</a>
-
-</body>
-</html> --}}
-
-
 @extends('template.main')
-
-@section('title', 'Home |')
 
 @push('css')
     <style>
@@ -159,7 +15,7 @@ LIST FEATURE USER:
 
     <main class="relative">
 
-        <section id="hero-section" 
+        <section id="hero-section"
             class="flex items-center h-screen justify-between w-full px-[36px] md:px-35 relative">
 
             <img src="{{ asset('images/hero-section.svg')}}"
@@ -200,7 +56,7 @@ LIST FEATURE USER:
                         @else
                             <a href="{{ route('umkm.regis') }}">Daftarkan Bisnismu</a>
                         @endif
-                        
+
                     </button>
 
                 </div>
@@ -225,8 +81,8 @@ LIST FEATURE USER:
                 <div id="umkm-card-left"
                     class="flex flex-col justify-between bg-[#FFFFFF] h-[400px] w-[300px] xl:h-[450px] xl:w-[300px] shadow-md mt-10 rounded-[18px] xl:hover:w-[350px] transition-all duration-300">  
 
-                    <img src="{{ asset('images/umkm-pulas-katumbiri.webp') }}" 
-                        alt="Foto UMKM" 
+                    <img src="{{ asset('images/umkm-pulas-katumbiri.webp') }}"
+                        alt="Foto UMKM"
                         class="w-full h-full object-cover rounded-t-[18px]">
 
                     <div class="flex flex-col justify-center items-start gap-3">
@@ -235,7 +91,7 @@ LIST FEATURE USER:
 
                         <div id="kategori"
                             class="border-1 border-[var(--info)] text-[var(--info)] rounded-2xl px-2 py-0.5 text-[10px] xl:text-[12px]">Kerajinan</div>
-                        
+
                         <div id="lokasi"
                             class="flex gap-1">
 
@@ -246,15 +102,15 @@ LIST FEATURE USER:
                         </div>
 
                         <button class="bg-[var(--primary-500)] rounded-4xl text-white w-full text-[12px] lg:text-[16px] py-2 items-center justify-center">Lihat Detail</button>
-                        
+
                     </div>
                 </div>
 
                 <div id="umkm-card-middle"
                     class="flex flex-col justify-between bg-[#FFFFFF] h-[450px] w-[300px] xl:h-[500px] xl:w-[320px] shadow-md mt-10 rounded-[18px] top-[100px] z-7 xl:hover:w-[370px] transition-all duration-300">  
 
-                    <img src="{{ asset('images/umkm-cafe-more.webp') }}" 
-                        alt="Foto UMKM" 
+                    <img src="{{ asset('images/umkm-cafe-more.webp') }}"
+                        alt="Foto UMKM"
                         class="w-full h-full object-cover rounded-t-[18px]">
 
                     <div class="flex flex-col justify-center items-start gap-3">
@@ -266,14 +122,14 @@ LIST FEATURE USER:
 
                         <div id="kolaborasi"
                             class="flex gap-2 bg-[var(--primary-50)] py-2 px-3 items-center rounded-md min-w-full">
-                            
+
                             <img src="{{ asset('images/kolaborasi.svg') }}" alt=""
                                 class="w-8 xl:w-11">
-                                
+
                             <p class="text-[8px] lg:text-[10px] xl:text-[13px] text-start text-[var(--primary-500)] font-[Montserrat]">Berkolaborasi dengan <br> <b>PUKA (Pulas Katumbiri)</b></p>
-                        
+
                         </div>
-                        
+
                         <div id="lokasi"
                             class="flex gap-1">
 
@@ -291,8 +147,8 @@ LIST FEATURE USER:
                 <div id="umkm-card-right"
                     class="flex flex-col justify-between bg-[#FFFFFF] h-[400px] w-[300px] xl:h-[450px] xl:w-[300px] shadow-md mt-10 rounded-[18px] xl:hover:w-[350px] transition-all duration-300">  
 
-                        <img src="{{ asset('images/umkm-keripik-kusnadi.webp') }}" 
-                            alt="Foto UMKM" 
+                        <img src="{{ asset('images/umkm-keripik-kusnadi.webp') }}"
+                            alt="Foto UMKM"
                             class="w-full h-full object-cover rounded-t-[18px]">
 
                     <div class="flex flex-col justify-center items-start gap-3">
@@ -301,7 +157,7 @@ LIST FEATURE USER:
 
                         <div id="kategori"
                             class="border-1 border-[var(--info)] text-[var(--info)] rounded-2xl px-2 py-0.5 text-[10px] xl:text-[12px]">Food & Beverages</div>
-                        
+
                         <div id="lokasi"
                             class="flex gap-1">
 
@@ -312,23 +168,24 @@ LIST FEATURE USER:
                         </div>
 
                         <button class="bg-[var(--primary-500)] rounded-4xl text-white w-full text-[12px] lg:text-[16px] py-2 items-center justify-center">Lihat Detail</button>
-                        
+
                     </div>
                 </div>
             </div>
 
             <button class="flex gap-2 mt-13 border-1 border-[var(--primary-600)] rounded-4xl py-2 px-4 hover:bg-[var(--primary-600)] transition-all duration-300 text-[var(--primary-600)] hover:text-[var(--bg)] items-center cursor-pointer">
-                
+
                 <div class="text-[13px] sm:text-[16px] xl:text-[18px]">Lihat UMKM Lainnya</div>
-                
+
                 <div id="back" wire:click="toggleSidebar"
                     class="cursor-pointer">
-                
+
                     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                
+
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5061 3.43558C12.8178 3.16282 13.2917 3.1944 13.5644 3.50613L20.5644 11.5061C20.8119 11.7889 20.8119 12.2111 20.5644 12.4939L13.5644 20.4939C13.2917 20.8056 12.8178 20.8372 12.5061 20.5644C12.1944 20.2917 12.1628 19.8179 12.4356 19.5061L18.3472 12.75H4C3.58579 12.75 3.25 12.4142 3.25 12C3.25 11.5858 3.58579 11.25 4 11.25H18.3472L12.4356 4.49389C12.1628 4.18216 12.1944 3.70834 12.5061 3.43558Z" fill="currentColor" class=""/>
-                
+
                     </svg>
+
 
             </div>
             </button>
@@ -354,7 +211,7 @@ LIST FEATURE USER:
                             <p class="text-start font-normal">3 jam yang lalu</p>
 
                         </div>
-                    
+
                     </div>
 
                     <p id="deskripsi"
@@ -369,7 +226,7 @@ LIST FEATURE USER:
 
                         <img src="{{ asset('images/like.svg') }}" alt="Like"
                             class="w-10 xl:w-11 pl-6">
-                        
+
                         <p class="text-[10px] xl:text-[13px] text-[var(--secondary-text)]">30</p>
 
                     </div>
@@ -394,7 +251,7 @@ LIST FEATURE USER:
                             <p class="text-start font-normal">3 hari yang lalu</p>
 
                         </div>
-                    
+
                     </div>
 
                     <p id="deskripsi"
@@ -409,7 +266,7 @@ LIST FEATURE USER:
 
                         <img src="{{ asset('images/like.svg') }}" alt="Like"
                             class="w-10 xl:w-11 pl-6">
-                        
+
                         <p class="text-[10px] xl:text-[13px] text-[var(--secondary-text)]">30</p>
 
                     </div>
@@ -434,7 +291,7 @@ LIST FEATURE USER:
                             <p class="text-start font-normal">2 jam yang lalu</p>
 
                         </div>
-                    
+
                     </div>
 
                     <p id="deskripsi"
@@ -449,7 +306,7 @@ LIST FEATURE USER:
 
                         <img src="{{ asset('images/like.svg') }}" alt="Like"
                             class="w-10 xl:w-11 pl-6">
-                        
+
                         <p class="text-[10px] xl:text-[13px] text-[var(--secondary-text)]">30</p>
 
                     </div>
@@ -460,7 +317,7 @@ LIST FEATURE USER:
 
                 </div>
             </div>
-        
+
             <div id="post-umkm-desc"
                 class="mt-9 xl:mt-20 xl:flex-[2] w-full flex flex-col items-center xl:items-end justify-center gap-2 xl:gap-3.5">
 
@@ -474,7 +331,7 @@ LIST FEATURE USER:
 
                         <div id="back" wire:click="toggleSidebar"
                             class="cursor-pointer">
-                        
+
                         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5061 3.43558C12.8178 3.16282 13.2917 3.1944 13.5644 3.50613L20.5644 11.5061C20.8119 11.7889 20.8119 12.2111 20.5644 12.4939L13.5644 20.4939C13.2917 20.8056 12.8178 20.8372 12.5061 20.5644C12.1944 20.2917 12.1628 19.8179 12.4356 19.5061L18.3472 12.75H4C3.58579 12.75 3.25 12.4142 3.25 12C3.25 11.5858 3.58579 11.25 4 11.25H18.3472L12.4356 4.49389C12.1628 4.18216 12.1944 3.70834 12.5061 3.43558Z" fill="currentColor" class=""/>
                         </svg>
@@ -501,21 +358,21 @@ LIST FEATURE USER:
                     class="flex flex-row flex-[1] lg:flex-col gap-2 w-full lg:h-full justify-between mt-3 lg:mt-0 text-center">
 
                     <div class="flex flex-col items-center justify-center bg-white shadow-md rounded-[10px] flex-1 h-[90px]">
-                        
+
                         <h4 class="text-[22px] lg:text-[32px] text-[var(--primary-500)] font-medium">20+</h4>
                         <p class="text-[10px] lg:text-[13px] xl:text-[16px] text-[var(--primary-500)]">Lokasi UMKM Disabilitas</p>
 
                     </div>
 
                     <div class="flex flex-col items-center justify-center bg-white shadow-md rounded-[10px] flex-1 h-[90px]">
-                        
+
                         <h4 class="text-[22px] lg:text-[32px] text-[var(--primary-500)] font-medium">15+</h4>
                         <p class="text-[10px] lg:text-[13px] xl:text-[16px] text-[var(--primary-500)]">Pelaku Usaha Terdaftar</p>
 
                     </div>
 
                     <div class="flex flex-col items-center justify-center bg-white shadow-md rounded-[10px] flex-1 h-[90px]">
-                        
+
                         <h4 class="text-[22px] lg:text-[32px] text-[var(--primary-500)] font-medium">8+</h4>
                         <p class="text-[10px] lg:text-[13px] xl:text-[16px] text-[var(--primary-500)]">Kolaborasi Aktif</p>
 
@@ -640,9 +497,9 @@ LIST FEATURE USER:
                             </div>
 
                         </div>
-            
+
                     </div>
-        
+
                 </div>
 
                 <div class="hidden xl:block">
