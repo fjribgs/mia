@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
             UmkmSeeder::class,
             CategorySeeder::class,
             PromoSeeder::class,
+            UmkmCategorySeeder::class,
         ]);
     }
 }

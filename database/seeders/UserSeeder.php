@@ -50,14 +50,14 @@ class UserSeeder extends Seeder
                 'role' => 'umkm',
             ],
             [
-                'name' => 'Kelompok Keripik Pisang Kusnadi',
+                'name' => 'Keripik Pisang Kusnadi',
                 'username' => 'keripikkusnadi',
                 'email' => 'keripikkusnadi@gmail.com',
                 'password' => bcrypt('keripikkusnadi'),
                 'role' => 'umkm',
             ],
             [
-                'name' => 'BJ Homemade (Kacamata Kayu)',
+                'name' => 'BJ Homemade',
                 'username' => 'bjhomemade',
                 'email' => 'bjhomemade@gmail.com',
                 'password' => bcrypt('bjhomemade'),

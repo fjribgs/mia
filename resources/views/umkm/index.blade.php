@@ -61,6 +61,8 @@
 
 @section('content')
     
+    <livewire:navbar />
+
     <livewire:umkm-index />
 
 @endsection

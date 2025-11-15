@@ -36,7 +36,7 @@ class Umkm extends Model
 
     // ! relations
     public function user() {
-        return $this->belongsTo(User::class, 'user_id');
+        return $this->belongsTo(User::class);
     }
 
     public function province() {
@@ -61,7 +61,15 @@ class Umkm extends Model
     }
 
     public function umkmCategory() {
-        return $this->hasMany(UmkmCategory::class);
+        return $this->hasMany(UmkmCategory::class, 'umkm_id');
+    }
+
+    public function categories()
+    {
+        return $this->belongsToMany(Category::class, 
+        'umkm_categories', 
+        'umkm_id', 
+        'category_id');
     }
 
     public function promo() {

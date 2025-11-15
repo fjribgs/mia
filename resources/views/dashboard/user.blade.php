@@ -66,7 +66,7 @@
         </section>
 
         <section id="umkm-section" 
-            class="flex flex-col justify-center items-center px-[36px] sm:px-30 md:px-35 py-10 h-[120vh] text-center bg-[var(--bg)] relative bg-gradient-to-b from-[#E6F2F1] to-[#FAFAFA]">
+            class="flex flex-col justify-center items-center px-[36px] sm:px-30 md:px-35 py-10 h-[120vh] xl:h-[140vh] text-center bg-[var(--bg)] relative bg-gradient-to-b from-[#E6F2F1] to-[#FAFAFA]">
 
             <div class="absolute bg-[var(--bg)] h-130 w-13 sm:w-20 md:w-27 blur-lg -left-[30px]"></div>
             <div class="absolute bg-[var(--bg)] h-130 w-13 sm:w-20 md:w-27 blur-lg -right-[30px]"></div>
@@ -323,7 +323,7 @@
 
                 <h3 class="font-semibold text-[var(--primary-500)] text-[25px] sm:text-[38px] xl:text-[38px] 2xl:text-[50px] text-center">Cerita & Aktivitas UMKM</h3>
 
-                <p class="text-[10px] sm:text-[13px] xl:text-[15px] 2xl:text-[18px] text-center xl:text-end font-[Montserrat] xl:w-160 2xl:w-180 justify-end">Dukung dan berinteraksi langsung dengan komunitas untuk mengikuti perkembangan terbaru dari berbagai UMKM</p>
+                <p class="text-[10px] sm:text-[13px] xl:text-[15px] 2xl:text-[18px] text-center xl:text-end font-[Montserrat] xl:w-130 2xl:w-150 justify-end">Dukung dan berinteraksi langsung dengan komunitas untuk mengikuti perkembangan terbaru dari berbagai UMKM</p>
 
                 <a class="flex gap-2 mt-7 border-1 border-[var(--primary-600)] rounded-4xl py-2 px-4 hover:bg-[var(--primary-600)] transition-all duration-300 text-[var(--primary-600)] hover:text-[var(--bg)] items-center cursor-pointer">
 
