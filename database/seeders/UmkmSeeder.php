@@ -36,6 +36,8 @@ class UmkmSeeder extends Seeder
                 'description' => 'Pulas Katumbiri (PUKA) adalah sebuah UMKM yang bertujuan untuk memberdayakan para penyandang disabilitas melalui penjualan kerajinan yang berkualitas tinggi. Misi perusahaan PUKA terdiri dari empat aspek. Pertama, membedakan ciri khas produk dengan menunjukkan bakat kerajinan tangan siswa difabel. Kedua, menjalin hubungan jangka panjang dengan siswa penyandang disabilitas. Ketiga, meningkatkan kepedulian konsumen terhadap penyandang disabilitas. Keempat, memberdayakan siswa penyandang disabilitas untuk memasuki dunia kerja',
                 'type' => 'tetap',
                 'gmaps_link' => 'https://maps.app.goo.gl/kwaeEJFsHDR4q4A56',
+                'latitude' => -6.8952053,
+                'longitude' => 107.6347303,
                 'address' => 'Jl. Pahlawan No.70, Cikutra, Kec. Cibeunying Kaler, Kota Bandung, Jawa Barat 40124',
                 'phone_number' => '081122288333',
                 'open_days' => 'Setiap Hari',
