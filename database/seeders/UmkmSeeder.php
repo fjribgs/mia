@@ -41,6 +41,7 @@ class UmkmSeeder extends Seeder
                 'open_days' => 'Setiap Hari',
                 'open_time' => '10.00',
                 'close_time' => '20.00',
+                'umkm_picture' => 'images/umkm-pulas-katumbiri.webp',
             ],
             [
                 'user_id' => 4,
@@ -56,12 +57,13 @@ class UmkmSeeder extends Seeder
                 'open_days' => 'Setiap Hari',
                 'open_time' => '09.00',
                 'close_time' => '20.00',
+                'umkm_picture' => 'images/umkm-cafe-more.webp',
             ],
             [
                 'user_id' => 5,
                 'province_id' => 12,
                 'city_id' => 164,
-                'description' => 'Coming Soon hehe',
+                'description' => 'Keripik Pak Dedi adalah usaha yang menyajikan aneka pilihan keripik yang sudah diolah.',
                 'type' => 'tetap',
                 'gmaps_link' => 'https://maps.app.goo.gl/CZf1Hsrz3iPcMGcS6',
                 'address' => 'Komp. Baranangsiang Indah No.16, RT.03/RW.04, Katulampa, Kec. Bogor Tim., Kota Bogor, Jawa Barat 16144',
@@ -78,6 +80,7 @@ class UmkmSeeder extends Seeder
                 'gmaps_link' => 'https://maps.app.goo.gl/CZf1Hsrz3iPcMGcS6',
                 'address' => 'Sekitar Cileunyi',
                 'open_days' => 'Setiap Hari',
+                'umkm_picture' => 'images/umkm-keripik-kusnadi.webp',
             ],
             [
                 'user_id' => 7,
@@ -104,6 +107,7 @@ class UmkmSeeder extends Seeder
                 'open_days' => 'Setiap Hari',
                 'open_time' => '08.00',
                 'close_time' => '19.00',
+                'umkm_picture' => 'images/umkm-nokha.webp',
             ],
             [
                 'user_id' => 9,
@@ -117,6 +121,7 @@ class UmkmSeeder extends Seeder
                 'open_days' => 'Setiap Hari',
                 'open_time' => '09.00',
                 'close_time' => '21.00',
+                'umkm_picture' => 'images/umkm-cafe-cupable.webp',
             ],
             [
                 'user_id' => 10,
@@ -130,6 +135,7 @@ class UmkmSeeder extends Seeder
                 'open_days' => 'Setiap Hari',
                 'open_time' => '09.00',
                 'close_time' => '22.00',
+                'umkm_picture' => 'images/umkm-cafe-sunyi.webp',
             ],
             [
                 'user_id' => 11,
@@ -143,6 +149,7 @@ class UmkmSeeder extends Seeder
                 'open_days' => 'Setiap Hari',
                 'open_time' => '10.00',
                 'close_time' => '22.00',
+                'umkm_picture' => 'images/umkm-onni-house.webp',
             ],
             [
                 'user_id' => 12,
@@ -150,6 +157,7 @@ class UmkmSeeder extends Seeder
                 'city_id' => 181,
                 'description' => 'Galleraj.id',
                 'type' => 'tetap',
+                'umkm_picture' => 'images/umkm-gallerajid.webp',
             ],
         ];
 

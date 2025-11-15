@@ -1,8 +1,8 @@
 <div class="w-screen flex flex-col">
 
-    <header class="flex flex-col w-full bg-[var(--primary-50)] justify-end fixed">
+    <header class="flex flex-col w-full bg-[var(--primary-50)] justify-end fixed z-9 shadow-md">
         
-        <div class="py-4 px-5 md:py-[15px] md:px-35 mt-21 flex flex-col">
+        <div class="py-4 px-5 md:py-[15px] md:px-35 mt-21 xl:mt-25 flex flex-col">
 
             <div id="search-bar" 
                 class="relative bg-[var(--bg)] border-2 border-[var(--soft-bg)] rounded-[100px]">
@@ -19,19 +19,19 @@
 
     </header>
 
-    <main class="py-4 px-5 md:py-[15px] md:px-35 mt-43">
+    <main class="py-4 px-5 md:py-[15px] md:px-35 mt-43 relative z-1">
 
-        <div class="grid gap-5 grid-cols-[repeat(auto-fit,minmax(280px,1fr))] items-center sm:mt-5 [&>div]:text-start [&>div>div]:px-5 [&>div>div]:py-5">
+        <div class="grid gap-5 grid-cols-[repeat(auto-fit,minmax(280px,1fr))] items-center sm:my-8 [&>div]:text-start [&>div>div]:px-5 [&>div>div]:py-5">
 
             @if ($umkms->count() > 0)
 
                 @foreach ($umkms as $umkm)
 
-                    <div class="flex flex-col justify-between bg-[#FFFFFF] w-full xl:w-full shadow-md rounded-[18px] xl:hover:w-[350px] transition-all duration-300">  
+                    <div class="flex flex-col justify-between bg-[#FFFFFF] w-full shadow-md rounded-[18px] xl:hover:-mt-5 transition-all duration-300">  
 
                         <img src="{{ asset('storage/' . $umkm->umkm->umkm_picture) }}"
                             alt="Foto UMKM"
-                            class="w-full h-full object-cover rounded-t-[18px]">
+                            class="w-full h-48 object-cover rounded-[18px]">
 
                         <div class="flex flex-col justify-center items-start gap-3">
 
