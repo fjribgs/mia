@@ -4,7 +4,7 @@
         
         <div class="py-4 px-5 md:py-[15px] md:px-35 mt-21 xl:mt-25 flex flex-col">
 
-            <div id="search-bar" 
+            <div id="search-bar"
                 class="relative bg-[var(--bg)] border-2 border-[var(--soft-bg)] rounded-[100px]">
 
                 <div class="absolute flex items-center inset-y-0 pl-3 w-7 pointer-events-none">
@@ -13,13 +13,13 @@
 
                 <input type="text" wire:model.live.debounce.300ms="search" placeholder="Cari UMKM..." class="w-full rounded-[100px] px-[35px] py-[10px] text-[13px] md:text-[18px]">
 
-            </div>       
+            </div>
 
         </div>
 
     </header>
 
-    <main class="py-4 px-5 md:py-[15px] md:px-35 mt-43 relative z-1">
+    <main class="py-4 px-5 md:py-[15px] md:px-35 mt-43 my-10 relative z-1">
 
         <div class="grid gap-5 grid-cols-[repeat(auto-fit,minmax(280px,1fr))] items-center sm:my-8 [&>div]:text-start [&>div>div]:px-5 [&>div>div]:py-5">
 
@@ -27,7 +27,7 @@
 
                 @foreach ($umkms as $umkm)
 
-                    <div class="flex flex-col justify-between bg-[#FFFFFF] w-full shadow-md rounded-[18px] xl:hover:-mt-5 xl:hover:shadow-xl transition-all duration-300">  
+                    <div class="flex flex-col justify-between bg-[#FFFFFF] {{ $umkms->count() < 2 ? 'w-100' : 'w-full' }} shadow-md rounded-[18px] xl:hover:-mt-5 xl:hover:shadow-xl transition-all duration-300">  
 
                         <img src="{{ asset('storage/' . $umkm->umkm->umkm_picture) }}"
                             alt="Foto UMKM"
@@ -35,48 +35,44 @@
 
                         <div class="flex flex-col justify-center items-start gap-3">
 
-                            <h3 class="text-[13px] lg:text-[16px] font-semibold text-[var(--primary-500)] font-[Montserrat]">{{ $umkm->name }}</h3>
+                            <h3 class="text-[13px] lg:text-[16px] font-semibold text-[var(--primary-500)]">{{ $umkm->umkm->user->name }}</h3>
 
                             <div id="kategori"
                                 class="border-1 border-[var(--info)] text-[var(--info)] rounded-2xl px-2 py-0.5 text-[10px] xl:text-[12px]">
-                                @foreach ($umkm->umkm->categories as $cat)
-                                    <span>{{ $cat->category_name }}</span>
-                                @endforeach
+                                <span>{{ $umkm->category->category_name }}</span>
                             </div>
 
                             <div id="rating"
                                 class="flex gap-1 items-center text-[var(--secondary-text)] text-[13px]">
-                                
                                 <img src="{{ asset('images/star.svg') }}" alt=""
                                     class="w-5">
-                                <p>{{ $umkm->umkm->average_rating }}</p> 
-
+                                <p>{{ $umkm->umkm->average_rating }}</p>
                             </div>
 
                             <div id="lokasi"
                                 class="flex gap-1">
-
                                 <img src="{{ asset('images/lokasi-gps.svg') }}" alt="" class="w-3">
-
                                 <p class="text-[11px] xl:text-[13px] text-[var(--caption)]">Bandung</p>
-
                             </div>
 
-                            <a class="bg-[var(--primary-500)] rounded-4xl text-white w-full text-[12px] lg:text-[16px] py-2 items-center text-center justify-center">Lihat Detail</a>
+                            <a href="{{ route('umkm.view', ['umkm_id' => $umkm->umkm->id]) }}" class="bg-[var(--primary-500)] rounded-4xl text-white w-full text-[12px] lg:text-[16px] text-center py-2 items-center justify-center flex hover:bg-[var(--primary-400)] transition-all duration-300">
+                                
+                                <span>Lihat Detail</span>
+                                <div class="flex items-center inset-y-0 pl-3 w-6 pointer-events-none">
+                                    <img src="{{ asset('images/detail.svg') }}" alt="Detail">
+                                </div>
 
+                            </a>
+                        
                         </div>
+                    
                     </div>
-
+                
                 @endforeach
 
-            @else
-
-                <p class="text-gray-500">Tidak ada hasil.</p>
-
-            @endif
-
+                @else
+                    <p class="text-gray-500">Tidak ada hasil.</p>
+                @endif
         </div>
-
     </main>
-
 </div>
