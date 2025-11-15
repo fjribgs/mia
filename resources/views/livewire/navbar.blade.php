@@ -5,7 +5,7 @@
 
         <div>
             <a href="{{ route('dashboard.user') }}">
-                <img src="{{ asset('images/logo.svg') }}" alt="" 
+                <img src="{{ asset('images/logo.svg') }}" alt=""
                     class="xl:w-43 h-auto w-22 md:w-28">
             </a>
         </div>
@@ -21,7 +21,7 @@
             <a href="#"
                 class="text-white hover:font-bold transition-all ease-in">Kontak</a>
             <div id="separator"
-                class="h-7 w-0.5 bg-gray-500"></div>
+                class="h-7 w-0.5 bg-gray-300 rounded-2xl"></div>
 
         </div>
 
@@ -43,7 +43,7 @@
 
                 <a href="{{ route('auth.login') }}"
                     class="border-white border-1 rounded-3xl px-[21px] py-[10px] text-white font-semibold hover:scale-105 transition-all duration-300">Login</a>
-                    
+
                 <a href="{{ route('auth.register') }}"
                     class="border-white border-1 rounded-3xl px-[21px] py-[10px] text-[var(--primary-700)] font-medium bg-white hover:scale-105 transition-all duration-300">Register</a>
 
@@ -69,7 +69,7 @@
     </div>
 
 
-    {{-- Mobile Sidebar --}}   
+    {{-- Mobile Sidebar --}}
 
 
     <div id="background-sidebar"
@@ -130,7 +130,7 @@
                         class="border-white border-1 text-[12px] rounded-3xl px-[21px] py-[10px] text-white font-semibold hover:scale-105 transition-all duration-300">Login</a>
                     <a href="{{ route('auth.register') }}"
                         class="border-white border-1 text-[12px] rounded-3xl px-[21px] py-[10px] text-[var(--primary-500)] font-medium bg-white hover:scale-105 transition-all duration-300">Register</a>
-                
+
                 </div>
             @endif
 

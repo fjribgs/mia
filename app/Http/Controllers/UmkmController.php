@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Umkm;
 use App\Models\UmkmCategory;
+use App\Models\Review;
 use Laravolt\Indonesia\Models\City;
 use Laravolt\Indonesia\Models\Province;
 
@@ -43,6 +44,14 @@ class UmkmController extends Controller
     public function view($umkm_id) {
         $umkm = UmkmCategory::where('umkm_id', $umkm_id)->get();
         $products = Product::where('umkm_id', $umkm_id)->get();
-        return view('umkm.view', compact('umkm', 'products'));
+        $reviews = Review::where('umkm_id', $umkm_id)->get();
+
+        $user_review = Review::where('umkm_id', $umkm_id)
+                        ->where('user_id', Auth::id())
+                        ->first();
+
+        $show_review = $user_review ? true : false;
+
+        return view('umkm.view', compact('umkm', 'products', 'reviews', 'show_review', 'user_review'));
     }
 }

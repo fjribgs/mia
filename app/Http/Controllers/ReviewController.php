@@ -16,14 +16,20 @@ class ReviewController extends Controller
             'comment' => 'nullable|string|max:255',
         ]);
 
-        $user = User::where('id', Auth::user()->id)->get();
-        $umkm = Umkm::where('id', $umkm_id)->get();
+        $user_id = Auth::id();
+        $umkm = Umkm::findOrFail($umkm_id);
 
         Review::create([
-            'user_id' => $user[0]->id,
-            'umkm_id' => $umkm[0]->id,
+            'user_id' => $user_id,
+            'umkm_id' => $umkm->id,
             'rating' => $request->rating,
             'comment' => $request->comment,
+        ]);
+
+        $avg_rating = Review::where('umkm_id', $umkm_id)->avg('rating');
+
+        $umkm->update([
+            'average_rating' => $avg_rating,
         ]);
 
         return back()->withSuccess('Penilaian berhasil! Terimakasih telah memberi penilaian!');

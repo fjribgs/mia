@@ -33,21 +33,58 @@
 
 <br><br>
 
-@if (Auth::check())
-    <h2>Ini rating umkm nya</h2>
+<h2>Ini rating umkm nya</h2>
 
-    <form action="{{ route('review.store', ['umkm_id' => $umkm[0]->umkm->id]) }}" method="post">
-        @csrf
-        <label for="rating">Penilaian: </label>
-        <input type="number" name="rating" id="rating" min="1" max="5">
-        <br>
-        <label for="comment">Komentar: </label>
-        <textarea name="comment" id="comment" cols="30" rows="5"></textarea>
-        <br><br>
-        <button type="submit">Kirim Penilaian</button>
-    </form>
-    <br>
+    <table>
+        <tr>
+            <th>No</th>
+            <th>Penilai</th>
+            <th>Rating</th>
+            <th>Comment</th>
+        </tr>
+        @foreach ($reviews as $review)
+            <tr>
+                <td>{{ $loop->iteration }}</td>
+                <td>{{ $review->user->name }}</td>
+                <td>{{ $review->rating }}</td>
+                @if ($review->comment != null)
+                    <td>{{ $review->comment }}</td>
+                @else
+                    <td>-</td>
+                @endif
+            </tr>
+        @endforeach
+        @empty($review)
+            <td colspan="100%" style="text-align: center;">Belum ada data penilaian</td>
+        @endempty
+    </table>
 
-    {{-- TODO: Tambahin pesan berhasilnya nanti gass --}}
-@endif
+    <br><br>
+
+    @if (Auth::check())
+        @if($show_review === true)
+            <h3>Penilaian Anda</h3>
+
+            <label for="rating">Penilaian: </label>
+            <input type="number" name="rating" id="rating" value="{{ $user_review->rating }}" disabled>
+            <br>
+            <label for="comment">Komentar: </label>
+            <textarea name="comment" id="comment" cols="30" rows="5" disabled>{{ $user_review->comment }}</textarea>
+            <br><br>
+        @else
+            <form action="{{ route('review.store', ['umkm_id' => $umkm[0]->umkm->id]) }}" method="post">
+                @csrf
+                <label for="rating">Penilaian: </label>
+                <input type="number" name="rating" id="rating" min="1" max="5">
+                <br>
+                <label for="comment">Komentar: </label>
+                <textarea name="comment" id="comment" cols="30" rows="5"></textarea>
+                <br><br>
+                <button type="submit">Kirim Penilaian</button>
+            </form>
+            <br>
+            {{-- TODO: Tambahin pesan berhasilnya nanti gass --}}
+        @endif
+    @endif
+
 
