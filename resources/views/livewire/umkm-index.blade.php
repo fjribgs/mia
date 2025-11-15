@@ -29,7 +29,7 @@
 
                     <div class="flex flex-col justify-between bg-[#FFFFFF] w-full xl:w-full shadow-md rounded-[18px] xl:hover:w-[350px] transition-all duration-300">  
 
-                        <img src="{{ asset('{{ $umkm->umkm->umkm_images }}') }}"
+                        <img src="{{ asset('storage/' . $umkm->umkm->umkm_picture) }}"
                             alt="Foto UMKM"
                             class="w-full h-full object-cover rounded-t-[18px]">
 
