@@ -27,9 +27,9 @@
 
                 @foreach ($umkms as $umkm)
 
-                    <div class="flex flex-col justify-between bg-[#FFFFFF] h-[450px] w-[300px] xl:h-[450px] xl:w-[300px] shadow-md rounded-[18px] xl:hover:w-[350px] transition-all duration-300">  
+                    <div class="flex flex-col justify-between bg-[#FFFFFF] w-full xl:w-full shadow-md rounded-[18px] xl:hover:w-[350px] transition-all duration-300">  
 
-                        <img src="{{ asset('images/umkm-pulas-katumbiri.webp') }}"
+                        <img src="{{ asset('{{ $umkm->umkm->umkm_images }}') }}"
                             alt="Foto UMKM"
                             class="w-full h-full object-cover rounded-t-[18px]">
 

@@ -20,7 +20,7 @@ class Umkm extends Model
         'city_id',
         'district_id',
         'village_id',
-        'profile_picture',
+        'umkm_picture',
         'description',
         'type',
         'gmaps_link',
