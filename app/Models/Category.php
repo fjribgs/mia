@@ -16,4 +16,12 @@ class Category extends Model
     public function umkmCategory() {
         return $this->hasMany(UmkmCategory::class);
     }
+
+    public function umkms()
+    {
+        return $this->belongsToMany(Umkm::class, 
+        'umkm_categories', 
+        'category_id', 
+        'umkm_id');
+    }
 }

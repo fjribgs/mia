@@ -1,7 +1,7 @@
 <div>
     {{-- Desktop Navbar --}}
     <nav id="navbar" wire:ignore
-        class="flex top-6 md:top-5 left-7 right-7 py-4 px-5 md:left-25 md:right-25 md:py-[15px] md:px-[40px] justify-between items-center border {{ request()->routeIs('dashboard.user') ? 'border-[#E6F2F1]/30 bg-[#E6F2F1]/10 fixed' : 'bg-[var(--primary-500)] border-[var(--primary-500)] shadow-md' }} rounded-[16px] z-40 transition-all duration-500">
+        class="flex top-6 md:top-5 left-7 right-7 py-4 px-5 md:left-25 md:right-25 md:py-[15px] md:px-[40px] justify-between items-center border {{ request()->routeIs('dashboard.user') ? 'border-[#E6F2F1]/30 bg-[#E6F2F1]/10 fixed' : 'bg-[var(--primary-500)] border-[var(--primary-500)] shadow-md fixed' }} rounded-[16px] z-40 transition-all duration-500">
 
         <div>
             <a href="{{ route('dashboard.user') }}">

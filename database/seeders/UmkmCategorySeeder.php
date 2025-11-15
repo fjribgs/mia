@@ -19,10 +19,6 @@ class UmkmCategorySeeder extends Seeder
                 'category_id' => 1,
             ],
             [
-                'umkm_id' => 1,
-                'category_id' => 3,
-            ],
-            [
                 'umkm_id' => 3,
                 'category_id' => 3,
             ],
