@@ -17,10 +17,14 @@ class UmkmCategorySeeder extends Seeder
             [
                 'umkm_id' => 1,
                 'category_id' => 1,
+            ],  
+            [
+                'umkm_id' => 2,
+                'category_id' => 3,
             ],
             [
                 'umkm_id' => 3,
-                'category_id' => 3,
+                'category_id' => 1,
             ],
             [
                 'umkm_id' => 4,
@@ -32,15 +36,15 @@ class UmkmCategorySeeder extends Seeder
             ],
             [
                 'umkm_id' => 6,
-                'category_id' => 1,
-            ],
-            [
-                'umkm_id' => 7,
                 'category_id' => 3,
             ],
             [
-                'umkm_id' => 8,
+                'umkm_id' => 7,
                 'category_id' => 2,
+            ],
+            [
+                'umkm_id' => 8,
+                'category_id' => 1,
             ],
             [
                 'umkm_id' => 9,
@@ -52,10 +56,6 @@ class UmkmCategorySeeder extends Seeder
             ],
             [
                 'umkm_id' => 11,
-                'category_id' => 1,
-            ],
-            [
-                'umkm_id' => 12,
                 'category_id' => 3,
             ],
 

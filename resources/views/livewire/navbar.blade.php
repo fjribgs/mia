@@ -17,8 +17,6 @@
             <a href="{{ route('umkm.index') }}"
                 class="text-white {{ request()->routeIs('umkm.index') ? 'font-bold' : '' }} hover:font-bold transition-all ease-in">UMKM</a>
             <a href="#"
-                class="text-white hover:font-bold transition-all ease-in">Postingan</a>
-            <a href="#"
                 class="text-white hover:font-bold transition-all ease-in">Tentang Kami</a>
             <a href="#"
                 class="text-white hover:font-bold transition-all ease-in">Kontak</a>
@@ -47,7 +45,7 @@
                     class="border-white border-1 rounded-3xl px-[21px] py-[10px] text-white font-semibold hover:scale-105 transition-all duration-300">Login</a>
                     
                 <a href="{{ route('auth.register') }}"
-                    class="border-white border-1 rounded-3xl px-[21px] py-[10px] text-black font-medium bg-white hover:scale-105 transition-all duration-300">Register</a>
+                    class="border-white border-1 rounded-3xl px-[21px] py-[10px] text-[var(--primary-700)] font-medium bg-white hover:scale-105 transition-all duration-300">Register</a>
 
             </div>
         @endif
