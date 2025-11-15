@@ -65,4 +65,6 @@
 
     <livewire:umkm-index />
 
+    <x-footer />
+
 @endsection
