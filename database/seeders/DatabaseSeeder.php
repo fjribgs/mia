@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+use App\Models\Product;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Artisan;
 
@@ -18,8 +20,9 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             UmkmSeeder::class,
             CategorySeeder::class,
-            PromoSeeder::class,
             UmkmCategorySeeder::class,
+            PromoSeeder::class,
+            ProductSeeder::class,
         ]);
     }
 }

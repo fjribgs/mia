@@ -45,7 +45,9 @@
                                 <img src="{{ asset('images/lokasi-gps.svg') }}" alt="" class="w-3">
                                 <p class="text-[11px] xl:text-[13px] text-[var(--caption)]">Bandung</p>
                             </div>
-                            <button class="bg-[var(--primary-500)] rounded-4xl text-white w-full text-[12px] lg:text-[16px] py-2 items-center justify-center">Lihat Detail</button>
+                            <a href="{{ route('umkm.view', ['umkm_id' => $umkm->umkm->id]) }}">
+                                <button class="bg-[var(--primary-500)] rounded-4xl text-white w-full text-[12px] lg:text-[16px] py-2 items-center justify-center">Lihat Detail</button>
+                            </a>
                         </div>
                     </div>
                 @endforeach
