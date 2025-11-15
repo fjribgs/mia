@@ -46,7 +46,9 @@ class UmkmSeeder extends Seeder
                 'user_id' => 4,
                 'province_id' => 12,
                 'city_id' => 181,
-                'description' => 'Cafe More adalah Kafe yang memberdayakan penyandang disabilitas sensorik tunanetra. Cafe More menyajikan aneka pilihan kopi yang diolah secara espresso, seperti cappucino dan kopi hitam. Adapun kopi olahan seperti kopi susu aren, kopi avokad, dan lain-lainnya',
+                'description' => 'Cafe More adalah kafe inklusif yang berlokasi di kawasan Sentra Wyata Guna, Bandung. Dikelola oleh individu dengan disabilitas netra dan didukung oleh komunitas Wyata Guna, Cafe More hadir sebagai ruang pemberdayaan dan pembelajaran bagi teman-teman disabilitas untuk mengembangkan keterampilan di bidang kuliner dan pelayanan.
+
+                Kami percaya bahwa setiap orang berhak memiliki kesempatan yang sama untuk berkarya dan melayani. Selain menyajikan berbagai minuman dan makanan ringan khas kafe, kami juga menghadirkan suasana yang ramah, terbuka, dan edukatif bagi setiap pengunjung.',
                 'type' => 'tetap',
                 'gmaps_link' => 'https://maps.app.goo.gl/NCHCR5d1QUmBmpmK8',
                 'address' => 'Jl. Pajajaran No.50, Pasir Kaliki, Kec. Cicendo, Kota Bandung, Jawa Barat 40171',
