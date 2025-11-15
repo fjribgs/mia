@@ -33,30 +33,32 @@
                             class="w-full h-48 object-cover rounded-[18px]">
 
                         <div class="flex flex-col justify-center items-start gap-3">
+
                             <h3 class="text-[13px] lg:text-[16px] font-semibold text-[var(--primary-500)] font-[Montserrat]">{{ $umkm->umkm->user->name }}</h3>
+
                             <div id="kategori"
                                 class="border-1 border-[var(--info)] text-[var(--info)] rounded-2xl px-2 py-0.5 text-[10px] xl:text-[12px]">
                                 <span>{{ $umkm->category->category_name }}</span>
                             </div>
+
                             <div id="rating"
                                 class="flex gap-1 items-center text-[var(--secondary-text)] text-[13px]">
                                 <img src="{{ asset('images/star.svg') }}" alt=""
                                     class="w-5">
                                 <p>{{ $umkm->umkm->average_rating }}</p>
                             </div>
+
                             <div id="lokasi"
                                 class="flex gap-1">
                                 <img src="{{ asset('images/lokasi-gps.svg') }}" alt="" class="w-3">
                                 <p class="text-[11px] xl:text-[13px] text-[var(--caption)]">Bandung</p>
                             </div>
-                            <a href="{{ route('umkm.view', ['umkm_id' => $umkm->umkm->id]) }}">
-                                <button class="bg-[var(--primary-500)] rounded-4xl text-white w-full text-[12px] lg:text-[16px] py-2 items-center justify-center">Lihat Detail</button>
-                            </a>
+
+                            <a href="{{ route('umkm.view', ['umkm_id' => $umkm->umkm->id]) }}" class="bg-[var(--primary-500)] rounded-4xl text-white w-full text-[12px] lg:text-[16px] py-2 items-center justify-center">Lihat Detail</a>
                         </div>
-                    </div>
-                @endforeach
-            @else
-                <p class="text-gray-500">Tidak ada hasil.</p>
+                    @endforeach
+                @else
+                    <p class="text-gray-500">Tidak ada hasil.</p>
             @endif
         </div>
     </main>
