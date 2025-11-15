@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\PromoController;
 use App\Http\Controllers\UmkmController;
 use Illuminate\Support\Facades\Route;
@@ -61,4 +62,8 @@ Route::controller(PromoController::class)->middleware('auth')->group(function() 
     Route::get('/promo/edit/{promo_id}', 'edit')->name('promo.edit');
     Route::post('/promo/update/{promo_id}', 'update')->name('promo.update');
     Route::get('/promo/destroy/{promo_id}', 'destroy')->name('promo.destroy');
+});
+
+Route::controller(ProductController::class)->group(function() {
+    Route::get('/product/create', 'create')->name('product.create');
 });
