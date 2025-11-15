@@ -133,7 +133,7 @@
       class="flex flex-col gap-3 w-screen px-5 md:px-35 bg-[var(--bg)] py-6">
 
         <div id="informasi-umum"
-          class="flex w-full px-5 shadow-md rounded-lg">
+          class="flex justify-between w-full px-5 shadow-md rounded-lg">
 
           <div class="flex flex-col py-4">
 
@@ -189,12 +189,31 @@
 
           <h2 class="font-semibold text-[var(--primary-500)]">Lokasi Kami</h2>
 
-          
+          <div id="map" style="height: 300px;"
+            class="rounded-[15px]"></div>
 
         </div>
 
     </section>
 
     <x-footer />
+
+    @push('script')
+      <script>
+          let lat = {{ $umkm[0]->umkm->latitude }};
+          let lng = {{ $umkm[0]->umkm->longitude }};
+
+          var map = L.map('map').setView([lat, lng], 15);
+
+          L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+              maxZoom: 19,
+          }).addTo(map);
+
+          L.marker([lat, lng]).addTo(map)
+              .bindPopup("{{ $umkm[0]->umkm->user->name }}");
+
+      </script>
+    @endpush
+
 
 @endsection
