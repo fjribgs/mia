@@ -46,6 +46,7 @@ Route::controller(CategoryController::class)->group(function() {
 Route::controller(UmkmController::class)->group(function() {
     // user views
     Route::get('/umkm', 'index')->name('umkm.index');
+    Route::get('/umkm/view/{umkm_id}', 'view')->name('umkm.view');
 
     // umkm auth
     Route::get('/umkm/regis', 'regisUmkm')->middleware('guest')->name('umkm.regis');

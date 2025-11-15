@@ -15,7 +15,7 @@ class LocationSelector extends Component
 
     public function mount($cities)
     {
-        dd($cities);
+        // dd($cities);
         $this->cities = $cities;
     }
 
