@@ -41,6 +41,6 @@ class ProductController extends Controller
             'image' => $imagePath,
         ]);
 
-        return redirect()->back()->with('success', 'Produk berhasil ditambahkan!');
+        return redirect()->back()->withSuccess('Produk berhasil ditambahkan!');
     }
 }

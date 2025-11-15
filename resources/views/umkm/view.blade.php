@@ -20,13 +20,13 @@
 <h2>Ini product umkm nya</h2>
 
 @foreach ($products as $product)
-<label for="name">Nama Produk</label>
-<input type="text" name="name" value="{{ $product->name }}" disabled>
-<br>
-<label for="description">Deskripsi</label>
-<textarea name="description" cols="30" rows="5" disabled>{{ $product->description }}</textarea>
-<br>
-<label for="price">Harga</label>
-<input type="number" name="price" value="{{ $product->price }}" disabled>
-<br><br>
+    <label for="name">Nama Produk</label>
+    <input type="text" name="name" value="{{ $product->name }}" disabled>
+    <br>
+    <label for="description">Deskripsi</label>
+    <textarea name="description" cols="30" rows="5" disabled>{{ $product->description }}</textarea>
+    <br>
+    <label for="price">Harga</label>
+    <input type="number" name="price" value="{{ $product->price }}" disabled>
+    <br><br>
 @endforeach
