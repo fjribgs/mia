@@ -4,6 +4,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\PromoController;
+use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\UmkmController;
 use Illuminate\Support\Facades\Route;
 
@@ -68,3 +69,5 @@ Route::controller(PromoController::class)->middleware('auth')->group(function() 
 Route::controller(ProductController::class)->group(function() {
     Route::get('/product/create', 'create')->name('product.create');
 });
+
+Route::post('/umkm/{umkm_id}/review', [ReviewController::class, 'store'])->name('review.store');

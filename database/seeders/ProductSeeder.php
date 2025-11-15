@@ -15,7 +15,7 @@ class ProductSeeder extends Seeder
     {
         $products = [
             [
-                'umkm_id' => 1,
+                'umkm_id' => 2,
                 'category_id' => 1,
                 'promo_id' => null,
                 'name' => 'Nasi Goreng Spesial',
@@ -26,7 +26,7 @@ class ProductSeeder extends Seeder
                 'image' => 'nasi-goreng.jpg',
             ],
             [
-                'umkm_id' => 1,
+                'umkm_id' => 2,
                 'category_id' => 2,
                 'promo_id' => null,
                 'name' => 'Kaos Katun Premium',
@@ -37,7 +37,7 @@ class ProductSeeder extends Seeder
                 'image' => 'kaos-premium.jpg',
             ],
             [
-                'umkm_id' => 1,
+                'umkm_id' => 3,
                 'category_id' => 3,
                 'promo_id' => null,
                 'name' => 'Tas Anyaman Rotan',

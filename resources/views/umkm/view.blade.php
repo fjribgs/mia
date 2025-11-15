@@ -13,7 +13,7 @@
 <input type="number" name="average_rating" value="{{ $umkm[0]->umkm->average_rating }}" disabled>
 <br><br>
 <a href="{{ route('umkm.index') }}">back</a>
-{{-- pokonya disini nanti tinggal ambli datanya kaya yg di contoh yaa gas --}}
+{{-- TODO: pokonya disini nanti tinggal ambli datanya kaya yg di contoh yaa gas --}}
 
 <br><br><br>
 
@@ -30,3 +30,24 @@
     <input type="number" name="price" value="{{ $product->price }}" disabled>
     <br><br>
 @endforeach
+
+<br><br>
+
+@if (Auth::check())
+    <h2>Ini rating umkm nya</h2>
+
+    <form action="{{ route('review.store', ['umkm_id' => $umkm[0]->umkm->id]) }}" method="post">
+        @csrf
+        <label for="rating">Penilaian: </label>
+        <input type="number" name="rating" id="rating" min="1" max="5">
+        <br>
+        <label for="comment">Komentar: </label>
+        <textarea name="comment" id="comment" cols="30" rows="5"></textarea>
+        <br><br>
+        <button type="submit">Kirim Penilaian</button>
+    </form>
+    <br>
+
+    {{-- TODO: Tambahin pesan berhasilnya nanti gass --}}
+@endif
+
