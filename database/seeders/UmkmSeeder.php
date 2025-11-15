@@ -41,12 +41,15 @@ class UmkmSeeder extends Seeder
                 'open_days' => 'Setiap Hari',
                 'open_time' => '10.00',
                 'close_time' => '20.00',
+                'umkm_picture' => 'images/umkm-pulas-katumbiri.webp',
             ],
             [
                 'user_id' => 4,
                 'province_id' => 12,
                 'city_id' => 181,
-                'description' => 'Cafe More adalah Kafe yang memberdayakan penyandang disabilitas sensorik tunanetra. Cafe More menyajikan aneka pilihan kopi yang diolah secara espresso, seperti cappucino dan kopi hitam. Adapun kopi olahan seperti kopi susu aren, kopi avokad, dan lain-lainnya',
+                'description' => 'Cafe More adalah kafe inklusif yang berlokasi di kawasan Sentra Wyata Guna, Bandung. Dikelola oleh individu dengan disabilitas netra dan didukung oleh komunitas Wyata Guna, Cafe More hadir sebagai ruang pemberdayaan dan pembelajaran bagi teman-teman disabilitas untuk mengembangkan keterampilan di bidang kuliner dan pelayanan.
+
+                Kami percaya bahwa setiap orang berhak memiliki kesempatan yang sama untuk berkarya dan melayani. Selain menyajikan berbagai minuman dan makanan ringan khas kafe, kami juga menghadirkan suasana yang ramah, terbuka, dan edukatif bagi setiap pengunjung.',
                 'type' => 'tetap',
                 'gmaps_link' => 'https://maps.app.goo.gl/NCHCR5d1QUmBmpmK8',
                 'address' => 'Jl. Pajajaran No.50, Pasir Kaliki, Kec. Cicendo, Kota Bandung, Jawa Barat 40171',
@@ -54,12 +57,13 @@ class UmkmSeeder extends Seeder
                 'open_days' => 'Setiap Hari',
                 'open_time' => '09.00',
                 'close_time' => '20.00',
+                'umkm_picture' => 'images/umkm-cafe-more.webp',
             ],
             [
                 'user_id' => 5,
                 'province_id' => 12,
                 'city_id' => 164,
-                'description' => 'Coming Soon hehe',
+                'description' => 'Keripik Pak Dedi adalah usaha yang menyajikan aneka pilihan keripik yang sudah diolah.',
                 'type' => 'tetap',
                 'gmaps_link' => 'https://maps.app.goo.gl/CZf1Hsrz3iPcMGcS6',
                 'address' => 'Komp. Baranangsiang Indah No.16, RT.03/RW.04, Katulampa, Kec. Bogor Tim., Kota Bogor, Jawa Barat 16144',
@@ -76,6 +80,7 @@ class UmkmSeeder extends Seeder
                 'gmaps_link' => 'https://maps.app.goo.gl/CZf1Hsrz3iPcMGcS6',
                 'address' => 'Sekitar Cileunyi',
                 'open_days' => 'Setiap Hari',
+                'umkm_picture' => 'images/umkm-keripik-kusnadi.webp',
             ],
             [
                 'user_id' => 7,
@@ -102,6 +107,7 @@ class UmkmSeeder extends Seeder
                 'open_days' => 'Setiap Hari',
                 'open_time' => '08.00',
                 'close_time' => '19.00',
+                'umkm_picture' => 'images/umkm-nokha.webp',
             ],
             [
                 'user_id' => 9,
@@ -115,6 +121,7 @@ class UmkmSeeder extends Seeder
                 'open_days' => 'Setiap Hari',
                 'open_time' => '09.00',
                 'close_time' => '21.00',
+                'umkm_picture' => 'images/umkm-cafe-cupable.webp',
             ],
             [
                 'user_id' => 10,
@@ -128,6 +135,7 @@ class UmkmSeeder extends Seeder
                 'open_days' => 'Setiap Hari',
                 'open_time' => '09.00',
                 'close_time' => '22.00',
+                'umkm_picture' => 'images/umkm-cafe-sunyi.webp',
             ],
             [
                 'user_id' => 11,
@@ -141,6 +149,7 @@ class UmkmSeeder extends Seeder
                 'open_days' => 'Setiap Hari',
                 'open_time' => '10.00',
                 'close_time' => '22.00',
+                'umkm_picture' => 'images/umkm-onni-house.webp',
             ],
             [
                 'user_id' => 12,
@@ -148,6 +157,7 @@ class UmkmSeeder extends Seeder
                 'city_id' => 181,
                 'description' => 'Galleraj.id',
                 'type' => 'tetap',
+                'umkm_picture' => 'images/umkm-gallerajid.webp',
             ],
         ];
 

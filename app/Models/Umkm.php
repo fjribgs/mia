@@ -20,7 +20,7 @@ class Umkm extends Model
         'city_id',
         'district_id',
         'village_id',
-        'profile_picture',
+        'umkm_picture',
         'description',
         'type',
         'gmaps_link',
@@ -66,10 +66,12 @@ class Umkm extends Model
 
     public function categories()
     {
-        return $this->belongsToMany(Category::class, 
-        'umkm_categories', 
-        'umkm_id', 
-        'category_id');
+        return $this->belongsToMany(
+            Category::class, 
+            'umkm_categories', 
+            'umkm_id', 
+            'category_id'
+        );
     }
 
     public function promo() {

@@ -1,8 +1,8 @@
 <div class="w-screen flex flex-col">
 
-    <header class="flex flex-col w-full bg-[var(--primary-50)] justify-end fixed">
-
-        <div class="py-4 px-5 md:py-[15px] md:px-35 mt-21 flex flex-col">
+    <header class="flex flex-col w-full bg-[var(--primary-50)] justify-end fixed z-9 shadow-md">
+        
+        <div class="py-4 px-5 md:py-[15px] md:px-35 mt-21 xl:mt-25 flex flex-col">
 
             <div id="search-bar"
                 class="relative bg-[var(--bg)] border-2 border-[var(--soft-bg)] rounded-[100px]">
@@ -19,41 +19,60 @@
 
     </header>
 
-    <main class="py-4 px-5 md:py-[15px] md:px-35 mt-43">
-        <div class="grid gap-5 grid-cols-[repeat(auto-fit,minmax(280px,1fr))] items-center sm:mt-5 [&>div]:text-start [&>div>div]:px-5 [&>div>div]:py-5">
+    <main class="py-4 px-5 md:py-[15px] md:px-35 mt-43 my-10 relative z-1">
+
+        <div class="grid gap-5 grid-cols-[repeat(auto-fit,minmax(280px,1fr))] items-center sm:my-8 [&>div]:text-start [&>div>div]:px-5 [&>div>div]:py-5">
+
             @if ($umkms->count() > 0)
+
                 @foreach ($umkms as $umkm)
-                    <div class="flex flex-col justify-between bg-[#FFFFFF] h-[450px] w-[300px] xl:h-[450px] xl:w-[300px] shadow-md rounded-[18px] xl:hover:w-[350px] transition-all duration-300">
-                        <img src="{{ asset('images/umkm-pulas-katumbiri.webp') }}"
+
+                    <div class="flex flex-col justify-between bg-[#FFFFFF] {{ $umkms->count() < 2 ? 'w-100' : 'w-full' }} shadow-md rounded-[18px] xl:hover:-mt-5 xl:hover:shadow-xl transition-all duration-300">  
+
+                        <img src="{{ asset('storage/' . $umkm->umkm->umkm_picture) }}"
                             alt="Foto UMKM"
-                            class="w-full h-full object-cover rounded-t-[18px]">
+                            class="w-full h-48 object-cover rounded-[18px]">
 
                         <div class="flex flex-col justify-center items-start gap-3">
-                            <h3 class="text-[13px] lg:text-[16px] font-semibold text-[var(--primary-500)] font-[Montserrat]">{{ $umkm->umkm->user->name }}</h3>
+
+                            <h3 class="text-[13px] lg:text-[16px] font-semibold text-[var(--primary-500)]">{{ $umkm->umkm->user->name }}</h3>
+
                             <div id="kategori"
                                 class="border-1 border-[var(--info)] text-[var(--info)] rounded-2xl px-2 py-0.5 text-[10px] xl:text-[12px]">
                                 <span>{{ $umkm->category->category_name }}</span>
                             </div>
+
                             <div id="rating"
                                 class="flex gap-1 items-center text-[var(--secondary-text)] text-[13px]">
                                 <img src="{{ asset('images/star.svg') }}" alt=""
                                     class="w-5">
                                 <p>{{ $umkm->umkm->average_rating }}</p>
                             </div>
+
                             <div id="lokasi"
                                 class="flex gap-1">
                                 <img src="{{ asset('images/lokasi-gps.svg') }}" alt="" class="w-3">
                                 <p class="text-[11px] xl:text-[13px] text-[var(--caption)]">Bandung</p>
                             </div>
-                            <a href="{{ route('umkm.view', ['umkm_id' => $umkm->umkm->id]) }}">
-                                <button class="bg-[var(--primary-500)] rounded-4xl text-white w-full text-[12px] lg:text-[16px] py-2 items-center justify-center">Lihat Detail</button>
+
+                            <a href="{{ route('umkm.view', ['umkm_id' => $umkm->umkm->id]) }}" class="bg-[var(--primary-500)] rounded-4xl text-white w-full text-[12px] lg:text-[16px] text-center py-2 items-center justify-center flex hover:bg-[var(--primary-400)] transition-all duration-300">
+                                
+                                <span>Lihat Detail</span>
+                                <div class="flex items-center inset-y-0 pl-3 w-6 pointer-events-none">
+                                    <img src="{{ asset('images/detail.svg') }}" alt="Detail">
+                                </div>
+
                             </a>
+                        
                         </div>
+                    
                     </div>
+                
                 @endforeach
-            @else
-                <p class="text-gray-500">Tidak ada hasil.</p>
-            @endif
+
+                @else
+                    <p class="text-gray-500">Tidak ada hasil.</p>
+                @endif
         </div>
     </main>
 </div>

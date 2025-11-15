@@ -18,7 +18,7 @@ return new class extends Migration
             $table->foreignId('city_id')->constrained('indonesia_cities');
             $table->foreignId('district_id')->nullable()->constrained('indonesia_districts');
             $table->foreignId('village_id')->nullable()->constrained('indonesia_villages');
-            $table->string('umkm_picture')->default('default_umkm.svg');
+            $table->string('umkm_picture')->default('defaults/default_store.webp');
             $table->text('description');
             $table->enum('type', ['Tetap', 'Keliling']);
             $table->text('gmaps_link')->nullable();
