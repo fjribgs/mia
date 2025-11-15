@@ -27,7 +27,7 @@
 
                 @foreach ($umkms as $umkm)
 
-                    <div class="flex flex-col justify-between bg-[#FFFFFF] w-full shadow-md rounded-[18px] xl:hover:-mt-5 transition-all duration-300">  
+                    <div class="flex flex-col justify-between bg-[#FFFFFF] w-full shadow-md rounded-[18px] xl:hover:-mt-5 xl:hover:shadow-xl transition-all duration-300">  
 
                         <img src="{{ asset('storage/' . $umkm->umkm->umkm_picture) }}"
                             alt="Foto UMKM"
@@ -62,7 +62,7 @@
 
                             </div>
 
-                            <button class="bg-[var(--primary-500)] rounded-4xl text-white w-full text-[12px] lg:text-[16px] py-2 items-center justify-center">Lihat Detail</button>
+                            <a class="bg-[var(--primary-500)] rounded-4xl text-white w-full text-[12px] lg:text-[16px] py-2 items-center text-center justify-center">Lihat Detail</a>
 
                         </div>
                     </div>
