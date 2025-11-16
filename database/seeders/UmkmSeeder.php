@@ -39,7 +39,7 @@ class UmkmSeeder extends Seeder
                 'latitude' => -6.8952053,
                 'longitude' => 107.6347303,
                 'address' => 'Jl. Pahlawan No.70, Cikutra, Kec. Cibeunying Kaler, Kota Bandung, Jawa Barat 40124',
-                'phone_number' => '081122288333',
+                'phone_number' => '6281122288333',
                 'open_days' => 'Setiap Hari',
                 'open_time' => '10.00',
                 'close_time' => '20.00',
@@ -57,7 +57,7 @@ class UmkmSeeder extends Seeder
                 'latitude' => -6.9065282,
                 'longitude' => 107.6008276,
                 'address' => 'Jl. Pajajaran No.50, Pasir Kaliki, Kec. Cicendo, Kota Bandung, Jawa Barat 40171',
-                'phone_number' => '085159288668',
+                'phone_number' => '6285159288668',
                 'open_days' => 'Setiap Hari',
                 'open_time' => '09.00',
                 'close_time' => '20.00',
@@ -82,7 +82,7 @@ class UmkmSeeder extends Seeder
                 'province_id' => 12,
                 'city_id' => 164,
                 'description' => 'Keripik Pak Kusnadi adalah sebuah UMKM yang didirikan oleh Pak Kusnadi, seorang penyandang disabilitas yang bersemangat memberdayakan diri dan orang lain lewat usaha keripik pisang.
-                
+
                 Visi jangka panjang dari UMKM ini adalah agar menjadi contoh inspiratif bahwa keterbatasan fisik tidak menjadi penghalang kreativitas dan produktivitas.',
                 'type' => 'tetap',
                 'gmaps_link' => 'https://maps.app.goo.gl/CZf1Hsrz3iPcMGcS6',
@@ -102,7 +102,7 @@ class UmkmSeeder extends Seeder
                 'latitude' => -6.9720134,
                 'longitude' => 110.4126223,
                 'address' => 'Pasar Baru Banjar Dowo, Jl.Ratan Cilik Kelurahan, Banjaran dowo, Kec. Semarang Utara, Kota Semarang, Jawa Tengah 50231',
-                'phone_number' => '085223119552',
+                'phone_number' => '6285223119552',
                 'open_days' => 'Selasa - Minggu',
                 'open_time' => '08.00',
                 'close_time' => '17.00',
@@ -117,7 +117,7 @@ class UmkmSeeder extends Seeder
                 'latitude' => -7.0011213,
                 'longitude' => 107.5573444,
                 'address' => 'Jl. Terusan Kopo - Katapang Babakan Sondari Rt.2, RT.2/RW.7, Pangauban, Katapang, Bandung Regency, West Java 40971',
-                'phone_number' => '08112221524',
+                'phone_number' => '628112221524',
                 'open_days' => 'Setiap Hari',
                 'open_time' => '08.00',
                 'close_time' => '19.00',
@@ -133,7 +133,7 @@ class UmkmSeeder extends Seeder
                 'latitude' => -7.6955424,
                 'longitude' => 110.4182056,
                 'address' => 'Kaliurang St No.km.13,5, Besi, Sukoharjo, Ngaglik, Sleman Regency, Special Region of Yogyakarta 55581',
-                'phone_number' => '085791375260',
+                'phone_number' => '6285791375260',
                 'open_days' => 'Setiap Hari',
                 'open_time' => '09.00',
                 'close_time' => '21.00',
@@ -144,7 +144,7 @@ class UmkmSeeder extends Seeder
                 'province_id' => 31,
                 'city_id' => 159,
                 'description' => 'Sunyi Coffee adalah sebuah kafe sosial yang digagas oleh Mario Gultom, dengan visi kuat untuk memberdayakan penyandang disabilitas terutama teman tuli dalam dunia pekerjaan.
-                
+
                 Sunyi Coffee ingin menjadi contoh model bisnis inklusif yang tidak hanya sukses secara komersial, tetapi juga sosial memperlihatkan bahwa usaha bisa menjadi jembatan perubahan dalam hal kesetaraan, penghargaan terhadap disabilitas, dan menciptakan masyarakat yang lebih inklusif.',
                 'type' => 'tetap',
                 'gmaps_link' => 'https://maps.app.goo.gl/EttYjPAjtcWscoNi6',
@@ -167,7 +167,7 @@ class UmkmSeeder extends Seeder
                 'latitude' => -7.2857204,
                 'longitude' => 112.7315209,
                 'address' => 'Jl. Opak No.56, Darmo, Kec. Wonokromo, Surabaya, Jawa Timur 60261',
-                'phone_number' => '081385069674',
+                'phone_number' => '6281385069674',
                 'open_days' => 'Setiap Hari',
                 'open_time' => '10.00',
                 'close_time' => '22.00',

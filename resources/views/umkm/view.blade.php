@@ -103,7 +103,7 @@
     <div class="fixed bg-[var(--soft-bg)] my-4 mx-6 py-2 px-2 w-10 rounded-4xl shadow-md">
 
         <a href="{{ route('umkm.index') }}">
-        
+
           <img src="{{ asset('images/arrow-right.svg')}}" alt=""
           class="rotate-180">
 
@@ -152,20 +152,40 @@
         <div id="buttons"
           class="flex flex-col gap-2 mt-7">
 
-          <a href="#"
-            class="flex gap-2 items-center py-2 px-4 bg-[var(--primary-50)] rounded-4xl text-[var(--primary-500)] font-medium">
+          @if ($umkm[0]->umkm->phone_number != null)
+            <a href="https://wa.me/{{ $umkm[0]->umkm->phone_number }}" target="_blank"
+                class="flex w-full justify-center gap-2 items-center py-2 px-4 bg-[var(--primary-50)] rounded-4xl text-[var(--primary-500)] font-medium">
 
-            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-4 fill-current text-[var(--primary-500)]">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5 1.92308C6.65853 1.92308 1.92308 6.65853 1.92308 12.5C1.92308 14.25 2.34733 15.8981 3.09775 17.3497C3.16831 17.4862 3.20513 17.6376 3.20513 17.7913V21.7949H7.20872C7.36237 21.7949 7.51378 21.8317 7.65027 21.9023C9.10191 22.6527 10.75 23.0769 12.5 23.0769C18.3415 23.0769 23.0769 18.3415 23.0769 12.5C23.0769 6.65853 18.3415 1.92308 12.5 1.92308ZM0 12.5C0 5.59644 5.59644 0 12.5 0C19.4036 0 25 5.59644 25 12.5C25 19.4036 19.4036 25 12.5 25C10.5203 25 8.64561 24.5391 6.97985 23.718H2.24359C1.71255 23.718 1.28205 23.2875 1.28205 22.7564V18.0202C0.460924 16.3544 0 14.4797 0 12.5Z"/>
-            <path d="M9.9359 12.5C9.9359 13.2081 9.36191 13.7821 8.65385 13.7821C7.94579 13.7821 7.3718 13.2081 7.3718 12.5C7.3718 11.7919 7.94579 11.218 8.65385 11.218C9.36191 11.218 9.9359 11.7919 9.9359 12.5Z"/>
-            <path d="M13.7821 12.5C13.7821 13.2081 13.2081 13.7821 12.5 13.7821C11.7919 13.7821 11.218 13.2081 11.218 12.5C11.218 11.7919 11.7919 11.218 12.5 11.218C13.2081 11.218 13.7821 11.7919 13.7821 12.5Z"/>
-            <path d="M17.6282 12.5C17.6282 13.2081 17.0542 13.7821 16.3462 13.7821C15.6381 13.7821 15.0641 13.2081 15.0641 12.5C15.0641 11.7919 15.6381 11.218 16.3462 11.218C17.0542 11.218 17.6282 11.7919 17.6282 12.5Z"/>
-            </svg>
+                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-4 fill-current text-[var(--primary-500)]">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5 1.92308C6.65853 1.92308 1.92308 6.65853 1.92308 12.5C1.92308 14.25 2.34733 15.8981 3.09775 17.3497C3.16831 17.4862 3.20513 17.6376 3.20513 17.7913V21.7949H7.20872C7.36237 21.7949 7.51378 21.8317 7.65027 21.9023C9.10191 22.6527 10.75 23.0769 12.5 23.0769C18.3415 23.0769 23.0769 18.3415 23.0769 12.5C23.0769 6.65853 18.3415 1.92308 12.5 1.92308ZM0 12.5C0 5.59644 5.59644 0 12.5 0C19.4036 0 25 5.59644 25 12.5C25 19.4036 19.4036 25 12.5 25C10.5203 25 8.64561 24.5391 6.97985 23.718H2.24359C1.71255 23.718 1.28205 23.2875 1.28205 22.7564V18.0202C0.460924 16.3544 0 14.4797 0 12.5Z"/>
+                <path d="M9.9359 12.5C9.9359 13.2081 9.36191 13.7821 8.65385 13.7821C7.94579 13.7821 7.3718 13.2081 7.3718 12.5C7.3718 11.7919 7.94579 11.218 8.65385 11.218C9.36191 11.218 9.9359 11.7919 9.9359 12.5Z"/>
+                <path d="M13.7821 12.5C13.7821 13.2081 13.2081 13.7821 12.5 13.7821C11.7919 13.7821 11.218 13.2081 11.218 12.5C11.218 11.7919 11.7919 11.218 12.5 11.218C13.2081 11.218 13.7821 11.7919 13.7821 12.5Z"/>
+                <path d="M17.6282 12.5C17.6282 13.2081 17.0542 13.7821 16.3462 13.7821C15.6381 13.7821 15.0641 13.2081 15.0641 12.5C15.0641 11.7919 15.6381 11.218 16.3462 11.218C17.0542 11.218 17.6282 11.7919 17.6282 12.5Z"/>
+                </svg>
 
+                <span>Hubungi Sekarang</span>
 
-            <span>Hubungi Sekarang</span>
+            </a>
+          @else
+            <button onclick="document.getElementById('dialog-phone-empty-phone').style.display='flex'"
+              class="flex w-full justify-center gap-2 items-center py-2 px-4 bg-[var(--primary-50)] rounded-4xl text-[var(--primary-500)] font-medium">
 
-          </a>
+              <svg width="25" height="25" viewBox="0 0 25 25" class="w-4 fill-current text-[var(--primary-500)]">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M12.5 1.92308C6.65853 1.92308 1.92308 6.65853 1.92308 12.5C1.92308 14.25 2.34733 15.8981 3.09775 17.3497C3.16831 17.4862 3.20513 17.6376 3.20513 17.7913V21.7949H7.20872C7.36237 21.7949 7.51378 21.8317 7.65027 21.9023C9.10191 22.6527 10.75 23.0769 12.5 23.0769C18.3415 23.0769 23.0769 18.3415 23.0769 12.5C23.0769 6.65853 18.3415 1.92308 12.5 1.92308ZM0 12.5C0 5.59644 5.59644 0 12.5 0C19.4036 0 25 5.59644 25 12.5C25 19.4036 19.4036 25 12.5 25C10.5203 25 8.64561 24.5391 6.97985 23.718H2.24359C1.71255 23.718 1.28205 23.2875 1.28205 22.7564V18.0202C0.460924 16.3544 0 14.4797 0 12.5Z" />
+                <path d="M9.9359 12.5C9.9359 13.2081 9.36191 13.7821 8.65385 13.7821C7.94579 13.7821 7.3718 13.2081 7.3718 12.5C7.3718 11.7919 7.94579 11.218 8.65385 11.218C9.36191 11.218 9.9359 11.7919 9.9359 12.5Z" />
+                <path d="M13.7821 12.5C13.7821 13.2081 13.2081 13.7821 12.5 13.7821C11.7919 13.7821 11.218 13.2081 11.218 12.5C11.218 11.7919 11.7919 11.218 12.5 11.218C13.2081 11.218 13.7821 11.7919 13.7821 12.5Z" />
+                <path d="M17.6282 12.5C17.6282 13.2081 17.0542 13.7821 16.3462 13.7821C15.6381 13.7821 15.0641 13.2081 15.0641 12.5C15.0641 11.7919 15.6381 11.218 16.3462 11.218C17.0542 11.218 17.6282 11.7919 17.6282 12.5Z" />
+              </svg>
+
+              <span>Hubungi Sekarang</span>
+            </button>
+          @endif
+
+          {{-- Pop Up --}}
+          <div id="dialog-phone-empty-phone" style="display:none;">
+            @include('components.dialog-phone-empty')
+          </div>
 
           <a href="{{ $umkm[0]->umkm->gmaps_link }}"
             class="flex gap-2 items-center py-2 px-4 bg-[var(--primary-50)] rounded-4xl text-[var(--primary-500)] font-medium">
@@ -187,7 +207,6 @@
 
     <section id="overview-desktop"
       class="bg-[var(--primary-600)] z-1 py-4 px-6 lg:px-35 flex-col h-180 items-center justify-center hidden xl:flex">
-
       <div class="flex gap-15 justify-between items-center">
 
         <img src="{{ asset('storage/' . $umkm[0]->umkm->umkm_picture) }}"
@@ -230,19 +249,40 @@
         <div id="buttons"
             class="flex flex-col flex-[3] gap-2 mt-7">
 
-          <a href="#"
-            class="flex gap-2 items-center py-2 px-4 bg-[var(--primary-50)] rounded-4xl text-[var(--primary-500)] justify-center font-medium">
+          @if ($umkm[0]->umkm->phone_number != null)
+            <a href="https://wa.me/{{ $umkm[0]->umkm->phone_number }}" target="_blank"
+              class="flex w-full justify-center gap-2 items-center py-2 px-4 bg-[var(--primary-50)] rounded-4xl text-[var(--primary-500)] font-medium">
 
-            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-4 fill-current text-[var(--primary-500)]">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5 1.92308C6.65853 1.92308 1.92308 6.65853 1.92308 12.5C1.92308 14.25 2.34733 15.8981 3.09775 17.3497C3.16831 17.4862 3.20513 17.6376 3.20513 17.7913V21.7949H7.20872C7.36237 21.7949 7.51378 21.8317 7.65027 21.9023C9.10191 22.6527 10.75 23.0769 12.5 23.0769C18.3415 23.0769 23.0769 18.3415 23.0769 12.5C23.0769 6.65853 18.3415 1.92308 12.5 1.92308ZM0 12.5C0 5.59644 5.59644 0 12.5 0C19.4036 0 25 5.59644 25 12.5C25 19.4036 19.4036 25 12.5 25C10.5203 25 8.64561 24.5391 6.97985 23.718H2.24359C1.71255 23.718 1.28205 23.2875 1.28205 22.7564V18.0202C0.460924 16.3544 0 14.4797 0 12.5Z"/>
-            <path d="M9.9359 12.5C9.9359 13.2081 9.36191 13.7821 8.65385 13.7821C7.94579 13.7821 7.3718 13.2081 7.3718 12.5C7.3718 11.7919 7.94579 11.218 8.65385 11.218C9.36191 11.218 9.9359 11.7919 9.9359 12.5Z"/>
-            <path d="M13.7821 12.5C13.7821 13.2081 13.2081 13.7821 12.5 13.7821C11.7919 13.7821 11.218 13.2081 11.218 12.5C11.218 11.7919 11.7919 11.218 12.5 11.218C13.2081 11.218 13.7821 11.7919 13.7821 12.5Z"/>
-            <path d="M17.6282 12.5C17.6282 13.2081 17.0542 13.7821 16.3462 13.7821C15.6381 13.7821 15.0641 13.2081 15.0641 12.5C15.0641 11.7919 15.6381 11.218 16.3462 11.218C17.0542 11.218 17.6282 11.7919 17.6282 12.5Z"/>
-            </svg>
+              <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-4 fill-current text-[var(--primary-500)]">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5 1.92308C6.65853 1.92308 1.92308 6.65853 1.92308 12.5C1.92308 14.25 2.34733 15.8981 3.09775 17.3497C3.16831 17.4862 3.20513 17.6376 3.20513 17.7913V21.7949H7.20872C7.36237 21.7949 7.51378 21.8317 7.65027 21.9023C9.10191 22.6527 10.75 23.0769 12.5 23.0769C18.3415 23.0769 23.0769 18.3415 23.0769 12.5C23.0769 6.65853 18.3415 1.92308 12.5 1.92308ZM0 12.5C0 5.59644 5.59644 0 12.5 0C19.4036 0 25 5.59644 25 12.5C25 19.4036 19.4036 25 12.5 25C10.5203 25 8.64561 24.5391 6.97985 23.718H2.24359C1.71255 23.718 1.28205 23.2875 1.28205 22.7564V18.0202C0.460924 16.3544 0 14.4797 0 12.5Z"/>
+              <path d="M9.9359 12.5C9.9359 13.2081 9.36191 13.7821 8.65385 13.7821C7.94579 13.7821 7.3718 13.2081 7.3718 12.5C7.3718 11.7919 7.94579 11.218 8.65385 11.218C9.36191 11.218 9.9359 11.7919 9.9359 12.5Z"/>
+              <path d="M13.7821 12.5C13.7821 13.2081 13.2081 13.7821 12.5 13.7821C11.7919 13.7821 11.218 13.2081 11.218 12.5C11.218 11.7919 11.7919 11.218 12.5 11.218C13.2081 11.218 13.7821 11.7919 13.7821 12.5Z"/>
+              <path d="M17.6282 12.5C17.6282 13.2081 17.0542 13.7821 16.3462 13.7821C15.6381 13.7821 15.0641 13.2081 15.0641 12.5C15.0641 11.7919 15.6381 11.218 16.3462 11.218C17.0542 11.218 17.6282 11.7919 17.6282 12.5Z"/>
+              </svg>
 
-            <span>Hubungi Sekarang</span>
+              <span>Hubungi Sekarang</span>
 
-          </a>
+            </a>
+          @else
+            <button onclick="document.getElementById('dialog-phone-empty-desktop').style.display='flex'"
+              class="flex w-full justify-center gap-2 items-center py-2 px-4 bg-[var(--primary-50)] rounded-4xl text-[var(--primary-500)] font-medium">
+
+              <svg width="25" height="25" viewBox="0 0 25 25" class="w-4 fill-current text-[var(--primary-500)]">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M12.5 1.92308C6.65853 1.92308 1.92308 6.65853 1.92308 12.5C1.92308 14.25 2.34733 15.8981 3.09775 17.3497C3.16831 17.4862 3.20513 17.6376 3.20513 17.7913V21.7949H7.20872C7.36237 21.7949 7.51378 21.8317 7.65027 21.9023C9.10191 22.6527 10.75 23.0769 12.5 23.0769C18.3415 23.0769 23.0769 18.3415 23.0769 12.5C23.0769 6.65853 18.3415 1.92308 12.5 1.92308ZM0 12.5C0 5.59644 5.59644 0 12.5 0C19.4036 0 25 5.59644 25 12.5C25 19.4036 19.4036 25 12.5 25C10.5203 25 8.64561 24.5391 6.97985 23.718H2.24359C1.71255 23.718 1.28205 23.2875 1.28205 22.7564V18.0202C0.460924 16.3544 0 14.4797 0 12.5Z" />
+                <path d="M9.9359 12.5C9.9359 13.2081 9.36191 13.7821 8.65385 13.7821C7.94579 13.7821 7.3718 13.2081 7.3718 12.5C7.3718 11.7919 7.94579 11.218 8.65385 11.218C9.36191 11.218 9.9359 11.7919 9.9359 12.5Z" />
+                <path d="M13.7821 12.5C13.7821 13.2081 13.2081 13.7821 12.5 13.7821C11.7919 13.7821 11.218 13.2081 11.218 12.5C11.218 11.7919 11.7919 11.218 12.5 11.218C13.2081 11.218 13.7821 11.7919 13.7821 12.5Z" />
+                <path d="M17.6282 12.5C17.6282 13.2081 17.0542 13.7821 16.3462 13.7821C15.6381 13.7821 15.0641 13.2081 15.0641 12.5C15.0641 11.7919 15.6381 11.218 16.3462 11.218C17.0542 11.218 17.6282 11.7919 17.6282 12.5Z" />
+              </svg>
+
+              <span>Hubungi Sekarang</span>
+            </button>
+          @endif
+
+          {{-- Pop Up --}}
+          <div id="dialog-phone-empty-desktop" style="display:none;">
+            @include('components.dialog-phone-empty')
+          </div>
 
           <a href="{{ $umkm[0]->umkm->gmaps_link }}"
             class="flex gap-2 items-center py-2 px-4 bg-[var(--primary-50)] rounded-4xl text-[var(--primary-500)] justify-center font-medium">
@@ -256,12 +296,19 @@
 
           </a>
 
+          @if (Auth::check())
+            @include('components.review')
+
+            <button onclick="document.getElementById('dialog-review').classList.remove('hidden')"
+                class="flex gap-2 items-center py-2 px-4 bg-[var(--primary-50)] rounded-4xl text-[var(--primary-500)] justify-center font-medium">
+
+                <img src="{{ asset('images/pencil_primary.png') }}" style="width: 20px">
+                Beri Ulasan
+            </button>
+          @endif
+
         </div>
-
       </div>
-
-    </div>
-
     </section>
 
     <section id="information"
@@ -293,7 +340,11 @@
               <img src="{{ asset('images/telepon.svg') }}" alt=""
               class="w-4">
 
-              <span class="text-[10px] text-[var(--primary-500)]">{{$umkm[0]->umkm->phone_number}}</span>
+              @if ($umkm[0]->umkm->phone_number != null)
+                <span class="text-[10px] text-[var(--primary-500)]">{{$umkm[0]->umkm->phone_number}}</span>
+              @else
+                <span class="text-[10px] text-[var(--primary-500)]">Tidak Tersedia</span>
+              @endif
 
             </div>
 
@@ -359,7 +410,11 @@
               <img src="{{ asset('images/telepon.svg') }}" alt=""
               class="w-6">
 
-              <span class="text-[13px] text-[var(--primary-500)]">{{$umkm[0]->umkm->phone_number}}</span>
+              @if ($umkm[0]->umkm->phone_number != null)
+                <span class="text-[10px] text-[var(--primary-500)]">{{$umkm[0]->umkm->phone_number}}</span>
+              @else
+                <span class="text-[13px] text-[var(--primary-500)]">Tidak Tersedia</span>
+              @endif
 
             </div>
 
@@ -375,7 +430,7 @@
           </div>
 
         </div>
-        
+
     </section>
 
     <x-footer />
