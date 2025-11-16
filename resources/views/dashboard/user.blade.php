@@ -173,7 +173,8 @@
                 </div>
             </div>
 
-            <button class="flex gap-2 mt-13 border-1 border-[var(--primary-600)] rounded-4xl py-2 px-4 hover:bg-[var(--primary-600)] transition-all duration-300 text-[var(--primary-600)] hover:text-[var(--bg)] items-center cursor-pointer">
+            <a href="{{ route('umkm.index') }}"
+                class="flex gap-2 mt-13 border-1 border-[var(--primary-600)] rounded-4xl py-2 px-4 active:bg-[var(--primary-600)] lg:hover:bg-[var(--primary-600)] transition-all duration-300 text-[var(--primary-600)] active:text-[var(--bg)] lg:hover:text-[var(--bg)] items-center cursor-pointer">
 
                 <div class="text-[13px] sm:text-[16px] xl:text-[18px]">Lihat UMKM Lainnya</div>
 
@@ -188,7 +189,7 @@
 
 
             </div>
-            </button>
+        </a>
 
         </section>
 
@@ -325,7 +326,7 @@
 
                 <p class="text-[10px] sm:text-[13px] xl:text-[15px] 2xl:text-[18px] text-center xl:text-end font-[Montserrat] xl:w-130 2xl:w-150 justify-end">Dukung dan berinteraksi langsung dengan komunitas untuk mengikuti perkembangan terbaru dari berbagai UMKM</p>
 
-                <a class="flex gap-2 mt-7 border-1 border-[var(--primary-600)] rounded-4xl py-2 px-4 hover:bg-[var(--primary-600)] transition-all duration-300 text-[var(--primary-600)] hover:text-[var(--bg)] items-center cursor-pointer">
+                <a class="flex gap-2 mt-7 border-1 border-[var(--primary-600)] rounded-4xl py-2 px-4 active:bg-[var(--primary-600)] lg:hover:bg-[var(--primary-600)] transition-all duration-300 text-[var(--primary-600)] active:text-[var(--bg)] lg:hover:text-[var(--bg)] items-center cursor-pointer">
 
                     <div class="text-[13px] sm:text-[16px] xl:text-[18px]">Lihat Cerita Lainnya</div>
 
@@ -348,7 +349,7 @@
 
                 <h3 class="font-semibold text-[var(--primary-500)] text-[25px] sm:text-[38px] xl:text-[42px] 2xl:text-[50px]">Peta Lokasi</h3>
 
-                <p class="text-[11px] sm:text-[13px] lg:text-[15px] xl:text-[19px] text-[var(--secondary-text)] font-[Montserrat] lg:w-140 xl:w-200">Ikuti perkembangan terbaru mengenai lokasi UMKM inklusif di daerah Bandung.</p>
+                <p class="text-[11px] sm:text-[13px] lg:text-[15px] xl:text-[19px] text-[var(--secondary-text)] font-[Montserrat] lg:w-140 xl:w-200">Ikuti perkembangan terbaru mengenai lokasi UMKM inklusif di berbagai daerah.</p>
 
             </div>
 
@@ -397,7 +398,7 @@
 
                         <p class="text-[12px] lg:text-[15px] font-[Montserrat] font-medium z-2 xl:mb-4">Peta akan menampilkan lokasi UMKM dengan pin interaktif.</p>
 
-                        <a href="#" class="bg-[var(--primary-500)] hover:bg-[var(--primary-400)] px-5 py-3 rounded-4xl mt-4 z-2 flex gap-2 items-center duration-200 transition-all cursor-pointer">
+                        <a href="#" class="bg-[var(--primary-500)] active:bg-[var(--primary-400)] lg:hover:bg-[var(--primary-400)] px-5 py-3 rounded-4xl mt-4 z-2 flex gap-2 items-center duration-200 transition-all cursor-pointer">
 
                             <svg width="18" height="18" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M17.0721 3.19692C17.1375 3.02881 16.9718 2.86318 16.8037 2.92855L3.0431 8.27991C2.86985 8.34729 2.86597 8.59103 3.037 8.66387L8.32008 10.9141C8.66499 11.061 8.93967 11.3357 9.08657 11.6806L11.3368 16.9637C11.4096 17.1347 11.6534 17.1308 11.7207 16.9576L17.0721 3.19692ZM16.3529 1.76921C17.5297 1.31158 18.6891 2.47101 18.2314 3.64777L12.8801 17.4084C12.4085 18.6212 10.7022 18.6483 10.1923 17.4511L7.94214 12.168C7.92115 12.1187 7.88191 12.0795 7.83264 12.0585L2.54955 9.80831C1.35239 9.29841 1.37949 7.5922 2.59224 7.12057L16.3529 1.76921Z" fill="#E6F2F1"/>

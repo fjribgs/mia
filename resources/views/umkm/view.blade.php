@@ -293,7 +293,12 @@
               <img src="{{ asset('images/telepon.svg') }}" alt=""
               class="w-4">
 
-              <span class="text-[10px] text-[var(--primary-500)]">{{$umkm[0]->umkm->phone_number}}</span>
+              <span class="text-[10px] text-[var(--primary-500)] break-words">
+                @if ($umkm[0]->umkm->phone_number == null)
+                  Maaf, nomor telepon belum tersedia
+                @else
+                   {{$umkm[0]->umkm->phone_number}}
+                @endif</span>
 
             </div>
 
@@ -302,7 +307,12 @@
               <img src="{{ asset('images/email.svg') }}" alt=""
               class="w-4">
 
-              <span class="text-[10px] text-[var(--primary-500)]">{{$umkm[0]->umkm->user->email}}</span>
+              <span class="text-[10px] text-[var(--primary-500)] break-words">
+                @if ($umkm[0]->umkm->email == null)
+                  Maaf, nomor email belum tersedia
+                @else
+                   {{$umkm[0]->umkm->email}}
+                @endif</span>
 
             </div>
 

@@ -90,19 +90,16 @@
             class="flex flex-col gap-3 transition-all duration-150 w-full">
 
             <a href="{{ route('dashboard.user') }}"
-                class=" text-white active:bg-[var(--primary-700)] active:px-4 py-1 rounded-sm transition-all duration-150">Beranda</a>
+                class=" text-white active:bg-[var(--primary-700)] active:px-4 py-1 rounded-[10px] transition-all duration-150">Beranda</a>
 
             <a href="{{ route('umkm.index') }}"
-                class="text-white active:bg-[var(--primary-700)] active:px-4 py-1 rounded-sm transition-all duration-150">UMKM</a>
+                class="text-white active:bg-[var(--primary-700)] active:px-4 py-1 rounded-[10px] transition-all duration-150">UMKM</a>
 
             <a href="#"
-                class="text-white active:bg-[var(--primary-700)] active:px-4 py-1 rounded-sm transition-all duration-150">Postingan</a>
+                class="text-white active:bg-[var(--primary-700)] active:px-4 py-1 rounded-[10px] transition-all duration-150">Tentang Kami</a>
 
             <a href="#"
-                class="text-white active:bg-[var(--primary-700)] active:px-4 py-1 rounded-sm transition-all duration-150">Tentang Kami</a>
-
-            <a href="#"
-                class="text-white active:bg-[var(--primary-700)] active:px-4 py-1 rounded-sm transition-all duration-150">Kontak</a>
+                class="text-white active:bg-[var(--primary-700)] active:px-4 py-1 rounded-[10px] transition-all duration-150">Kontak</a>
 
         </div>
 
