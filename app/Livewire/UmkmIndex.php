@@ -28,14 +28,6 @@ class UmkmIndex extends Component
 
         ->get();
 
-        if ($this->selectedCategory) {
-            $categoryId = (int) $this->selectedCategory; 
-            
-            $umkmCategories->whereHas('category', function ($q2) use ($categoryId) {
-                $q2->where('id', $categoryId);
-            });
-        }
-
         $categories = Category::all();
 
         return view('livewire.umkm-index', [
