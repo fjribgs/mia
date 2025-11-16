@@ -1,7 +1,7 @@
 <div class="w-screen flex flex-col">
     <header class="flex flex-col w-full bg-[var(--primary-50)] justify-end fixed z-9 shadow-md">
         <div class="py-4 px-5 md:py-[15px] md:px-35 mt-21 xl:mt-25 flex gap-2">
-            
+
             <div id="search-bar"
                 class="relative bg-[var(--bg)] border-2 flex flex-[2] border-[var(--soft-bg)] rounded-[100px]">
                 <div class="absolute flex items-center inset-y-0 pl-3 w-7 pointer-events-none">
@@ -12,24 +12,23 @@
 
             <div id="filter-by-categories"
                 class="flex flex-[1] bg-[var(--bg)] border-2 border-[var(--soft-bg)] rounded-[100px] items-center">
-                <select 
-                    wire:model="selectedCategory" 
+                <select
+                    wire:model.live="selectedCategory"
                     class="
-                        py-1.5 px-3 
+                        py-1.5 px-3
                         rounded-[100px]
-                        bg-white                 
+                        bg-white
                         text-[var(--primary-500)]
-                        hover:bg-blue-50  
+                        hover:bg-blue-50
                         focus:bg-[var(--primary-50)]
                         transition duration-150
                     ">
                     <option value=""
                         class="bg-white focus:bg-white">Semua Kategori</option>
-                    @foreach($categories as $cat)
-                        {{-- Styling pada <option> ini tidak akan terlihat --}}
-                        <option value="{{ $cat->id }}"
+                    @foreach($categories as $category)
+                        <option value="{{ $category->id }}"
                             class="bg-white">
-                            {{ $cat->category_name }}
+                            {{ $category->category_name }}
                         </option>
                     @endforeach
                 </select>

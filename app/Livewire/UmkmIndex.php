@@ -19,19 +19,18 @@ class UmkmIndex extends Component
         ])
 
         ->whereHas('umkm.user', function ($q) {
-            $q->where('name', '!=', 'admin');
-        })
+        $q->where('name', '!=', 'admin')
+            ->where('name', 'like', '%'.$this->search.'%');
+        });
 
-        ->whereHas('umkm.user', function ($q) {
-            $q->where('name', 'like', '%'.$this->search.'%');
-        })
-
-        ->get();
+        if (!empty($this->selectedCategory)) {
+            $umkmCategories->where('category_id', $this->selectedCategory);
+        }
 
         $categories = Category::all();
 
         return view('livewire.umkm-index', [
-            'umkms' => $umkmCategories,
+            'umkms' => $umkmCategories->get(),
             'categories' => $categories,
         ]);
     }
