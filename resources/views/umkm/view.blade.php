@@ -112,7 +112,7 @@
     </div>
 
     <section id="overview-mobile"
-      class="bg-[var(--primary-600)] z-1 w-full py-4 px-6 md:py-[15px] lg:px-35 flex flex-col  h-180 items-center justify-center xl:hidden">
+      class="bg-[var(--primary-600)] z-1 w-screen py-4 px-6 md:py-[15px] lg:px-35 flex flex-col  h-180 items-center justify-center xl:hidden">
 
       <div class="flex flex-col gap-2 w-full px-5 sm:px-20 md:px-25 items-center text-[var(--primary-50)]">
 
@@ -186,17 +186,17 @@
     </section>
 
     <section id="overview-desktop"
-      class="bg-[var(--primary-600)] z-1 py-4 px-6 lg:px-35 flex-col h-180 items-center justify-center hidden xl:flex">
+      class="bg-[var(--primary-600)] z-1 py-4 lg:px-35 w-full flex-col h-180 items-center justify-center hidden xl:flex">
 
       <div class="flex gap-15 justify-between items-center">
 
         <img src="{{ asset('storage/' . $umkm[0]->umkm->umkm_picture) }}"
           alt="Foto UMKM"
-          class="w-58 h-58 object-cover rounded-[18px] border-[var(--primary-50)] border-5">
+          class="w-58 h-58 lg:w-66 lg:h-66 object-cover rounded-[18px] border-[var(--primary-50)] border-5">
 
-        <div class="flex flex-col flex-[4] gap-3 text-[var(--primary-50)] items-start justify-start">
+        <div class="flex flex-col flex-[6] gap-3 text-[var(--primary-50)] items-start justify-start">
 
-          <h1 class="font-medium text-[40px] mt-4">{{ $umkm[0]->umkm->user->name }}</h1>
+          <h1 class="font-medium text-[40px]">{{ $umkm[0]->umkm->user->name }}</h1>
 
           <div class="bg-[var(--primary-50)] rounded-4xl text-[var(--primary-500)] px-4 py-1 text-[14px]">
 
@@ -240,7 +240,7 @@
             <path d="M17.6282 12.5C17.6282 13.2081 17.0542 13.7821 16.3462 13.7821C15.6381 13.7821 15.0641 13.2081 15.0641 12.5C15.0641 11.7919 15.6381 11.218 16.3462 11.218C17.0542 11.218 17.6282 11.7919 17.6282 12.5Z"/>
             </svg>
 
-            <span>Hubungi Sekarang</span>
+            <span class="text-[17px]">Hubungi Sekarang</span>
 
           </a>
 
@@ -252,7 +252,7 @@
             <path fill-rule="evenodd" clip-rule="evenodd" d="M9 8.13653C8.28604 8.13653 7.70727 8.74367 7.70727 9.49262C7.70727 10.2416 8.28604 10.8487 9 10.8487C9.71396 10.8487 10.2927 10.2416 10.2927 9.49262C10.2927 8.74367 9.71396 8.13653 9 8.13653ZM6.15599 9.49262C6.15599 7.84494 7.4293 6.50922 9 6.50922C10.5707 6.50922 11.844 7.84494 11.844 9.49262C11.844 11.1403 10.5707 12.476 9 12.476C7.4293 12.476 6.15599 11.1403 6.15599 9.49262Z">
             </svg>
 
-            <span>Lihat Detail Lokasi</span>
+            <span class="text-[17px]">Lihat Detail Lokasi</span>
 
           </a>
 
@@ -265,7 +265,7 @@
     </section>
 
     <section id="information"
-      class="flex flex-col xl:flex-row xl:justify-start gap-3 w-screen px-5 md:px-35 bg-[var(--bg)] py-6 xl:py-12">
+      class="flex flex-col xl:flex-row w-screen xl:justify-start gap-3 px-5 md:px-35 bg-[var(--bg)] py-6 xl:py-12">
 
         <div id="informasi-umum-mobile"
           class="flex justify-between w-full px-5 shadow-md rounded-lg xl:hidden">
@@ -310,14 +310,14 @@
 
         </div>
 
-        <div class="flex flex-col flex-[5]">
+        <div class="flex flex-col">
 
           <div id="tentang-kami"
           class="flex flex-col w-full gap-3 py-6 px-5 xl:px-8 xl:py-10 shadow-md rounded-lg">
 
             <h2 class="font-semibold text-[var(--primary-500)] xl:text-[30px]">Tentang Kami</h2>
 
-            <p class="text-[11px] xl:text-[14px] text-[var(--primary-500)]">{{ $umkm[0]->umkm->description }}</p>
+            <p class="text-[11px] xl:text-[16px] text-[var(--primary-500)]">{{ $umkm[0]->umkm->description }}</p>
 
           </div>
 
@@ -334,11 +334,11 @@
         </div>
 
         <div id="informasi-umum-desktop"
-          class="hidden w-full px-5 py-5 shadow-md h-60 rounded-lg xl:flex flex-col flex-[1]">
+          class="hidden w-full px-5 py-5 shadow-md h-70 rounded-lg xl:flex flex-col">
 
           <div class="flex flex-col py-4">
 
-            <div class="bg-[var(--bg)] flex items-center gap-2 mb-2 text-[var(--caption)]">
+            <div class="bg-[var(--bg)] flex items-center gap-2 2w-full mb-2 text-[var(--caption)]">
 
               <img src="{{ asset('images/jam.svg') }}" alt=""
                 class="w-4">
@@ -357,18 +357,30 @@
             <div class="flex gap-2">
 
               <img src="{{ asset('images/telepon.svg') }}" alt=""
-              class="w-6">
+              class="w-5">
 
-              <span class="text-[13px] text-[var(--primary-500)]">{{$umkm[0]->umkm->phone_number}}</span>
+              <span class="text-[14px] text-[var(--primary-500)] break-word">
+                @if ($umkm[0]->umkm->phone_number == null)
+                  Maaf, nomor telepon belum tersedia
+                @else
+                   {{$umkm[0]->umkm->phone_number}}
+                @endif
+              </span>
 
             </div>
 
             <div class="flex gap-2">
 
               <img src="{{ asset('images/email.svg') }}" alt=""
-              class="w-6">
+              class="w-5">
 
-              <span class="text-[13px] text-[var(--primary-500)]">{{$umkm[0]->umkm->user->email}}</span>
+              <span class="text-[14px] text-[var(--primary-500)] break-word">
+                @if ($umkm[0]->umkm->email == null)
+                  Maaf, email belum tersedia
+                @else
+                   {{$umkm[0]->umkm->phone_number}}
+                @endif
+              </span>
 
             </div>
 
