@@ -199,6 +199,18 @@
 
           </a>
 
+          @if (Auth::check())
+            <button onclick="document.getElementById('dialog-review-mobile').classList.remove('hidden')"
+                class="flex gap-2 items-center py-2 px-4 bg-[var(--primary-50)] rounded-4xl text-[var(--primary-500)] justify-center font-medium hover:cursor-pointer">
+
+                <img src="{{ asset('images/pencil_primary.png') }}" style="width: 20px">
+                Beri Ulasan
+            </button>
+            <div id="dialog-review-mobile" class="fixed inset-0 bg-black/40 flex items-center justify-center z-[9999]">
+                @include('components.review', ['size' => 'mobile'])
+            </div>
+          @endif
+
         </div>
 
       </div>
@@ -297,14 +309,15 @@
           </a>
 
           @if (Auth::check())
-            @include('components.review')
-
-            <button onclick="document.getElementById('dialog-review').classList.remove('hidden')"
-                class="flex gap-2 items-center py-2 px-4 bg-[var(--primary-50)] rounded-4xl text-[var(--primary-500)] justify-center font-medium">
+            <button onclick="document.getElementById('dialog-review-desktop').classList.remove('hidden')"
+                class="flex gap-2 items-center py-2 px-4 bg-[var(--primary-50)] rounded-4xl text-[var(--primary-500)] justify-center font-medium hover:cursor-pointer">
 
                 <img src="{{ asset('images/pencil_primary.png') }}" style="width: 20px">
                 Beri Ulasan
             </button>
+            <div id="dialog-review-desktop" class="hidden fixed inset-0 bg-black/40 flex items-center justify-center z-[9999]">
+                @include('components.review', ['size' => 'desktop'])
+            </div>
           @endif
 
         </div>
