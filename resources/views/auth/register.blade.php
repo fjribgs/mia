@@ -120,14 +120,14 @@
                 <header>
 
                     <h1 class="font-semibold text-[36px] md:text-[48px]">Daftar</h1>
-                    
+
                     <p class="text-[var(--secondary-text)] -mt-2 text-[13px] md:text-[20px] font-[Montserrat]
                     ">Daftarkan Akun Anda</p>
 
                 </header>
-                
+
                 <div class="mt-[40px]">
-                    
+
                     <form action="{{ route('auth.postregis') }}" method="post"
                             class="">
                             @csrf
@@ -140,6 +140,11 @@
                                 <input type="text" name="username" placeholder="Masukkan Username"
                                     class="border-[2px] w-full rounded-md border-[var(--soft-bg)] px-[16px]
                                     py-[13px] text-[18px]">
+                                @error('username')
+                                    <p class="text-red-500 text-sm mt-1">
+                                        {{ $message }}
+                                    </p>
+                                @enderror
                             </div>
 
                             <div class="mt-[15px]">
@@ -150,6 +155,11 @@
                                 <input type="text" name="name" placeholder="Masukkan Nama"
                                     class="border-[2px] w-full rounded-md border-[var(--soft-bg)] px-[16px]
                                     py-[13px] text-[18px]">
+                                @error('name')
+                                    <p class="text-red-500 text-sm mt-1">
+                                        {{ $message }}
+                                    </p>
+                                @enderror
                             </div>
 
                             <div class="mt-[15px]">
@@ -160,6 +170,11 @@
                                 <input type="email" name="email" placeholder="Masukkan Email"
                                     class="border-[2px] w-full rounded-md border-[var(--soft-bg)] px-[16px]
                                     py-[13px] text-[18px]">
+                                @error('email')
+                                    <p class="text-red-500 text-sm mt-1">
+                                        {{ $message }}
+                                    </p>
+                                @enderror
                             </div>
 
                             <div class="mt-[15px]">
@@ -170,6 +185,11 @@
                                 <input type="password" name="password" placeholder="********"
                                     class="border-[2px] w-full rounded-md border-[var(--soft-bg)] px-[16px]
                                     py-[13px] text-[18px]">
+                                @error('password')
+                                    <p class="text-red-500 text-sm mt-1">
+                                        {{ $message }}
+                                    </p>
+                                @enderror
                             </div>
 
                             <div class="mt-[15px]">
@@ -180,6 +200,11 @@
                                 <input type="password" name="password_confirmation" placeholder="Konfirmasi Password"
                                     class="border-[2px] w-full rounded-md border-[var(--soft-bg)] px-[16px]
                                     py-[13px] text-[18px]">
+                                @error('password_confirmation')
+                                    <p class="text-red-500 text-sm mt-1">
+                                        {{ $message }}
+                                    </p>
+                                @enderror
                             </div>
 
                             <div class="">

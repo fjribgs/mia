@@ -94,7 +94,12 @@
                                     <img src="{{ asset('images/username.svg') }}" alt="Username Icon">
                                 </div>
 
-                                <input type="text" name="username" placeholder="Masukkan username" class="border-[2px] w-full rounded-md border-[var(--soft-bg)] px-[55px] py-[13px] text-[18px]">
+                                <input type="text" name="username" placeholder="Masukkan username" value="{{ old('username') }}" class="border-[2px] w-full rounded-md border-[var(--soft-bg)] px-[55px] py-[13px] text-[18px]">
+                                @error('username')
+                                    <p class="text-red-500 text-sm mt-1">
+                                        {{ $message }}
+                                    </p>
+                                @enderror
 
                             </div>
                         </div>
@@ -114,7 +119,11 @@
 
                                 <input type="password" name="password" placeholder="********"
                                 class="border-[2px] w-full rounded-md border-[var(--soft-bg)] px-[55px] py-[13px] text-[18px]">
-
+                                @error('password')
+                                    <p class="text-red-500 text-sm mt-1">
+                                        {{ $message }}
+                                    </p>
+                                @enderror
                             </div>
 
                         </div>
