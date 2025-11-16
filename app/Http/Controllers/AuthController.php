@@ -33,7 +33,7 @@ class AuthController extends Controller
             }
         }
 
-        return back()->withErrors('Username atau password salah! Silakan coba lagi!');
+        return back()->withErrors('password', 'Username atau password salah! Silakan coba lagi!');
     }
 
     public function register() {
