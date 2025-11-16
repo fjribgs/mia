@@ -1,13 +1,40 @@
 <div class="w-screen flex flex-col">
     <header class="flex flex-col w-full bg-[var(--primary-50)] justify-end fixed z-9 shadow-md">
-        <div class="py-4 px-5 md:py-[15px] md:px-35 mt-21 xl:mt-25 flex flex-col">
+        <div class="py-4 px-5 md:py-[15px] md:px-35 mt-21 xl:mt-25 flex gap-2">
+            
             <div id="search-bar"
-                class="relative bg-[var(--bg)] border-2 border-[var(--soft-bg)] rounded-[100px]">
+                class="relative bg-[var(--bg)] border-2 flex flex-[2] border-[var(--soft-bg)] rounded-[100px]">
                 <div class="absolute flex items-center inset-y-0 pl-3 w-7 pointer-events-none">
                     <img src="{{ asset('images/search.svg') }}" alt="">
                 </div>
                 <input type="text" wire:model.live.debounce.300ms="search" placeholder="Cari UMKM..." class="w-full rounded-[100px] px-[35px] py-[10px] text-[13px] md:text-[18px]">
             </div>
+
+            <div id="filter-by-categories"
+                class="flex flex-[1] bg-[var(--bg)] border-2 border-[var(--soft-bg)] rounded-[100px] items-center">
+                <select 
+                    wire:model="selectedCategory" 
+                    class="
+                        py-1.5 px-3 
+                        rounded-[100px]
+                        bg-white                 
+                        text-[var(--primary-500)]
+                        hover:bg-blue-50  
+                        focus:bg-[var(--primary-50)]
+                        transition duration-150
+                    ">
+                    <option value=""
+                        class="bg-white focus:bg-white">Semua Kategori</option>
+                    @foreach($categories as $cat)
+                        {{-- Styling pada <option> ini tidak akan terlihat --}}
+                        <option value="{{ $cat->id }}"
+                            class="bg-white">
+                            {{ $cat->category_name }}
+                        </option>
+                    @endforeach
+                </select>
+            </div>
+
         </div>
     </header>
 
@@ -15,7 +42,7 @@
         <div class="grid gap-5 grid-cols-[repeat(auto-fit,minmax(280px,1fr))] items-center sm:my-8 [&>div]:text-start [&>div>div]:px-5 [&>div>div]:py-5">
             @if ($umkms->count() > 0)
                 @foreach ($umkms as $umkm)
-                    <div class="flex flex-col justify-between bg-[#FFFFFF] {{ $umkms->count() < 2 ? 'w-100' : 'w-full' }} shadow-md rounded-[18px] xl:hover:-mt-5 xl:hover:shadow-xl transition-all duration-300">
+                    <div class="flex flex-col justify-between bg-[#FFFFFF] {{ $umkms->count() < 2 ? 'xl:w-100' : 'w-full' }} shadow-md rounded-[18px] xl:hover:-mt-5 xl:hover:shadow-xl transition-all duration-300">
                         <img src="{{ asset('storage/' . $umkm->umkm->umkm_picture) }}"
                             alt="Foto UMKM"
                             class="w-full h-48 object-cover rounded-[18px]">
