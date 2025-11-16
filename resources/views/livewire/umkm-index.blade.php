@@ -11,18 +11,11 @@
             </div>
 
             <div id="filter-by-categories"
-                class="flex flex-[1] bg-[var(--bg)] border-2 border-[var(--soft-bg)] rounded-[100px] items-center">
+                class="flex flex-[1] bg-[var(--bg)] border-2 border-[var(--soft-bg)] rounded-[100px] items-center text-[var(--primary-500)] hover:bg-blue-50 focus:bg-[var(--soft-bg)]">
                 <select
                     wire:model.live="selectedCategory"
                     class="
-                        py-1.5 px-3
-                        rounded-[100px]
-                        bg-white
-                        text-[var(--primary-500)]
-                        hover:bg-blue-50
-                        focus:bg-[var(--primary-50)]
-                        transition duration-150
-                    ">
+                        py-1.5 mx-3 w-full h-full rounded-[100px] (--primary-50)] transition duration-150 text-[13px]">
                     <option value=""
                         class="bg-white focus:bg-white">Semua Kategori</option>
                     @foreach($categories as $category)

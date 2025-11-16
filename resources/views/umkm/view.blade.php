@@ -135,7 +135,13 @@
           <path fill-rule="evenodd" clip-rule="evenodd" d="M9 8.13653C8.28604 8.13653 7.70727 8.74367 7.70727 9.49262C7.70727 10.2416 8.28604 10.8487 9 10.8487C9.71396 10.8487 10.2927 10.2416 10.2927 9.49262C10.2927 8.74367 9.71396 8.13653 9 8.13653ZM6.15599 9.49262C6.15599 7.84494 7.4293 6.50922 9 6.50922C10.5707 6.50922 11.844 7.84494 11.844 9.49262C11.844 11.1403 10.5707 12.476 9 12.476C7.4293 12.476 6.15599 11.1403 6.15599 9.49262Z" fill="#B0D7D2"/>
           </svg>
 
-          <p>{{ $umkm[0]->umkm->address }}</p>
+          <p>
+            @if ($umkm[0]->umkm->address == null)
+              Maaf, Data Lokasi Belum Tersedia
+            @else
+              {{ $umkm[0]->umkm->address }}
+            @endif
+          </p>
 
         </div>
 
@@ -218,12 +224,12 @@
     </section>
 
     <section id="overview-desktop"
-      class="bg-[var(--primary-600)] z-1 py-4 px-6 lg:px-35 flex-col h-180 items-center justify-center hidden xl:flex">
-      <div class="flex gap-15 justify-between items-center">
+      class="bg-[var(--primary-600)] z-1 py-4 px-6 lg:px-35 flex-col h-180 items-center justify-center w-screen hidden xl:flex">
+      <div class="flex gap-15 justify-between w-full items-center">
 
         <img src="{{ asset('storage/' . $umkm[0]->umkm->umkm_picture) }}"
           alt="Foto UMKM"
-          class="w-58 h-58 lg:w-66 lg:h-66 object-cover rounded-[18px] border-[var(--primary-50)] border-5">
+          class="w-58 h-58 xl:w-80 xl:h-80 object-cover rounded-[18px] border-[var(--primary-50)] border-5">
 
         <div class="flex flex-col flex-[6] gap-3 text-[var(--primary-50)] items-start justify-start">
 
@@ -237,12 +243,18 @@
 
           <div class="flex text-[13px] sm:text-[15px] w-full gap-5 items-center justify-start text-start mt-5 px-0.5">
 
-            <svg viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-10">
+            <svg viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-6">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M9 1.62731C4.81281 1.62731 1.28068 4.97345 1.56837 9.14067C1.60963 9.73834 1.67131 10.2586 1.75535 10.6715C2.17935 12.7543 3.51026 14.8234 5.00934 16.5799C6.49565 18.3214 8.07816 19.6762 8.8959 20.3333C8.96126 20.3858 9.03874 20.3858 9.1041 20.3333C9.92184 19.6762 11.5043 18.3214 12.9907 16.5799C14.4897 14.8234 15.8206 12.7543 16.2446 10.6715C16.3287 10.2586 16.3904 9.73834 16.4316 9.14067C16.7193 4.97345 13.1872 1.62731 9 1.62731ZM0.0211454 9.25821C-0.345912 3.94141 4.12259 0 9 0C13.8774 0 18.3459 3.94141 17.9789 9.25821C17.9349 9.89504 17.8664 10.497 17.7617 11.0113C17.2534 13.5083 15.7089 15.8346 14.1464 17.6653C12.5712 19.511 10.9062 20.9351 10.0474 21.6252C9.42544 22.1249 8.57456 22.1249 7.95258 21.6252C7.09382 20.9351 5.42877 19.511 3.85358 17.6653C2.29114 15.8346 0.74659 13.5083 0.238281 11.0113C0.133594 10.497 0.0651105 9.89504 0.0211454 9.25821Z" fill="#B0D7D2"/>
             <path fill-rule="evenodd" clip-rule="evenodd" d="M9 8.13653C8.28604 8.13653 7.70727 8.74367 7.70727 9.49262C7.70727 10.2416 8.28604 10.8487 9 10.8487C9.71396 10.8487 10.2927 10.2416 10.2927 9.49262C10.2927 8.74367 9.71396 8.13653 9 8.13653ZM6.15599 9.49262C6.15599 7.84494 7.4293 6.50922 9 6.50922C10.5707 6.50922 11.844 7.84494 11.844 9.49262C11.844 11.1403 10.5707 12.476 9 12.476C7.4293 12.476 6.15599 11.1403 6.15599 9.49262Z" fill="#B0D7D2"/>
             </svg>
 
-            <p>{{ $umkm[0]->umkm->address }}</p>
+            <p>
+              @if ($umkm[0]->umkm->address == null)
+                  Maaf, alamat belum tersedia
+              @else
+                 {{$umkm[0]->umkm->address}}
+              @endif
+            </p>
 
           </div>
 
@@ -371,12 +383,16 @@
               <img src="{{ asset('images/email.svg') }}" alt=""
               class="w-4">
 
-              <span class="text-[10px] text-[var(--primary-500)] break-words">
-                @if ($umkm[0]->umkm->email == null)
+              @if ($umkm[0]->umkm->user->email != null)
+                <span class="text-[10px] text-[var(--primary-500)] break-words">
+                @if ($umkm[0]->umkm->user->email == null)
                   Maaf, nomor email belum tersedia
                 @else
-                   {{$umkm[0]->umkm->email}}
+                   {{$umkm[0]->umkm->user->email}}
                 @endif</span>
+              @else
+                <span class="text-[10px] text-[var(--primary-500)]">Tidak Tersedia</span>
+              @endif
 
             </div>
 
@@ -448,13 +464,16 @@
               <img src="{{ asset('images/email.svg') }}" alt=""
               class="w-5">
 
-              <span class="text-[14px] text-[var(--primary-500)] break-word">
-                @if ($umkm[0]->umkm->email == null)
-                  Maaf, email belum tersedia
+              @if ($umkm[0]->umkm->user->email != null)
+                <span class="text-[14px] text-[var(--primary-500)] break-words">
+                @if ($umkm[0]->umkm->user->email == null)
+                  Maaf, nomor email belum tersedia
                 @else
-                   {{$umkm[0]->umkm->phone_number}}
-                @endif
-              </span>
+                   {{$umkm[0]->umkm->user->email}}
+                @endif</span>
+              @else
+                <span class="text-[14px] text-[var(--primary-500)]">Tidak Tersedia</span>
+              @endif
 
             </div>
 
