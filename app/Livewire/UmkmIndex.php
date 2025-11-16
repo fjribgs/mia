@@ -9,6 +9,7 @@ use App\Models\UmkmCategory;
 class UmkmIndex extends Component
 {
     public $search = '';
+    public $selectedCategory = '';
 
     public function render() {
         $umkmCategories = UmkmCategory::with([
@@ -27,8 +28,11 @@ class UmkmIndex extends Component
 
         ->get();
 
+        $categories = Category::all();
+
         return view('livewire.umkm-index', [
             'umkms' => $umkmCategories,
+            'categories' => $categories,
         ]);
     }
 }

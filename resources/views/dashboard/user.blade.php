@@ -173,7 +173,8 @@
                 </div>
             </div>
 
-            <button class="flex gap-2 mt-13 border-1 border-[var(--primary-600)] rounded-4xl py-2 px-4 hover:bg-[var(--primary-600)] transition-all duration-300 text-[var(--primary-600)] hover:text-[var(--bg)] items-center cursor-pointer">
+            <a href="{{ route('umkm.index') }}"
+                class="flex gap-2 mt-13 border-1 border-[var(--primary-600)] rounded-4xl py-2 px-4 active:bg-[var(--primary-600)] lg:hover:bg-[var(--primary-600)] transition-all duration-300 text-[var(--primary-600)] active:text-[var(--bg)] lg:hover:text-[var(--bg)] items-center cursor-pointer">
 
                 <div class="text-[13px] sm:text-[16px] xl:text-[18px]">Lihat UMKM Lainnya</div>
 
@@ -188,14 +189,14 @@
 
 
             </div>
-            </button>
+        </a>
 
         </section>
 
         <section id="post-section"
-            class="h-[100vh] bg-[var(--bg)] flex flex-col xl:flex-row justify-center xl:justify-between items-center w-full px-35 bg-gradient-to-b from-[#FAFAFA] to-[#E6F2F1]">
+            class="h-[100vh] bg-[var(--bg)] flex flex-col xl:flex-row justify-center items-center px-35 bg-gradient-to-b from-[#FAFAFA] to-[#E6F2F1] w-full">
 
-            <div class="group relative ml-10">
+            <div class="group relative xl:ml-10">
 
                 <div id="postingan-card-1"
                     class="relative xl:top-3 xl:flex-[1] xl:left-3 bg-white rounded-md w-70 xl:w-100 2xl:w-120 py-5 shadow-lg z-8">
@@ -319,13 +320,13 @@
             </div>
 
             <div id="post-umkm-desc"
-                class="mt-9 xl:mt-20 xl:flex-[2] w-full flex flex-col items-center xl:items-end justify-center gap-2 xl:gap-3.5">
+                class="mt-9 xl:mt-20 px-5 xl:flex-[2] w-screen flex flex-col items-center xl:items-end justify-center gap-2 xl:gap-3.5">
 
                 <h3 class="font-semibold text-[var(--primary-500)] text-[25px] sm:text-[38px] xl:text-[38px] 2xl:text-[50px] text-center">Cerita & Aktivitas UMKM</h3>
 
                 <p class="text-[10px] sm:text-[13px] xl:text-[15px] 2xl:text-[18px] text-center xl:text-end font-[Montserrat] xl:w-130 2xl:w-150 justify-end">Dukung dan berinteraksi langsung dengan komunitas untuk mengikuti perkembangan terbaru dari berbagai UMKM</p>
 
-                <a class="flex gap-2 mt-7 border-1 border-[var(--primary-600)] rounded-4xl py-2 px-4 hover:bg-[var(--primary-600)] transition-all duration-300 text-[var(--primary-600)] hover:text-[var(--bg)] items-center cursor-pointer">
+                <a class="flex gap-2 mt-7 border-1 border-[var(--primary-600)] rounded-4xl py-2 px-4 active:bg-[var(--primary-600)] lg:hover:bg-[var(--primary-600)] transition-all duration-300 text-[var(--primary-600)] active:text-[var(--bg)] lg:hover:text-[var(--bg)] items-center cursor-pointer">
 
                     <div class="text-[13px] sm:text-[16px] xl:text-[18px]">Lihat Cerita Lainnya</div>
 
@@ -342,13 +343,13 @@
         </section>
 
         <section id="maps-section"
-            class="flex flex-col lg:h-[120vh] h-screen bg-[var(--bg)] lg:px-35 px-9 items-center justify-center bg-gradient-to-b from-[#E6F2F1] to-[#FAFAFA]">
+            class="flex flex-col lg:h-[120vh] h-screen bg-[var(--bg)] lg:px-35 px-5 items-center justify-center bg-gradient-to-b from-[#E6F2F1] to-[#FAFAFA]">
 
             <div class="flex flex-col w-full gap-1">
 
                 <h3 class="font-semibold text-[var(--primary-500)] text-[25px] sm:text-[38px] xl:text-[42px] 2xl:text-[50px]">Peta Lokasi</h3>
 
-                <p class="text-[11px] sm:text-[13px] lg:text-[15px] xl:text-[19px] text-[var(--secondary-text)] font-[Montserrat] lg:w-140 xl:w-200">Ikuti perkembangan terbaru mengenai lokasi UMKM inklusif di daerah Bandung.</p>
+                <p class="text-[11px] sm:text-[13px] lg:text-[15px] xl:text-[19px] text-[var(--secondary-text)] font-[Montserrat] lg:w-140 xl:w-200">Ikuti perkembangan terbaru mengenai lokasi UMKM inklusif di berbagai daerah.</p>
 
             </div>
 
@@ -384,7 +385,7 @@
                     class="mt-0 flex-[3] xl:flex-[4] border-2 border-[var(--soft-bg)] rounded-[6px] w-full lg:h-full relative shadow-md">
 
                     <img src="{{  asset('images/maps.webp') }}" alt="Maps"
-                        class="w-full blur-[3px] h-70 lg:h-140 object-cover">
+                        class="w-full blur-[3px] h-100 lg:h-140 object-cover">
 
                     <div class="absolute inset-0 flex items-center justify-center flex-col text-center text-[var(--primary-500)] px-7">
 
@@ -397,7 +398,7 @@
 
                         <p class="text-[12px] lg:text-[15px] font-[Montserrat] font-medium z-2 xl:mb-4">Peta akan menampilkan lokasi UMKM dengan pin interaktif.</p>
 
-                        <a href="#" class="bg-[var(--primary-500)] hover:bg-[var(--primary-400)] px-5 py-3 rounded-4xl mt-4 z-2 flex gap-2 items-center duration-200 transition-all cursor-pointer">
+                        <a href="#" class="bg-[var(--primary-500)] active:bg-[var(--primary-400)] lg:hover:bg-[var(--primary-400)] px-5 py-3 rounded-4xl mt-4 z-2 flex gap-2 items-center duration-200 transition-all cursor-pointer">
 
                             <svg width="18" height="18" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M17.0721 3.19692C17.1375 3.02881 16.9718 2.86318 16.8037 2.92855L3.0431 8.27991C2.86985 8.34729 2.86597 8.59103 3.037 8.66387L8.32008 10.9141C8.66499 11.061 8.93967 11.3357 9.08657 11.6806L11.3368 16.9637C11.4096 17.1347 11.6534 17.1308 11.7207 16.9576L17.0721 3.19692ZM16.3529 1.76921C17.5297 1.31158 18.6891 2.47101 18.2314 3.64777L12.8801 17.4084C12.4085 18.6212 10.7022 18.6483 10.1923 17.4511L7.94214 12.168C7.92115 12.1187 7.88191 12.0795 7.83264 12.0585L2.54955 9.80831C1.35239 9.29841 1.37949 7.5922 2.59224 7.12057L16.3529 1.76921Z" fill="#E6F2F1"/>
@@ -416,7 +417,7 @@
         </section>
 
         <section id="about-us-section"
-            class="h-[120vh] flex flex-col relative items-center justify-center lg:px-35 px-9 text-[var(--primary-500)] w-full bg-gradient-to-b from-[#FAFAFA] to-[#E6F2F1]">
+            class="h-[120vh] flex flex-col relative items-center justify-center lg:px-35 px-5 text-[var(--primary-500)] w-full bg-gradient-to-b from-[#FAFAFA] to-[#E6F2F1]">
 
             <div class="flex gap-20 items-center justify-center">
 
@@ -444,7 +445,7 @@
                                 <path d="M18.3965 0.100586C20.2126 0.0871452 21.9601 0.778521 23.2549 2.02344C24.5498 3.26861 25.2858 4.96566 25.2998 6.74121C25.3137 8.51688 24.6044 10.2248 23.3291 11.4893V11.4902L13.708 20.8857C13.436 21.1513 13.0673 21.2997 12.6836 21.2998C12.2998 21.2998 11.9304 21.1514 11.6582 20.8857L2.03516 11.4893L2.0332 11.4883V11.4873C0.780807 10.2259 0.0864749 8.53323 0.100586 6.77539C0.114798 5.01746 0.836693 3.33579 2.10938 2.09375L2.2793 1.92773V1.93848C2.87885 1.39176 3.57323 0.952459 4.33203 0.645508C5.16321 0.309305 6.05456 0.136719 6.9541 0.136719C7.85346 0.136772 8.74418 0.30939 9.5752 0.645508C10.4063 0.981716 11.1615 1.47526 11.7979 2.09668H11.7988C12.029 2.32229 12.3236 2.60024 12.6826 2.93066C13.0402 2.6002 13.3353 2.32226 13.5674 2.0957C14.8427 0.831347 16.5801 0.11413 18.3965 0.100586ZM18.4004 1.89062C17.0653 1.90081 15.7895 2.42911 14.8535 3.35742H14.8525C14.7224 3.48447 14.5753 3.6265 14.4102 3.78223L13.8623 4.29199L12.751 5.31348L12.6836 5.37598L12.6152 5.31348L11.5039 4.29199C11.103 3.9225 10.7728 3.61054 10.5127 3.35742H10.5117C9.56848 2.43665 8.28889 1.91905 6.9541 1.91895C5.61913 1.91895 4.33885 2.43651 3.39551 3.35742C1.45299 5.25542 1.4302 8.32301 3.32227 10.2295L12.6826 19.3691L22.0264 10.2451L22.1963 10.0674C23.0245 9.16016 23.4805 7.98283 23.4707 6.7627C23.4602 5.46134 22.9213 4.21652 21.9707 3.30273C21.5 2.85022 20.9417 2.49229 20.3291 2.25C19.7167 2.00784 19.0612 1.8856 18.4004 1.89062Z" fill="#007F6E" stroke="#007F6E" stroke-width="0.2"/>
                                 </svg>
 
-                                <h3 class="font-medium text-[15px] lg:text-[17px] xl:px-1">Inklusif</h3>
+                                <h3 class="font-medium mt-2 text-[15px] lg:text-[17px] xl:px-1">Inklusif</h3>
 
                                 <p class="font-[Montserrat] text-[11px] lg:text-[14px] xl:px-1">Mendukung ekosistem bisnis yang setara untuk semua</p>
                             </div>
@@ -459,7 +460,7 @@
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M19.798 15.6126C19.8997 15.0914 20.4046 14.7513 20.9258 14.8529C23.2922 15.3144 25 17.3875 25 19.7985V20.4668C25 21.0586 24.8224 21.9015 24.0505 22.3949C23.5308 22.7271 22.7247 23.0811 21.4819 23.3326C20.9614 23.4379 20.4541 23.1013 20.3488 22.5808C20.2435 22.0603 20.58 21.553 21.1005 21.4477C22.1608 21.2331 22.7339 20.9541 23.0147 20.7746L23.017 20.7724C23.0191 20.7698 23.0266 20.7596 23.0359 20.7369C23.0564 20.6872 23.0769 20.598 23.0769 20.4668V19.7985C23.0769 18.3077 22.0209 17.0258 20.5577 16.7405C20.0365 16.6388 19.6964 16.1339 19.798 15.6126Z" fill="#007F6E"/>
                                 </svg>
 
-                                <h3 class="font-medium text-[15px] lg:text-[17px] xl:px-1">Kolaboratif</h3>
+                                <h3 class="font-medium mt-2 text-[15px] lg:text-[17px] xl:px-1">Kolaboratif</h3>
 
                                 <p class="font-[Montserrat] text-[11px] lg:text-[14px] xl:px-1">Membangun jaringan dan kolaborasi yang kuat</p>
                             </div>
@@ -478,7 +479,7 @@
                                 </svg>
 
 
-                                <h3 class="font-medium text-[15px] lg:text-[17px] xl:px-1">Berdampak</h3>
+                                <h3 class="font-medium mt-2 text-[15px] lg:text-[17px] xl:px-1">Berdampak</h3>
 
                                 <p class="font-[Montserrat] text-[11px] lg:text-[14px] xl:px-1">Menciptakan perubahan yang nyata bagi UMKM</p>
                             </div>
@@ -491,7 +492,7 @@
                                 </svg>
 
 
-                                <h3 class="font-medium text-[15px] lg:text-[17px] xl:px-1">Berkelanjutan</h3>
+                                <h3 class="font-medium mt-2 text-[15px] lg:text-[17px] xl:px-1">Berkelanjutan</h3>
 
                                 <p class="font-[Montserrat] text-[11px] lg:text-[14px] xl:px-1">Pertumbuhan bisnis yang berkelanjutan</p>
                             </div>
